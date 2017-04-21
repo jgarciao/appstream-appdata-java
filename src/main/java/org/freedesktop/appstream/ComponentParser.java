@@ -11,42 +11,31 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by jorge on 08/04/17.
+ * Created by jorge on 21/04/17.
  */
-public class AppdataParser {
+public class ComponentParser {
 
-    public static Components parseFile(File file) throws JAXBException {
+    public static String getName(Component component) {
 
-        JAXBContext jaxbContext = JAXBContext.newInstance(Components.class);
-
-        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-        Components components = (Components) jaxbUnmarshaller.unmarshal(file);
-
-        return components;
-
-    }
-
-    public static String getName(List<Name> nameList) {
-
-        for (Name name : nameList) {
+        for (Name name : component.getName()) {
             if (name.getLang() == null) return name.getValue();
         }
 
         return "";
     }
 
-    public static String getName(List<Name> nameList, String lang) {
+    public static String getName(Component component, String lang) {
 
-        for (Name name : nameList) {
+        for (Name name : component.getName()) {
             if (lang.equalsIgnoreCase(name.getLang())) return name.getValue();
         }
 
         return "";
     }
 
-    public static String getSummary(List<Summary> summaryList) {
+    public static String getSummary(Component component) {
 
-        for (Summary summary : summaryList) {
+        for (Summary summary : component.getSummary()) {
             if (summary.getLang() == null) return summary.getValue();
         }
 
@@ -54,18 +43,18 @@ public class AppdataParser {
 
     }
 
-    public static String getSummary(List<Summary> summaryList, String lang) {
+    public static String getSummary(Component component, String lang) {
 
-        for (Summary summary : summaryList) {
+        for (Summary summary : component.getSummary()) {
             if (lang.equalsIgnoreCase(summary.getLang())) return summary.getValue();
         }
 
         return "";
     }
 
-    public static String getDescription(List<Description> descriptionList) {
+    public static String getDescription(Component component) {
 
-        for (Description description : descriptionList) {
+        for (Description description : component.getDescription()) {
             if (description.getLang() == null) return getObjectListAsString(description.getContent());
         }
 
@@ -73,9 +62,9 @@ public class AppdataParser {
 
     }
 
-    public static String getDescription(List<Description> descriptionList, String lang) {
+    public static String getDescription(Component component, String lang) {
 
-        for (Description description : descriptionList) {
+        for (Description description : component.getDescription()) {
             if (lang.equalsIgnoreCase(description.getLang())) return getObjectListAsString(description.getContent());
         }
 
@@ -84,7 +73,7 @@ public class AppdataParser {
     }
 
 
-    public static String getObjectListAsString(List<Object> objectList) {
+    private static String getObjectListAsString(List<Object> objectList) {
 
         String contents = "";
 
@@ -107,16 +96,16 @@ public class AppdataParser {
     }
 
 
-    public static String getObjectAsString(Object obj) {
+    private static String getObjectAsString(Object obj) {
 
         String contents = "";
 
         if (obj instanceof JAXBElement) {
-            contents = contents + AppdataParser.getJAXBElementAsString((JAXBElement) obj);
+            contents = contents + ComponentParser.getJAXBElementAsString((JAXBElement) obj);
         } else if (obj instanceof Ul) {
-            contents = contents + AppdataParser.getUlAsString((Ul) obj);
+            contents = contents + ComponentParser.getUlAsString((Ul) obj);
         } else if (obj instanceof Ol) {
-            contents = contents + AppdataParser.getOlAsString((Ol) obj);
+            contents = contents + ComponentParser.getOlAsString((Ol) obj);
         }
 
 
@@ -124,28 +113,21 @@ public class AppdataParser {
     }
 
 
-    public static String getDescriptionAsString(Description description) {
-
-        return getObjectListAsString(description.getContent());
-
-    }
-
-    public static String getJAXBElementAsString(JAXBElement element) {
+    private static String getJAXBElementAsString(JAXBElement element) {
         String contents = "<" + element.getName() + ">";
         contents = contents + element.getValue();
         contents = contents + "</" + element.getName() + ">";
         return contents;
     }
 
-    public static String getUlAsString(Ul element) {
+    private static String getUlAsString(Ul element) {
         return "<ul>" + getSerializableObjectListAsString(element.getContent()) + "</ul>";
     }
 
 
-    public static String getOlAsString(Ol element) {
+    private static String getOlAsString(Ol element) {
 
         return "<ol>" + getSerializableObjectListAsString(element.getContent()) + "</ol>";
     }
-
 
 }
