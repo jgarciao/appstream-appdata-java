@@ -2,11 +2,7 @@ package org.freedesktop.appstream;
 
 import org.freedesktop.appstream.appdata.*;
 
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
-import java.io.File;
 import java.io.Serializable;
 import java.util.List;
 
@@ -14,6 +10,38 @@ import java.util.List;
  * Created by jorge on 21/04/17.
  */
 public class ComponentParser {
+
+
+    public static String getId(Component component) {
+
+        return component.getId();
+    }
+
+    public static String getFlatpakId(Component component) {
+
+        //TODO: check component.getBundle().getType.equals("flatpak")
+
+        String[] idArray;
+        String flatpakID = "";
+
+        if (component.getBundle() != null && component.getBundle().getValue() != null) {
+            idArray = component.getBundle().getValue().split("/");
+
+            if (idArray.length == 4 && idArray[1] != null) {
+                flatpakID = idArray[1];
+            }
+        }
+
+        return flatpakID;
+    }
+
+    public static String getFlatpakRuntime(Component component) {
+        return component.getBundle().getRuntime();
+    }
+
+    public static String getFlatpakSdk(Component component) {
+        return component.getBundle().getSdk();
+    }
 
     public static String getName(Component component) {
 
