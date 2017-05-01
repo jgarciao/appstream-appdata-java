@@ -8,6 +8,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,14 +16,20 @@ import java.util.List;
  */
 public class AppdataParser {
 
-    public static Components parseFile(File file) throws JAXBException {
+
+    public static List<AppdataComponent> parseAppdataFile(File file) throws JAXBException {
 
         JAXBContext jaxbContext = JAXBContext.newInstance(Components.class);
 
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
         Components components = (Components) jaxbUnmarshaller.unmarshal(file);
+        List<AppdataComponent> componentList = new ArrayList<AppdataComponent>();
 
-        return components;
+        for (Component component: components.getComponent()) {
+            componentList.add(new AppdataComponent(component));
+        }
+
+        return componentList;
 
     }
 
