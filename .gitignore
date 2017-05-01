@@ -6,20 +6,32 @@
 build
 bin
 
-# Spring
+# STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
 .springBeans
 
-# NetBeans
+# IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+# NetBeans ###
 nbproject/private/
 build/
 nbbuild/
 dist/
 nbdist/
+.nb-gradle/
 nbactions.xml
 nb-configuration.xml
 
-# IDEA
-*.iml
+# Spring
+.springBeans
 
 # Class Files #
 *.class
@@ -30,7 +42,8 @@ nb-configuration.xml
 *.ear
 
 # Maven #
-target
+target/
+!.mvn/wrapper/maven-wrapper.jar
 
 # Subversion files
 .svn
