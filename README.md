@@ -39,3 +39,10 @@ mkdir appstream-gnome-apps-generated
 	xjc -d appstream-gnome-apps-generated -p org.freedesktop.appstream.appdata appstream-gnome-apps-few.xsd
 ```
 * Move classes to org.freedesktop.appstream.appdata
+
+
+## Building appstream-appdata-java
+
+```
+mvn install
+```
