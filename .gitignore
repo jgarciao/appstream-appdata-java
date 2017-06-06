@@ -6,32 +6,22 @@
 build
 bin
 
-# STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
+# Spring
 .springBeans
 
-# IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-# NetBeans ###
+# NetBeans
 nbproject/private/
 build/
 nbbuild/
 dist/
 nbdist/
-.nb-gradle/
 nbactions.xml
 nb-configuration.xml
 
-# Spring
-.springBeans
+# Intellij
+.idea/
+*.iml
+*.iws
 
 # Class Files #
 *.class
@@ -42,8 +32,7 @@ nb-configuration.xml
 *.ear
 
 # Maven #
-target/
-!.mvn/wrapper/maven-wrapper.jar
+target
 
 # Subversion files
 .svn
@@ -57,6 +46,7 @@ $RECYCLE.BIN/
 # Linux
 .*
 !.gitignore
+!.editorconfig
 *~
 
 # Mac OS X
