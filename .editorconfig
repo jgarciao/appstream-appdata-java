@@ -1,0 +1,20 @@
+# top-most EditorConfig file
+root = true
+
+[*]
+charset=utf-8
+end_of_line=lf
+insert_final_newline=false
+indent_style=space
+indent_size=2
+
+[{*.gy,*.gant,*.groovy,*.gradle,*.gdsl}]
+indent_style=space
+indent_size=4
+
+[{*.yml,*.yaml}]
+indent_style=space
+indent_size=2
+
+[*.properties]
+charset = latin1
