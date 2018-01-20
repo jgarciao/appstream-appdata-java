@@ -1,184 +1,241 @@
 package org.freedesktop.appstream;
 
-import org.freedesktop.appstream.appdata.*;
-
-import javax.xml.bind.JAXBElement;
 import java.io.Serializable;
 import java.util.List;
+import javax.xml.bind.JAXBElement;
+import org.freedesktop.appstream.appdata.Component;
+import org.freedesktop.appstream.appdata.Description;
+import org.freedesktop.appstream.appdata.Icon;
+import org.freedesktop.appstream.appdata.Name;
+import org.freedesktop.appstream.appdata.Ol;
+import org.freedesktop.appstream.appdata.Summary;
+import org.freedesktop.appstream.appdata.Ul;
 
 /**
  * Created by jorge on 01/05/17.
  */
 public class AppdataComponent extends Component {
 
-    public AppdataComponent() {
-        super();
+  private static final String ICON_TYPE_CACHED = "cached";
+  private static final String ICON_TYPE_REMOTE = "remote";
+
+  public AppdataComponent() {
+    super();
+  }
+
+  public AppdataComponent(Component parentComponent) {
+    super();
+    this.id = parentComponent.getId();
+    this.translation = parentComponent.getTranslation();
+    this.name = parentComponent.getName();
+    this.summary = parentComponent.getSummary();
+    this.description = parentComponent.getDescription();
+    this.icon = parentComponent.getIcon();
+    this.categories = parentComponent.getCategories();
+    this.keywords = parentComponent.getKeywords();
+    this.kudos = parentComponent.getKudos();
+    this.projectLicense = parentComponent.getProjectLicense();
+    this.url = parentComponent.getUrl();
+    this.projectGroup = parentComponent.getProjectGroup();
+    this.compulsoryForDesktop = parentComponent.getCompulsoryForDesktop();
+    this.screenshots = parentComponent.getScreenshots();
+    this.languages = parentComponent.getLanguages();
+    this.bundle = parentComponent.getBundle();
+    this.type = parentComponent.getType();
+  }
+
+  private static String getObjectListAsString(List<Object> objectList) {
+
+    String contents = "";
+
+    for (Object obj : objectList) {
+      contents = contents + getObjectAsString(obj);
     }
 
-    public AppdataComponent(Component parentComponent) {
-        super();
-        this.id = parentComponent.getId();
-        this.translation = parentComponent.getTranslation();
-        this.name = parentComponent.getName();
-        this.summary = parentComponent.getSummary();
-        this.description = parentComponent.getDescription();
-        this.icon = parentComponent.getIcon();
-        this.categories = parentComponent.getCategories();
-        this.keywords = parentComponent.getKeywords();
-        this.kudos = parentComponent.getKudos();
-        this.projectLicense = parentComponent.getProjectLicense();
-        this.url = parentComponent.getUrl();
-        this.projectGroup = parentComponent.getProjectGroup();
-        this.compulsoryForDesktop = parentComponent.getCompulsoryForDesktop();
-        this.screenshots = parentComponent.getScreenshots();
-        this.languages = parentComponent.getLanguages();
-        this.bundle = parentComponent.getBundle();
-        this.type = parentComponent.getType();
+    return contents;
+  }
+
+  private static String getSerializableObjectListAsString(List<Serializable> objectList) {
+
+    String contents = "";
+
+    for (Object obj : objectList) {
+      contents = contents + getObjectAsString(obj);
     }
 
-    public String getFlatpakId() {
+    return contents;
+  }
 
-        //TODO: check component.getBundle().getType.equals("flatpak")
+  private static String getObjectAsString(Object obj) {
 
-        String[] idArray;
-        String flatpakID = "";
+    String contents = "";
 
-        if (this.getBundle() != null && this.getBundle().getValue() != null) {
-            idArray = this.getBundle().getValue().split("/");
-
-            if (idArray.length == 4 && idArray[1] != null) {
-                flatpakID = idArray[1];
-            }
-        }
-
-        return flatpakID;
+    if (obj instanceof JAXBElement) {
+      contents = contents + AppdataComponent.getJAXBElementAsString((JAXBElement) obj);
+    } else if (obj instanceof Ul) {
+      contents = contents + AppdataComponent.getUlAsString((Ul) obj);
+    } else if (obj instanceof Ol) {
+      contents = contents + AppdataComponent.getOlAsString((Ol) obj);
     }
 
-    public String getFlatpakRuntime() {
+    return contents;
+  }
 
-        return this.getBundle().getRuntime();
+  private static String getJAXBElementAsString(JAXBElement element) {
+    String contents = "<" + element.getName() + ">";
+    contents = contents + element.getValue();
+    contents = contents + "</" + element.getName() + ">" + "\n";
+    return contents;
+  }
+
+  private static String getUlAsString(Ul element) {
+    return "<ul>" + "\n" + getSerializableObjectListAsString(element.getContent()) + "</ul>" + "\n";
+  }
+
+  private static String getOlAsString(Ol element) {
+
+    return "<ol>" + "\n" + getSerializableObjectListAsString(element.getContent()) + "</ol>" + "\n";
+  }
+
+  public String getFlatpakId() {
+
+    //TODO: check component.getBundle().getType.equals("flatpak")
+
+    String[] idArray;
+    String flatpakID = "";
+
+    if (this.getBundle() != null && this.getBundle().getValue() != null) {
+      idArray = this.getBundle().getValue().split("/");
+
+      if (idArray.length == 4 && idArray[1] != null) {
+        flatpakID = idArray[1];
+      }
     }
 
-    public String getFlatpakSdk() {
+    return flatpakID;
+  }
 
-        return this.getBundle().getSdk();
+  public String getFlatpakRuntime() {
+
+    return this.getBundle().getRuntime();
+  }
+
+  public String getFlatpakSdk() {
+
+    return this.getBundle().getSdk();
+  }
+
+  public String findDefaultName() {
+
+    for (Name name : this.getName()) {
+      if (name.getLang() == null) {
+        return name.getValue();
+      }
     }
 
+    return "";
+  }
 
-    public String findDefaultName() {
+  public String findNameByLang(String lang) {
 
-        for (Name name : this.getName()) {
-            if (name.getLang() == null) return name.getValue();
-        }
-
-        return "";
+    for (Name name : this.getName()) {
+      if (lang.equalsIgnoreCase(name.getLang())) {
+        return name.getValue();
+      }
     }
 
-    public String findNameByLang(String lang) {
+    return "";
+  }
 
-        for (Name name : this.getName()) {
-            if (lang.equalsIgnoreCase(name.getLang())) return name.getValue();
-        }
+  public String findDefaultSummary() {
 
-        return "";
+    for (Summary summary : this.getSummary()) {
+      if (summary.getLang() == null) {
+        return summary.getValue();
+      }
     }
 
-    public String findDefaultSummary() {
+    return "";
 
-        for (Summary summary : this.getSummary()) {
-            if (summary.getLang() == null) return summary.getValue();
-        }
+  }
 
-        return "";
+  public String findSummaryByLang(String lang) {
 
+    for (Summary summary : this.getSummary()) {
+      if (lang.equalsIgnoreCase(summary.getLang())) {
+        return summary.getValue();
+      }
     }
 
-    public String findSummaryByLang(String lang) {
+    return "";
+  }
 
-        for (Summary summary : this.getSummary()) {
-            if (lang.equalsIgnoreCase(summary.getLang())) return summary.getValue();
-        }
+  public String findDefaultDescription() {
 
-        return "";
+    for (Description description : this.getDescription()) {
+      if (description.getLang() == null) {
+        return getObjectListAsString(description.getContent());
+      }
     }
 
-    public String findDefaultDescription() {
+    return "";
 
-        for (Description description : this.getDescription()) {
-            if (description.getLang() == null) return getObjectListAsString(description.getContent());
-        }
+  }
 
-        return "";
+  public String findDescriptionByLang(String lang) {
 
+    for (Description description : this.getDescription()) {
+      if (lang.equalsIgnoreCase(description.getLang())) {
+        return getObjectListAsString(description.getContent());
+      }
     }
 
-    public String findDescriptionByLang(String lang) {
+    return "";
 
-        for (Description description : this.getDescription()) {
-            if (lang.equalsIgnoreCase(description.getLang())) return getObjectListAsString(description.getContent());
-        }
+  }
 
-        return "";
+  public Icon findIconByHeight(String height) {
 
+    for (Icon icon : this.getIcon()) {
+      if (height.equalsIgnoreCase(icon.getHeight())) {
+        return icon;
+      }
+    }
+    return null;
+  }
+
+  public Icon findIconWhereTypeIsRemote() {
+
+    for (Icon icon : this.getIcon()) {
+      if (ICON_TYPE_REMOTE.equalsIgnoreCase(icon.getType())) {
+        return icon;
+      }
+    }
+    return null;
+  }
+
+  public String findIconUrl(String iconBaseRelativePath, String height) {
+
+    String url = "";
+
+    Icon icon = this.findIconByHeight(height);
+    if (icon != null && icon.getValue() != null) {
+
+      if (ICON_TYPE_CACHED.equalsIgnoreCase(icon.getType())) {
+
+        url = iconBaseRelativePath + height + "x" + height + "/" + icon.getValue();
+      } else if (ICON_TYPE_REMOTE.equalsIgnoreCase(icon.getType())) {
+        url = icon.getValue();
+      }
+    } else {
+      icon = this.findIconWhereTypeIsRemote();
+      if (icon != null && icon.getValue() != null) {
+        url = icon.getValue();
+      }
     }
 
-
-    private static String getObjectListAsString(List<Object> objectList) {
-
-        String contents = "";
-
-        for (Object obj : objectList) {
-            contents = contents + getObjectAsString(obj);
-        }
-
-        return contents;
-    }
-
-    private static String getSerializableObjectListAsString(List<Serializable> objectList) {
-
-        String contents = "";
-
-        for (Object obj : objectList) {
-            contents = contents + getObjectAsString(obj);
-        }
-
-        return contents;
-    }
-
-
-    private static String getObjectAsString(Object obj) {
-
-        String contents = "";
-
-        if (obj instanceof JAXBElement) {
-            contents = contents + AppdataComponent.getJAXBElementAsString((JAXBElement) obj);
-        } else if (obj instanceof Ul) {
-            contents = contents + AppdataComponent.getUlAsString((Ul) obj);
-        } else if (obj instanceof Ol) {
-            contents = contents + AppdataComponent.getOlAsString((Ol) obj);
-        }
-
-
-        return contents;
-    }
-
-
-    private static String getJAXBElementAsString(JAXBElement element) {
-        String contents = "<" + element.getName() + ">";
-        contents = contents + element.getValue();
-        contents = contents + "</" + element.getName() + ">" + "\n";
-        return contents;
-    }
-
-    private static String getUlAsString(Ul element) {
-        return "<ul>" + "\n" + getSerializableObjectListAsString(element.getContent()) + "</ul>" + "\n";
-    }
-
-
-    private static String getOlAsString(Ol element) {
-
-        return "<ol>" + "\n" + getSerializableObjectListAsString(element.getContent()) + "</ol>" + "\n";
-    }
+    return url;
+  }
 
 
 }
