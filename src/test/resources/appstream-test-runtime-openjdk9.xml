@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="flatpak">
+  <component type="runtime">
+    <id>org.freedesktop.Sdk.Extension.openjdk9</id>
+    <name>OpenJdk 9 Sdk extension</name>
+    <summary>OpenJdk 9 Sdk extension</summary>
+    <description><p>This SDK extension allows you to build java apps.</p></description>
+    <bundle type="flatpak" runtime="org.freedesktop.Sdk/x86_64/1.6" sdk="org.freedesktop.Sdk/x86_64/1.6">runtime/org.freedesktop.Sdk.Extension.openjdk9/x86_64/1.6</bundle>
+  </component>
+</components>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="flatpak">
+  <component type="runtime">
+    <id>org.gtk.Gtk3theme.Adapta</id>
+    <name>Adapta Gtk+ theme</name>
+    <summary>Adapta Gtk+ theme</summary>
+    <description><p>An adaptive Gtk+ theme based on Material Design</p></description>
+    <url type="homepage">https://github.com/adapta-project/adapta-gtk-theme</url>
+    <bundle type="flatpak" runtime="org.gnome.Sdk/x86_64/3.26" sdk="org.gnome.Sdk/x86_64/3.26">runtime/org.gtk.Gtk3theme.Adapta/x86_64/3.22</bundle>
+  </component>
+</components>

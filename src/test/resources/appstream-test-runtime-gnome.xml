@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="flatpak">
+  <component type="runtime">
+    <id>org.gnome.Platform</id>
+    <name>GNOME Application Platform version 3.26</name>
+    <summary>Shared libraries used by GNOME applications</summary>
+    <project_license>GPL-2.0+</project_license>
+    <url type="homepage">http://www.gnome.org/</url>
+    <project_group>GNOME</project_group>
+    <bundle type="flatpak" runtime="org.gnome.Platform/x86_64/3.26" sdk="org.gnome.Sdk/x86_64/3.26">runtime/org.gnome.Platform/x86_64/3.26</bundle>
+  </component>
+</components>

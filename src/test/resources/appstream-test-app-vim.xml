@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="flatpak">
+  <component type="desktop">
+    <id>org.vim.Vim.desktop</id>
+    <name>Vim</name>
+    <summary>Edit text files</summary>
+    <summary xml:lang="af">Redigeer tekslêers</summary>
+    <summary xml:lang="am">የጽሑፍ ፋይሎች ያስተካክሉ</summary>
+    <summary xml:lang="ar">حرّر ملفات نصية</summary>
+    <summary xml:lang="az">Mətn fayllarını redaktə edin</summary>
+    <summary xml:lang="be">Рэдагаваньне тэкставых файлаў</summary>
+    <summary xml:lang="bg">Редактиране на текстови файлове</summary>
+    <summary xml:lang="bn">টেক্স্ট ফাইল এডিট করুন</summary>
+    <summary xml:lang="bs">Izmijeni tekstualne datoteke</summary>
+    <summary xml:lang="ca">Edita fitxers de text</summary>
+    <summary xml:lang="cs">Úprava textových souborů</summary>
+    <summary xml:lang="cy">Golygu ffeiliau testun</summary>
+    <summary xml:lang="da">Redigér tekstfiler</summary>
+    <summary xml:lang="de">Textdateien bearbeiten</summary>
+    <summary xml:lang="el">Επεξεργασία αρχείων κειμένου</summary>
+    <summary xml:lang="es">Edita archivos de texto</summary>
+    <summary xml:lang="et">Redigeeri tekstifaile</summary>
+    <summary xml:lang="eu">Editatu testu-fitxategiak</summary>
+    <summary xml:lang="fa">ویرایش پرونده‌های متنی</summary>
+    <summary xml:lang="fi">Muokkaa tekstitiedostoja</summary>
+    <summary xml:lang="fr">Édite des fichiers texte</summary>
+    <summary xml:lang="ga">Eagar comhad Téacs</summary>
+    <summary xml:lang="gu">લખાણ ફાઇલોમાં ફેરફાર કરો</summary>
+    <summary xml:lang="he">ערוך קבצי טקסט</summary>
+    <summary xml:lang="hi">पाठ फ़ाइलें संपादित करें</summary>
+    <summary xml:lang="hr">Uređivanje tekstualne datoteke</summary>
+    <summary xml:lang="hu">Szövegfájlok szerkesztése</summary>
+    <summary xml:lang="id">Edit file teks</summary>
+    <summary xml:lang="it">Modifica file di testo</summary>
+    <summary xml:lang="ja">テキストファイルを編集します</summary>
+    <summary xml:lang="kn">ಪಠ್ಯ ಕಡತಗಳನ್ನು ಸಂಪಾದಿಸು</summary>
+    <summary xml:lang="ko">텍스트 파일을 편집합니다</summary>
+    <summary xml:lang="lt">Redaguoti tekstines bylas</summary>
+    <summary xml:lang="lv">Rediģēt teksta failus</summary>
+    <summary xml:lang="mk">Уреди текстуални фајлови</summary>
+    <summary xml:lang="ml">വാചക രചനകള് തിരുത്തുക</summary>
+    <summary xml:lang="mn">Текст файл боловсруулах</summary>
+    <summary xml:lang="mr">गद्य फाइल संपादित करा</summary>
+    <summary xml:lang="ms">Edit fail teks</summary>
+    <summary xml:lang="nb">Rediger tekstfiler</summary>
+    <summary xml:lang="ne">पाठ फाइललाई संशोधन गर्नुहोस्</summary>
+    <summary xml:lang="nl">Tekstbestanden bewerken</summary>
+    <summary xml:lang="nn">Rediger tekstfiler</summary>
+    <summary xml:lang="no">Rediger tekstfiler</summary>
+    <summary xml:lang="or">ପାଠ୍ଯ ଫାଇଲଗୁଡ଼ିକୁ ସମ୍ପାଦନ କରନ୍ତୁ</summary>
+    <summary xml:lang="pa">ਪਾਠ ਫਾਇਲਾਂ ਸੰਪਾਦਨ</summary>
+    <summary xml:lang="pl">Edytor plików tekstowych</summary>
+    <summary xml:lang="pt">Editar ficheiros de texto</summary>
+    <summary xml:lang="pt_BR">Edite arquivos de texto</summary>
+    <summary xml:lang="ro">Editare fişiere text</summary>
+    <summary xml:lang="ru">Редактор текстовых файлов</summary>
+    <summary xml:lang="sk">Úprava textových súborov</summary>
+    <summary xml:lang="sl">Urejanje datotek z besedili</summary>
+    <summary xml:lang="sq">Përpuno files teksti</summary>
+    <summary xml:lang="sr">Измени текстуалне датотеке</summary>
+    <summary xml:lang="sr@Latn">Izmeni tekstualne datoteke</summary>
+    <summary xml:lang="sv">Redigera textfiler</summary>
+    <summary xml:lang="ta">உரை கோப்புகளை தொகுக்கவும்</summary>
+    <summary xml:lang="th">แก้ไขแฟ้มข้อความ</summary>
+    <summary xml:lang="tk">Metin faýllary editle</summary>
+    <summary xml:lang="tr">Metin dosyalarını düzenle</summary>
+    <summary xml:lang="uk">Редактор текстових файлів</summary>
+    <summary xml:lang="vi">Soạn thảo tập tin văn bản</summary>
+    <summary xml:lang="wa">Asspougnî des fitchîs tecses</summary>
+    <summary xml:lang="zh_CN">编辑文本文件</summary>
+    <summary xml:lang="zh_TW">編輯文字檔</summary>
+    <description><p>Vim is an advanced text editor that seeks to provide the power of the de-facto Unix editor &apos;Vi&apos;, with a more complete feature set. It&apos;s useful whether you&apos;re already using vi or using a different editor.</p><p>Vim is a highly configurable text editor built to enable efficient text editing. Vim is often called a &quot;programmer&apos;s editor,&quot; and so useful for programming that many consider it an entire IDE. It is not just for programmers, though. Vim is perfect for all kinds of text editing, from composing email to editing configuration files.</p></description>
+    <icon type="cached" height="128" width="128">org.vim.Vim.png</icon>
+    <icon type="cached" height="64" width="64">org.vim.Vim.png</icon>
+    <categories>
+      <category>TextEditor</category>
+      <category>Utility</category>
+    </categories>
+    <keywords>
+      <keyword>Text</keyword>
+      <keyword>editor</keyword>
+    </keywords>
+    <kudos>
+      <kudo>HiDpiIcon</kudo>
+    </kudos>
+    <mimetypes>
+      <mimetype>application/x-shellscript</mimetype>
+      <mimetype>text/english</mimetype>
+      <mimetype>text/plain</mimetype>
+      <mimetype>text/x-c</mimetype>
+      <mimetype>text/x-c++</mimetype>
+      <mimetype>text/x-c++hdr</mimetype>
+      <mimetype>text/x-c++src</mimetype>
+      <mimetype>text/x-chdr</mimetype>
+      <mimetype>text/x-csrc</mimetype>
+      <mimetype>text/x-java</mimetype>
+      <mimetype>text/x-makefile</mimetype>
+      <mimetype>text/x-moc</mimetype>
+      <mimetype>text/x-pascal</mimetype>
+      <mimetype>text/x-tcl</mimetype>
+      <mimetype>text/x-tex</mimetype>
+    </mimetypes>
+    <project_license>Vim</project_license>
+    <url type="homepage">http://www.vim.org/</url>
+    <screenshots>
+      <screenshot type="default">
+        <image type="source">https://raw.githubusercontent.com/zdohnal/vim/zdohnal-screenshot/gvim16_9.png</image>
+        <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/org.vim.Vim-stable/624x351/org.vim.Vim-b8bde54ac7d233817a6d3ef72792e564.png</image>
+        <image type="thumbnail" height="63" width="112">https://flathub.org/repo/screenshots/org.vim.Vim-stable/112x63/org.vim.Vim-b8bde54ac7d233817a6d3ef72792e564.png</image>
+        <image type="thumbnail" height="126" width="224">https://flathub.org/repo/screenshots/org.vim.Vim-stable/224x126/org.vim.Vim-b8bde54ac7d233817a6d3ef72792e564.png</image>
+        <image type="thumbnail" height="423" width="752">https://flathub.org/repo/screenshots/org.vim.Vim-stable/752x423/org.vim.Vim-b8bde54ac7d233817a6d3ef72792e564.png</image>
+      </screenshot>
+    </screenshots>
+    <content_rating type="oars-1.1">
+      <content_attribute id="violence-cartoon">none</content_attribute>
+      <content_attribute id="violence-fantasy">none</content_attribute>
+      <content_attribute id="violence-realistic">none</content_attribute>
+      <content_attribute id="violence-bloodshed">none</content_attribute>
+      <content_attribute id="violence-sexual">none</content_attribute>
+      <content_attribute id="violence-desecration">none</content_attribute>
+      <content_attribute id="violence-slavery">none</content_attribute>
+      <content_attribute id="violence-worship">none</content_attribute>
+      <content_attribute id="drugs-alcohol">none</content_attribute>
+      <content_attribute id="drugs-narcotics">none</content_attribute>
+      <content_attribute id="drugs-tobacco">none</content_attribute>
+      <content_attribute id="sex-nudity">none</content_attribute>
+      <content_attribute id="sex-themes">none</content_attribute>
+      <content_attribute id="sex-homosexuality">none</content_attribute>
+      <content_attribute id="sex-prostitution">none</content_attribute>
+      <content_attribute id="sex-adultery">none</content_attribute>
+      <content_attribute id="sex-appearance">none</content_attribute>
+      <content_attribute id="language-profanity">none</content_attribute>
+      <content_attribute id="language-humor">none</content_attribute>
+      <content_attribute id="language-discrimination">none</content_attribute>
+      <content_attribute id="social-chat">none</content_attribute>
+      <content_attribute id="social-info">none</content_attribute>
+      <content_attribute id="social-audio">none</content_attribute>
+      <content_attribute id="social-location">none</content_attribute>
+      <content_attribute id="social-contacts">none</content_attribute>
+      <content_attribute id="money-purchasing">none</content_attribute>
+      <content_attribute id="money-gambling">none</content_attribute>
+    </content_rating>
+    <content_rating type="oars-1.1">
+      <content_attribute id="violence-cartoon">none</content_attribute>
+      <content_attribute id="violence-fantasy">none</content_attribute>
+      <content_attribute id="violence-realistic">none</content_attribute>
+      <content_attribute id="violence-bloodshed">none</content_attribute>
+      <content_attribute id="violence-sexual">none</content_attribute>
+      <content_attribute id="violence-desecration">none</content_attribute>
+      <content_attribute id="violence-slavery">none</content_attribute>
+      <content_attribute id="violence-worship">none</content_attribute>
+      <content_attribute id="drugs-alcohol">none</content_attribute>
+      <content_attribute id="drugs-narcotics">none</content_attribute>
+      <content_attribute id="drugs-tobacco">none</content_attribute>
+      <content_attribute id="sex-nudity">none</content_attribute>
+      <content_attribute id="sex-themes">none</content_attribute>
+      <content_attribute id="sex-homosexuality">none</content_attribute>
+      <content_attribute id="sex-prostitution">none</content_attribute>
+      <content_attribute id="sex-adultery">none</content_attribute>
+      <content_attribute id="sex-appearance">none</content_attribute>
+      <content_attribute id="language-profanity">none</content_attribute>
+      <content_attribute id="language-humor">none</content_attribute>
+      <content_attribute id="language-discrimination">none</content_attribute>
+      <content_attribute id="social-chat">none</content_attribute>
+      <content_attribute id="social-info">none</content_attribute>
+      <content_attribute id="social-audio">none</content_attribute>
+      <content_attribute id="social-location">none</content_attribute>
+      <content_attribute id="social-contacts">none</content_attribute>
+      <content_attribute id="money-purchasing">none</content_attribute>
+      <content_attribute id="money-gambling">none</content_attribute>
+    </content_rating>
+    <releases>
+      <release timestamp="1517184000" version="v8.0.1433"/>
+    </releases>
+    <bundle type="flatpak" runtime="org.freedesktop.Platform/x86_64/1.6" sdk="org.freedesktop.Sdk/x86_64/1.6">app/org.vim.Vim/x86_64/stable</bundle>
+  </component>
+</components>

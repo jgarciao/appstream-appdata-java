@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="flatpak">
+  <component type="desktop">
+    <id>io.lbry.lbry-app.desktop</id>
+    <name>LBRY</name>
+    <summary>A browser and wallet for LBRY, the decentralized, user-controlled content marketplace.</summary>
+    <description><p>LBRY is a free, open, and community-run digital marketplace.</p><p>You own your data. You control the network. Indeed, you are the network.</p><p>Hollywood films, college lessons, amazing streamers and more are on the first media network ruled by you.</p></description>
+    <icon type="cached" height="128" width="128">io.lbry.lbry-app.png</icon>
+    <icon type="cached" height="64" width="64">io.lbry.lbry-app.png</icon>
+    <categories>
+      <category>AudioVideo</category>
+      <category>Video</category>
+    </categories>
+    <kudos>
+      <kudo>HiDpiIcon</kudo>
+    </kudos>
+    <mimetypes>
+      <mimetype>x-scheme-handler/lbry</mimetype>
+    </mimetypes>
+    <project_license>MIT</project_license>
+    <url type="bugtracker">https://github.com/lbryio/lbry-app/issues</url>
+    <url type="homepage">https://lbry.io/</url>
+    <screenshots>
+      <screenshot type="default">
+        <image type="source">https://raw.githubusercontent.com/flathub/io.lbry.lbry-app/master/screenshots/a.png</image>
+        <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/624x351/io.lbry.lbry-app-21533f305ef79994d2c3a678b3e6cd60.png</image>
+        <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/1248x702/io.lbry.lbry-app-21533f305ef79994d2c3a678b3e6cd60.png</image>
+        <image type="thumbnail" height="63" width="112">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/112x63/io.lbry.lbry-app-21533f305ef79994d2c3a678b3e6cd60.png</image>
+        <image type="thumbnail" height="126" width="224">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/224x126/io.lbry.lbry-app-21533f305ef79994d2c3a678b3e6cd60.png</image>
+        <image type="thumbnail" height="423" width="752">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/752x423/io.lbry.lbry-app-21533f305ef79994d2c3a678b3e6cd60.png</image>
+        <image type="thumbnail" height="846" width="1504">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/1504x846/io.lbry.lbry-app-21533f305ef79994d2c3a678b3e6cd60.png</image>
+      </screenshot>
+      <screenshot>
+        <image type="source">https://raw.githubusercontent.com/flathub/io.lbry.lbry-app/master/screenshots/c.png</image>
+        <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/624x351/io.lbry.lbry-app-4f75bb6d25d618d4501f35c4f1893acc.png</image>
+        <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/1248x702/io.lbry.lbry-app-4f75bb6d25d618d4501f35c4f1893acc.png</image>
+        <image type="thumbnail" height="63" width="112">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/112x63/io.lbry.lbry-app-4f75bb6d25d618d4501f35c4f1893acc.png</image>
+        <image type="thumbnail" height="126" width="224">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/224x126/io.lbry.lbry-app-4f75bb6d25d618d4501f35c4f1893acc.png</image>
+        <image type="thumbnail" height="423" width="752">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/752x423/io.lbry.lbry-app-4f75bb6d25d618d4501f35c4f1893acc.png</image>
+        <image type="thumbnail" height="846" width="1504">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/1504x846/io.lbry.lbry-app-4f75bb6d25d618d4501f35c4f1893acc.png</image>
+      </screenshot>
+      <screenshot>
+        <image type="source">https://raw.githubusercontent.com/flathub/io.lbry.lbry-app/master/screenshots/d.png</image>
+        <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/624x351/io.lbry.lbry-app-8b8a4039e0c8a74dacc939ee143b0154.png</image>
+        <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/1248x702/io.lbry.lbry-app-8b8a4039e0c8a74dacc939ee143b0154.png</image>
+        <image type="thumbnail" height="63" width="112">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/112x63/io.lbry.lbry-app-8b8a4039e0c8a74dacc939ee143b0154.png</image>
+        <image type="thumbnail" height="126" width="224">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/224x126/io.lbry.lbry-app-8b8a4039e0c8a74dacc939ee143b0154.png</image>
+        <image type="thumbnail" height="423" width="752">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/752x423/io.lbry.lbry-app-8b8a4039e0c8a74dacc939ee143b0154.png</image>
+        <image type="thumbnail" height="846" width="1504">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/1504x846/io.lbry.lbry-app-8b8a4039e0c8a74dacc939ee143b0154.png</image>
+      </screenshot>
+      <screenshot>
+        <image type="source">https://raw.githubusercontent.com/flathub/io.lbry.lbry-app/master/screenshots/e.png</image>
+        <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/624x351/io.lbry.lbry-app-06b7f500e672850f17fbd994d394e2a2.png</image>
+        <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/1248x702/io.lbry.lbry-app-06b7f500e672850f17fbd994d394e2a2.png</image>
+        <image type="thumbnail" height="63" width="112">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/112x63/io.lbry.lbry-app-06b7f500e672850f17fbd994d394e2a2.png</image>
+        <image type="thumbnail" height="126" width="224">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/224x126/io.lbry.lbry-app-06b7f500e672850f17fbd994d394e2a2.png</image>
+        <image type="thumbnail" height="423" width="752">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/752x423/io.lbry.lbry-app-06b7f500e672850f17fbd994d394e2a2.png</image>
+        <image type="thumbnail" height="846" width="1504">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/1504x846/io.lbry.lbry-app-06b7f500e672850f17fbd994d394e2a2.png</image>
+      </screenshot>
+      <screenshot>
+        <image type="source">https://raw.githubusercontent.com/flathub/io.lbry.lbry-app/master/screenshots/b.png</image>
+        <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/624x351/io.lbry.lbry-app-c4eea68066293772f92264823f9f36b0.png</image>
+        <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/1248x702/io.lbry.lbry-app-c4eea68066293772f92264823f9f36b0.png</image>
+        <image type="thumbnail" height="63" width="112">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/112x63/io.lbry.lbry-app-c4eea68066293772f92264823f9f36b0.png</image>
+        <image type="thumbnail" height="126" width="224">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/224x126/io.lbry.lbry-app-c4eea68066293772f92264823f9f36b0.png</image>
+        <image type="thumbnail" height="423" width="752">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/752x423/io.lbry.lbry-app-c4eea68066293772f92264823f9f36b0.png</image>
+        <image type="thumbnail" height="846" width="1504">https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/1504x846/io.lbry.lbry-app-c4eea68066293772f92264823f9f36b0.png</image>
+      </screenshot>
+    </screenshots>
+    <content_rating type="oars-1.1">
+      <content_attribute id="violence-cartoon">none</content_attribute>
+      <content_attribute id="violence-fantasy">none</content_attribute>
+      <content_attribute id="violence-realistic">none</content_attribute>
+      <content_attribute id="violence-bloodshed">none</content_attribute>
+      <content_attribute id="violence-sexual">none</content_attribute>
+      <content_attribute id="violence-desecration">none</content_attribute>
+      <content_attribute id="violence-slavery">none</content_attribute>
+      <content_attribute id="violence-worship">none</content_attribute>
+      <content_attribute id="drugs-alcohol">none</content_attribute>
+      <content_attribute id="drugs-narcotics">none</content_attribute>
+      <content_attribute id="drugs-tobacco">none</content_attribute>
+      <content_attribute id="sex-nudity">none</content_attribute>
+      <content_attribute id="sex-themes">none</content_attribute>
+      <content_attribute id="sex-homosexuality">none</content_attribute>
+      <content_attribute id="sex-prostitution">none</content_attribute>
+      <content_attribute id="sex-adultery">none</content_attribute>
+      <content_attribute id="sex-appearance">none</content_attribute>
+      <content_attribute id="language-profanity">none</content_attribute>
+      <content_attribute id="language-humor">none</content_attribute>
+      <content_attribute id="language-discrimination">none</content_attribute>
+      <content_attribute id="social-chat">none</content_attribute>
+      <content_attribute id="social-info">mild</content_attribute>
+      <content_attribute id="social-audio">intense</content_attribute>
+      <content_attribute id="social-location">none</content_attribute>
+      <content_attribute id="social-contacts">none</content_attribute>
+      <content_attribute id="money-purchasing">mild</content_attribute>
+      <content_attribute id="money-gambling">none</content_attribute>
+    </content_rating>
+    <content_rating type="oars-1.1">
+      <content_attribute id="violence-cartoon">none</content_attribute>
+      <content_attribute id="violence-fantasy">none</content_attribute>
+      <content_attribute id="violence-realistic">none</content_attribute>
+      <content_attribute id="violence-bloodshed">none</content_attribute>
+      <content_attribute id="violence-sexual">none</content_attribute>
+      <content_attribute id="violence-desecration">none</content_attribute>
+      <content_attribute id="violence-slavery">none</content_attribute>
+      <content_attribute id="violence-worship">none</content_attribute>
+      <content_attribute id="drugs-alcohol">none</content_attribute>
+      <content_attribute id="drugs-narcotics">none</content_attribute>
+      <content_attribute id="drugs-tobacco">none</content_attribute>
+      <content_attribute id="sex-nudity">none</content_attribute>
+      <content_attribute id="sex-themes">none</content_attribute>
+      <content_attribute id="sex-homosexuality">none</content_attribute>
+      <content_attribute id="sex-prostitution">none</content_attribute>
+      <content_attribute id="sex-adultery">none</content_attribute>
+      <content_attribute id="sex-appearance">none</content_attribute>
+      <content_attribute id="language-profanity">none</content_attribute>
+      <content_attribute id="language-humor">none</content_attribute>
+      <content_attribute id="language-discrimination">none</content_attribute>
+      <content_attribute id="social-chat">none</content_attribute>
+      <content_attribute id="social-info">mild</content_attribute>
+      <content_attribute id="social-audio">intense</content_attribute>
+      <content_attribute id="social-location">none</content_attribute>
+      <content_attribute id="social-contacts">none</content_attribute>
+      <content_attribute id="money-purchasing">mild</content_attribute>
+      <content_attribute id="money-gambling">none</content_attribute>
+    </content_rating>
+    <releases>
+      <release timestamp="1517270400" version="0.20.0">
+        <description><p>Added:</p><ul><li>Added Automatic Dark Mode (#950)</li><li>Re-introduce build dir / dist dir option for isolated build environments (#933)</li><li>Added sms as a method for reward identity verification (#946)</li><li>Added auto-update (#808)</li></ul><p>Changed:</p><ul><li>Refactored Electron&apos;s main process (#951)</li><li>Refactored lbryuri.js into separate named exports (#957)</li><li>Upgraded Daemon to version 18.2 (#961)</li><li>Upgraded Electron for security patch (commit)</li></ul><p>Fixed:</p><ul><li>Fixed issues in documentation (#945)</li><li>Fixed linting errors (#929)</li></ul></description>
+      </release>
+      <release timestamp="1515369600" version="0.19.4">
+        <description><p>Added:</p><ul><li>Video state tracking in redux - developer only (#890)</li></ul><p>Changed:</p><ul><li>Improved text content in app (#921)</li></ul><p>Fixed:</p><ul><li>Right click works in the app again (#928)</li><li>Icons are now the rights size (#925)</li><li>Fixed tip sending error (#918)</li></ul></description>
+      </release>
+      <release timestamp="1514592000" version="0.19.3">
+        <description><p>Changed:</p><ul><li>Improved internal code structuring by adding linting integration -- developers only (#891)</li><li>Improved developer documentation (#910)</li></ul><p>Removed:</p><ul><li>Removed email verification reward (#914)</li></ul><p>Fixed:</p><ul><li>Added snackbar text in place where it was coming up blank (#902)</li></ul></description>
+      </release>
+    </releases>
+    <bundle type="flatpak" runtime="org.freedesktop.Platform/x86_64/1.6" sdk="org.freedesktop.Sdk/x86_64/1.6">app/io.lbry.lbry-app/x86_64/stable</bundle>
+  </component>
+</components>
