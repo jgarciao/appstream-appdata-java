@@ -2,6 +2,7 @@ package org.freedesktop.appstream;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Optional;
 import javax.xml.bind.JAXBElement;
 import org.freedesktop.appstream.appdata.Component;
 import org.freedesktop.appstream.appdata.Description;
@@ -10,6 +11,7 @@ import org.freedesktop.appstream.appdata.Name;
 import org.freedesktop.appstream.appdata.Ol;
 import org.freedesktop.appstream.appdata.Summary;
 import org.freedesktop.appstream.appdata.Ul;
+import org.freedesktop.appstream.appdata.Url;
 
 /**
  * Created by jorge on 01/05/17.
@@ -18,6 +20,13 @@ public class AppdataComponent extends Component {
 
   private static final String ICON_TYPE_CACHED = "cached";
   private static final String ICON_TYPE_REMOTE = "remote";
+
+  private static final String URL_TYPE_HOMEPAGE = "homepage";
+  private static final String URL_TYPE_BUGTRACKER = "bugtracker";
+  private static final String URL_TYPE_FAQ = "faq";
+  private static final String URL_TYPE_HELP = "help";
+  private static final String URL_TYPE_DONATION = "donation";
+  private static final String URL_TYPE_TRANSLATE = "translate";
 
   public AppdataComponent() {
     super();
@@ -237,5 +246,40 @@ public class AppdataComponent extends Component {
     return url;
   }
 
+
+  private Optional<String> findUrlByType(String expectedUrlType){
+
+    for (Url url : this.getUrl()) {
+      if (expectedUrlType.equalsIgnoreCase(url.getType())) {
+        return Optional.of(url.getValue());
+      }
+    }
+    return Optional.empty();
+
+  }
+
+  public Optional<String> findHomepageUrl() {
+    return findUrlByType(URL_TYPE_HOMEPAGE);
+  }
+
+  public Optional<String> findBugtrackerUrl() {
+    return findUrlByType(URL_TYPE_BUGTRACKER);
+  }
+
+  public Optional<String> findFaqUrl() {
+    return findUrlByType(URL_TYPE_FAQ);
+  }
+
+  public Optional<String> findHelpUrl() {
+    return findUrlByType(URL_TYPE_HELP);
+  }
+
+  public Optional<String> findDonationUrl() {
+    return findUrlByType(URL_TYPE_DONATION);
+  }
+
+  public Optional<String> findTranslateUrl() {
+    return findUrlByType(URL_TYPE_TRANSLATE);
+  }
 
 }
