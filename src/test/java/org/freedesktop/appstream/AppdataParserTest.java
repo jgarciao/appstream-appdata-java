@@ -14,6 +14,7 @@ public class AppdataParserTest {
   final String ICON_BASE_RELATIVE_PATH = "/repo/appstream/x86_64/icons/";
   final String SCREENSHOT_TYPE_DEFAULT = "default";
   final String IMAGE_TYPE_THUMBNAIL = "thumbnail";
+  final String IMAGE_TYPE_SOURCE = "source";
 
   final ClassLoader classLoader = getClass().getClassLoader();
 
@@ -220,15 +221,29 @@ public class AppdataParserTest {
 
     String EXPECTED_PROJECT_LICENSE = "GPL-3.0+ and GPL-2.0+ and LGPL-3.0+ and LGPL-2.0+ and MIT";
 
-    String EXPECTED_ICONHEIGHT_128 = "128";
+    short EXPECTED_ICONHEIGHT_128 = 128;
     String EXPECTED_ICONURL_128 = "/repo/appstream/x86_64/icons/128x128/org.gnome.Builder.png";
-    String EXPECTED_ICONHEIGHT_64 = "64";
+    short EXPECTED_ICONHEIGHT_64 = 64;
     String EXPECTED_ICONURL_64 = "/repo/appstream/x86_64/icons/64x64/org.gnome.Builder.png";
     int EXPECTED_SCREENSHOT_COUNT = 6;
-    String EXPECTED_SCHEENSHOT_HEIGHT = "846";
-    String EXPECTED_SCREENSHOT_URL = "https://flathub.org/repo/screenshots/org.gnome.Builder-stable/1504x846/org.gnome.Builder-3582853b1ad4a82da236a964983cef7c.png";
+    short EXPECTED_SCHEENSHOT0_HEIGHT = 846;
+    String EXPECTED_SCREENSHOT0_URL = "https://git.gnome.org/browse/gnome-builder/plain/data/appdata/02-template.png";
+    short EXPECTED_SCHEENSHOT1_HEIGHT = 351;
+    String EXPECTED_SCREENSHOT1_URL = "https://flathub.org/repo/screenshots/org.gnome.Builder-stable/624x351/org.gnome.Builder-3582853b1ad4a82da236a964983cef7c.png";
+
     int EXPECTEC_CATEGORY_COUNT = 2;
     String EXPECTED_CATEGORY_FIRST = "Development";
+
+    String EXPECTED_RELEASE_VERSION = "3.26.4";
+    String EXPECTED_RELEASE_DESCRIPTION  = "<p>This new release of Builder contains a number of bug fixes found during the 3.26 cycle. It is recommended that you update.</p>\n"
+      + "<ul>\n"
+      + "<li>Various memory leak improvements.</li>\n"
+      + "<li>Meson plugin no longer uses the legacy \"mesonintrospect\" utility.</li>\n"
+      + "<li>Block selection in the terminal has been restored.</li>\n"
+      + "<li>The flatpak exporter now properly determines the target application binary from the manifest.</li>\n"
+      + "</ul>\n"
+      + "\n";
+    int EXPECTED_RELEASE_TIMESTAMP = 1517356800;
 
     //When
     File file = new File(classLoader.getResource(appDataResourceFile).getFile());
@@ -253,24 +268,34 @@ public class AppdataParserTest {
     assertThat(component.findBugtrackerUrl().get()).isEqualToIgnoringCase(EXPECTED_BUGTRACKER_URL);
 
 
-    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getHeight()).isEqualToIgnoringCase(EXPECTED_ICONHEIGHT_128);
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_128);
     assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getValue()).isNotNull();
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_128)).isEqualToIgnoringCase(EXPECTED_ICONURL_128);
 
-    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getHeight()).isEqualToIgnoringCase(EXPECTED_ICONHEIGHT_64);
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_64);
     assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getValue()).isNotNull();
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64)).isEqualToIgnoringCase(EXPECTED_ICONURL_64);
 
     assertThat(component.getScreenshots().getScreenshot().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(component.getScreenshots().getScreenshot().get(0).getType()).isEqualToIgnoringCase(SCREENSHOT_TYPE_DEFAULT);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getType()).isEqualToIgnoringCase(IMAGE_TYPE_THUMBNAIL);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getHeight()).isEqualToIgnoringCase(EXPECTED_SCHEENSHOT_HEIGHT);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getValue()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT_URL);
+    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().get(0).getType()).isEqualToIgnoringCase(IMAGE_TYPE_SOURCE);
+    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().get(0).getValue()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
+
+    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().get(1).getType()).isEqualToIgnoringCase(IMAGE_TYPE_THUMBNAIL);
+    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().get(1).getHeight()).isEqualTo(EXPECTED_SCHEENSHOT1_HEIGHT);
+    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().get(1).getValue()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT1_URL);
 
 
     assertThat(component.getCategories()).isNotNull();
     assertThat(component.getCategories().getCategory().size()).isEqualTo(EXPECTEC_CATEGORY_COUNT);
     assertThat(component.getCategories().getCategory().get(0)).isEqualToIgnoringCase(EXPECTED_CATEGORY_FIRST);
+
+
+    assertThat(component.findReleaseInfoByMostRecent()).isPresent();
+    assertThat(component.findReleaseInfoByMostRecent().get().getVersion()).isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
+    assertThat(component.findReleaseInfoByMostRecent().get().getTimestamp()).isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
+    assertThat(component.findReleaseInfoByMostRecent().get().getDescription()).isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
+
   }
 
   @Test
@@ -328,13 +353,13 @@ public class AppdataParserTest {
 
     String EXPECTED_PROJECT_LICENSE = "LicenseRef-proprietary";
 
-    String EXPECTED_ICONHEIGHT_128 = "128";
+    short EXPECTED_ICONHEIGHT_128 = 128;
     String EXPECTED_ICONURL_128 = "https://lh3.googleusercontent.com/_4zBNFjA8S9yjNB_ONwqBvxTvyXYdC7Nh1jYZ2x6YEcldBr2fyijdjM2J5EoVdTpnkA=w256";
-    String EXPECTED_ICONHEIGHT_64 = "64";
+    short EXPECTED_ICONHEIGHT_64 = 64;
     String EXPECTED_ICONURL_64 = "https://lh3.googleusercontent.com/_4zBNFjA8S9yjNB_ONwqBvxTvyXYdC7Nh1jYZ2x6YEcldBr2fyijdjM2J5EoVdTpnkA=w256";
     int EXPECTED_SCREENSHOT_COUNT = 2;
     String EXPECTED_SCHEENSHOT_HEIGHT = "423";
-    String EXPECTED_SCREENSHOT_URL = "https://flathub.org/repo/screenshots/com.discordapp.Discord-stable/752x423/com.discordapp.Discord-37a5e4d4631fa5155a87bb08d30da1b0.png";
+    String EXPECTED_SCREENSHOT_URL = "https://support.discordapp.com/hc/en-us/article_attachments/206077828/FLFeathWindow.png";
     int EXPECTEC_CATEGORY_COUNT = 2;
     String EXPECTED_CATEGORY_FIRST = "InstantMessaging";
 
@@ -364,14 +389,17 @@ public class AppdataParserTest {
 
     assertThat(component.getScreenshots().getScreenshot().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(component.getScreenshots().getScreenshot().get(0).getType()).isEqualToIgnoringCase(SCREENSHOT_TYPE_DEFAULT);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getType()).isEqualToIgnoringCase(IMAGE_TYPE_THUMBNAIL);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getHeight()).isEqualToIgnoringCase(EXPECTED_SCHEENSHOT_HEIGHT);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getValue()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT_URL);
+    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().get(0).getType()).isEqualToIgnoringCase(IMAGE_TYPE_SOURCE);
+    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().get(0).getValue()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT_URL);
 
 
     assertThat(component.getCategories()).isNotNull();
     assertThat(component.getCategories().getCategory().size()).isEqualTo(EXPECTEC_CATEGORY_COUNT);
     assertThat(component.getCategories().getCategory().get(0)).isEqualToIgnoringCase(EXPECTED_CATEGORY_FIRST);
+
+
+    assertThat(component.getReleases().getRelease()).isNotNull();
+
   }
 
   @Test
@@ -396,13 +424,13 @@ public class AppdataParserTest {
 
     String EXPECTED_PROJECT_LICENSE = "GPL-2.0+";
 
-    String EXPECTED_ICONHEIGHT_128 = "128";
+    short EXPECTED_ICONHEIGHT_128 = 128;
     String EXPECTED_ICONURL_128 = "/repo/appstream/x86_64/icons/128x128/org.kde.kdenlive.png";
-    String EXPECTED_ICONHEIGHT_64 = "64";
+    short EXPECTED_ICONHEIGHT_64 = 64;
     String EXPECTED_ICONURL_64 = "/repo/appstream/x86_64/icons/64x64/org.kde.kdenlive.png";
     int EXPECTED_SCREENSHOT_COUNT = 1;
     String EXPECTED_SCHEENSHOT_HEIGHT = "423";
-    String EXPECTED_SCREENSHOT_URL = "https://flathub.org/repo/screenshots/org.kde.kdenlive-stable/752x423/org.kde.kdenlive-097e6cd6748a6b371b413b947f956a0e.png";
+    String EXPECTED_SCREENSHOT_URL = "https://kdenlive.org/wp-content/data/kdenlive-screenshot.png";
     int EXPECTEC_CATEGORY_COUNT = 2;
     String EXPECTED_CATEGORY_FIRST = "AudioVideo";
 
@@ -424,19 +452,18 @@ public class AppdataParserTest {
     assertThat(component.findDefaultDescription()).isEqualToIgnoringCase(EXPECTED_DEFAULT_DESCRIPTION);
     assertThat(component.getProjectLicense()).isEqualToIgnoringCase(EXPECTED_PROJECT_LICENSE);
 
-    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getHeight()).isEqualToIgnoringCase(EXPECTED_ICONHEIGHT_128);
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_128);
     assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getValue()).isNotNull();
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_128)).isEqualToIgnoringCase(EXPECTED_ICONURL_128);
 
-    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getHeight()).isEqualToIgnoringCase(EXPECTED_ICONHEIGHT_64);
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_64);
     assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getValue()).isNotNull();
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64)).isEqualToIgnoringCase(EXPECTED_ICONURL_64);
 
     assertThat(component.getScreenshots().getScreenshot().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(component.getScreenshots().getScreenshot().get(0).getType()).isEqualToIgnoringCase(SCREENSHOT_TYPE_DEFAULT);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getType()).isEqualToIgnoringCase(IMAGE_TYPE_THUMBNAIL);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getHeight()).isEqualToIgnoringCase(EXPECTED_SCHEENSHOT_HEIGHT);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getValue()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT_URL);
+    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().get(0).getType()).isEqualToIgnoringCase(IMAGE_TYPE_SOURCE);
+    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().get(0).getValue()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT_URL);
 
 
     assertThat(component.getCategories()).isNotNull();
@@ -460,13 +487,13 @@ public class AppdataParserTest {
 
     String EXPECTED_PROJECT_LICENSE = "Vim";
 
-    String EXPECTED_ICONHEIGHT_128 = "128";
+    short EXPECTED_ICONHEIGHT_128 = 128;
     String EXPECTED_ICONURL_128 = "/repo/appstream/x86_64/icons/128x128/org.vim.Vim.png";
-    String EXPECTED_ICONHEIGHT_64 = "64";
+    short EXPECTED_ICONHEIGHT_64 = 64;
     String EXPECTED_ICONURL_64 = "/repo/appstream/x86_64/icons/64x64/org.vim.Vim.png";
     int EXPECTED_SCREENSHOT_COUNT = 1;
     String EXPECTED_SCHEENSHOT_HEIGHT = "423";
-    String EXPECTED_SCREENSHOT_URL = "https://flathub.org/repo/screenshots/org.vim.Vim-stable/752x423/org.vim.Vim-b8bde54ac7d233817a6d3ef72792e564.png";
+    String EXPECTED_SCREENSHOT_URL = "https://raw.githubusercontent.com/zdohnal/vim/zdohnal-screenshot/gvim16_9.png";
     int EXPECTEC_CATEGORY_COUNT = 2;
     String EXPECTED_CATEGORY_FIRST = "TextEditor";
 
@@ -488,19 +515,18 @@ public class AppdataParserTest {
     assertThat(component.findDefaultDescription()).isEqualToIgnoringCase(EXPECTED_DEFAULT_DESCRIPTION);
     assertThat(component.getProjectLicense()).isEqualToIgnoringCase(EXPECTED_PROJECT_LICENSE);
 
-    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getHeight()).isEqualToIgnoringCase(EXPECTED_ICONHEIGHT_128);
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_128);
     assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getValue()).isNotNull();
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_128)).isEqualToIgnoringCase(EXPECTED_ICONURL_128);
 
-    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getHeight()).isEqualToIgnoringCase(EXPECTED_ICONHEIGHT_64);
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_64);
     assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getValue()).isNotNull();
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64)).isEqualToIgnoringCase(EXPECTED_ICONURL_64);
 
     assertThat(component.getScreenshots().getScreenshot().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(component.getScreenshots().getScreenshot().get(0).getType()).isEqualToIgnoringCase(SCREENSHOT_TYPE_DEFAULT);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getType()).isEqualToIgnoringCase(IMAGE_TYPE_THUMBNAIL);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getHeight()).isEqualToIgnoringCase(EXPECTED_SCHEENSHOT_HEIGHT);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getValue()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT_URL);
+    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().get(0).getType()).isEqualToIgnoringCase(IMAGE_TYPE_SOURCE);
+    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().get(0).getValue()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT_URL);
 
 
     assertThat(component.getCategories()).isNotNull();
@@ -525,13 +551,13 @@ public class AppdataParserTest {
 
     String EXPECTED_PROJECT_LICENSE = "MIT";
 
-    String EXPECTED_ICONHEIGHT_128 = "128";
+    short EXPECTED_ICONHEIGHT_128 = 128;
     String EXPECTED_ICONURL_128 = "/repo/appstream/x86_64/icons/128x128/io.lbry.lbry-app.png";
-    String EXPECTED_ICONHEIGHT_64 = "64";
+    short EXPECTED_ICONHEIGHT_64 = 64;
     String EXPECTED_ICONURL_64 = "/repo/appstream/x86_64/icons/64x64/io.lbry.lbry-app.png";
     int EXPECTED_SCREENSHOT_COUNT = 5;
     String EXPECTED_SCHEENSHOT_HEIGHT = "846";
-    String EXPECTED_SCREENSHOT_URL = "https://flathub.org/repo/screenshots/io.lbry.lbry-app-stable/1504x846/io.lbry.lbry-app-21533f305ef79994d2c3a678b3e6cd60.png";
+    String EXPECTED_SCREENSHOT_URL = "https://raw.githubusercontent.com/flathub/io.lbry.lbry-app/master/screenshots/a.png";
     int EXPECTEC_CATEGORY_COUNT = 2;
     String EXPECTED_CATEGORY_FIRST = "AudioVideo";
 
@@ -553,19 +579,18 @@ public class AppdataParserTest {
     assertThat(component.findDefaultDescription()).isEqualToIgnoringCase(EXPECTED_DEFAULT_DESCRIPTION);
     assertThat(component.getProjectLicense()).isEqualToIgnoringCase(EXPECTED_PROJECT_LICENSE);
 
-    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getHeight()).isEqualToIgnoringCase(EXPECTED_ICONHEIGHT_128);
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_128);
     assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getValue()).isNotNull();
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_128)).isEqualToIgnoringCase(EXPECTED_ICONURL_128);
 
-    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getHeight()).isEqualToIgnoringCase(EXPECTED_ICONHEIGHT_64);
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_64);
     assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getValue()).isNotNull();
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64)).isEqualToIgnoringCase(EXPECTED_ICONURL_64);
 
     assertThat(component.getScreenshots().getScreenshot().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(component.getScreenshots().getScreenshot().get(0).getType()).isEqualToIgnoringCase(SCREENSHOT_TYPE_DEFAULT);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getType()).isEqualToIgnoringCase(IMAGE_TYPE_THUMBNAIL);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getHeight()).isEqualToIgnoringCase(EXPECTED_SCHEENSHOT_HEIGHT);
-    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().getValue()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT_URL);
+    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().get(0).getType()).isEqualToIgnoringCase(IMAGE_TYPE_SOURCE);
+    assertThat(component.getScreenshots().getScreenshot().get(0).getImage().get(0).getValue()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT_URL);
 
 
     assertThat(component.getCategories()).isNotNull();
