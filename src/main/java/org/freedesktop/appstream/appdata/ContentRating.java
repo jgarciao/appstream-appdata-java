@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -25,9 +27,10 @@ import javax.xml.bind.annotation.XmlType;
  * &lt;complexType>
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{}screenshot" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
+ *       &lt;choice maxOccurs="unbounded" minOccurs="0">
+ *         &lt;element ref="{}content_attribute"/>
+ *       &lt;/choice>
+ *       &lt;attribute name="type" type="{http://www.w3.org/2001/XMLSchema}string" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -37,40 +40,67 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "screenshot"
+    "contentAttribute"
 })
-@XmlRootElement(name = "screenshots")
-public class Screenshots {
+@XmlRootElement(name = "content_rating")
+public class ContentRating {
 
-    protected List<Screenshot> screenshot;
+    @XmlElement(name = "content_attribute")
+    protected List<ContentAttribute> contentAttribute;
+    @XmlAttribute(name = "type")
+    protected String type;
 
     /**
-     * Gets the value of the screenshot property.
+     * Gets the value of the contentAttribute property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the screenshot property.
+     * This is why there is not a <CODE>set</CODE> method for the contentAttribute property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getScreenshot().add(newItem);
+     *    getContentAttribute().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Screenshot }
+     * {@link ContentAttribute }
      * 
      * 
      */
-    public List<Screenshot> getScreenshot() {
-        if (screenshot == null) {
-            screenshot = new ArrayList<Screenshot>();
+    public List<ContentAttribute> getContentAttribute() {
+        if (contentAttribute == null) {
+            contentAttribute = new ArrayList<ContentAttribute>();
         }
-        return this.screenshot;
+        return this.contentAttribute;
+    }
+
+    /**
+     * Gets the value of the type property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * Sets the value of the type property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setType(String value) {
+        this.type = value;
     }
 
 }

@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlValue;
  * &lt;complexType>
  *   &lt;simpleContent>
  *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *       &lt;attribute ref="{http://www.w3.org/XML/1998/namespace}lang"/>
+ *       &lt;attribute name="key" type="{http://www.w3.org/2001/XMLSchema}string" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>
@@ -37,13 +37,13 @@ import javax.xml.bind.annotation.XmlValue;
 @XmlType(name = "", propOrder = {
     "value"
 })
-@XmlRootElement(name = "summary")
-public class Summary {
+@XmlRootElement(name = "value")
+public class Value {
 
     @XmlValue
     protected String value;
-    @XmlAttribute(name = "lang", namespace = "http://www.w3.org/XML/1998/namespace")
-    protected String lang;
+    @XmlAttribute(name = "key")
+    protected String key;
 
     /**
      * Gets the value of the value property.
@@ -70,27 +70,27 @@ public class Summary {
     }
 
     /**
-     * Gets the value of the lang property.
+     * Gets the value of the key property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getLang() {
-        return lang;
+    public String getKey() {
+        return key;
     }
 
     /**
-     * Sets the value of the lang property.
+     * Sets the value of the key property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setLang(String value) {
-        this.lang = value;
+    public void setKey(String value) {
+        this.key = value;
     }
 
 }

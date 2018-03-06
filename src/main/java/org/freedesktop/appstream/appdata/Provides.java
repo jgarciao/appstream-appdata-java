@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{}screenshot" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element ref="{}binary" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,40 +37,40 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "screenshot"
+    "binary"
 })
-@XmlRootElement(name = "screenshots")
-public class Screenshots {
+@XmlRootElement(name = "provides")
+public class Provides {
 
-    protected List<Screenshot> screenshot;
+    protected List<String> binary;
 
     /**
-     * Gets the value of the screenshot property.
+     * Gets the value of the binary property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the screenshot property.
+     * This is why there is not a <CODE>set</CODE> method for the binary property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getScreenshot().add(newItem);
+     *    getBinary().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Screenshot }
+     * {@link String }
      * 
      * 
      */
-    public List<Screenshot> getScreenshot() {
-        if (screenshot == null) {
-            screenshot = new ArrayList<Screenshot>();
+    public List<String> getBinary() {
+        if (binary == null) {
+            binary = new ArrayList<String>();
         }
-        return this.screenshot;
+        return this.binary;
     }
 
 }
