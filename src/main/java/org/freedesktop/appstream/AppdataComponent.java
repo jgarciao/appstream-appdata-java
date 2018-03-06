@@ -1,7 +1,6 @@
 package org.freedesktop.appstream;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
@@ -89,12 +88,11 @@ public class AppdataComponent extends Component {
 
     if (obj instanceof JAXBElement) {
       contents = contents + AppdataComponent.getJAXBElementAsString((JAXBElement) obj);
-    }
-    else if (obj instanceof Ul) {
+    } else if (obj instanceof Ul) {
       contents = contents + AppdataComponent.getUlAsString((Ul) obj);
     } else if (obj instanceof Ol) {
       contents = contents + AppdataComponent.getOlAsString((Ol) obj);
-    } 
+    }
 
     return contents;
   }
@@ -105,8 +103,7 @@ public class AppdataComponent extends Component {
 
     if (element.getValue() instanceof String) {
       contents = contents + element.getValue();
-    }
-    else if(element.getValue() instanceof Description){
+    } else if (element.getValue() instanceof Description) {
       contents = contents + getObjectListAsString(((Description) element.getValue()).getContent());
     }
     contents = contents + "</" + element.getName() + ">" + "\n";
@@ -263,7 +260,7 @@ public class AppdataComponent extends Component {
   }
 
 
-  private Optional<String> findUrlByType(String expectedUrlType){
+  private Optional<String> findUrlByType(String expectedUrlType) {
 
     for (Url url : this.getUrl()) {
       if (expectedUrlType.equalsIgnoreCase(url.getType())) {
@@ -274,20 +271,20 @@ public class AppdataComponent extends Component {
 
   }
 
-  public Optional<ReleaseInfo> findReleaseInfoByMostRecent(){
+  public Optional<ReleaseInfo> findReleaseInfoByMostRecent() {
 
-    if(this.releases == null || this.releases.getRelease() == null || this.releases.getRelease().size() == 0){
+    if (this.releases == null || this.releases.getRelease() == null
+      || this.releases.getRelease().size() == 0) {
       return Optional.empty();
     }
 
-    List<Release>  sortedReleases = this.releases.getRelease();
+    List<Release> sortedReleases = this.releases.getRelease();
     sortedReleases.sort(Comparator.comparing(Release::getTimestamp).reversed());
 
     Release release = sortedReleases.get(0);
     String description = getSerializableObjectListAsString(release.getContent());
     description = description.replace("<description>", "");
     description = description.replace("</description>", "");
-
 
     return Optional.of(new ReleaseInfo(release.getVersion(), release.getTimestamp(), description));
 
