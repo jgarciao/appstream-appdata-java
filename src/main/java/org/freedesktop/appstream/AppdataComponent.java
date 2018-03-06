@@ -1,6 +1,8 @@
 package org.freedesktop.appstream;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import javax.xml.bind.JAXBElement;
@@ -9,6 +11,7 @@ import org.freedesktop.appstream.appdata.Description;
 import org.freedesktop.appstream.appdata.Icon;
 import org.freedesktop.appstream.appdata.Name;
 import org.freedesktop.appstream.appdata.Ol;
+import org.freedesktop.appstream.appdata.Release;
 import org.freedesktop.appstream.appdata.Summary;
 import org.freedesktop.appstream.appdata.Ul;
 import org.freedesktop.appstream.appdata.Url;
@@ -38,18 +41,23 @@ public class AppdataComponent extends Component {
     this.translation = parentComponent.getTranslation();
     this.name = parentComponent.getName();
     this.summary = parentComponent.getSummary();
+    this.developerName = parentComponent.getDeveloperName();
     this.description = parentComponent.getDescription();
     this.icon = parentComponent.getIcon();
     this.categories = parentComponent.getCategories();
     this.keywords = parentComponent.getKeywords();
     this.kudos = parentComponent.getKudos();
+    this.mimetypes = parentComponent.getMimetypes();
     this.projectLicense = parentComponent.getProjectLicense();
     this.url = parentComponent.getUrl();
     this.projectGroup = parentComponent.getProjectGroup();
-    this.compulsoryForDesktop = parentComponent.getCompulsoryForDesktop();
     this.screenshots = parentComponent.getScreenshots();
+    this.contentRating = parentComponent.getContentRating();
+    this.releases = parentComponent.getReleases();
     this.languages = parentComponent.getLanguages();
+    this.provides = parentComponent.getProvides();
     this.bundle = parentComponent.getBundle();
+    this.metadata = parentComponent.getMetadata();
     this.type = parentComponent.getType();
   }
 
@@ -81,18 +89,26 @@ public class AppdataComponent extends Component {
 
     if (obj instanceof JAXBElement) {
       contents = contents + AppdataComponent.getJAXBElementAsString((JAXBElement) obj);
-    } else if (obj instanceof Ul) {
+    }
+    else if (obj instanceof Ul) {
       contents = contents + AppdataComponent.getUlAsString((Ul) obj);
     } else if (obj instanceof Ol) {
       contents = contents + AppdataComponent.getOlAsString((Ol) obj);
-    }
+    } 
 
     return contents;
   }
 
   private static String getJAXBElementAsString(JAXBElement element) {
+
     String contents = "<" + element.getName() + ">";
-    contents = contents + element.getValue();
+
+    if (element.getValue() instanceof String) {
+      contents = contents + element.getValue();
+    }
+    else if(element.getValue() instanceof Description){
+      contents = contents + getObjectListAsString(((Description) element.getValue()).getContent());
+    }
     contents = contents + "</" + element.getName() + ">" + "\n";
     return contents;
   }
@@ -102,9 +118,9 @@ public class AppdataComponent extends Component {
   }
 
   private static String getOlAsString(Ol element) {
-
     return "<ol>" + "\n" + getSerializableObjectListAsString(element.getContent()) + "</ol>" + "\n";
   }
+
 
   public String getFlatpakId() {
 
@@ -203,10 +219,10 @@ public class AppdataComponent extends Component {
 
   }
 
-  public Icon findIconByHeight(String height) {
+  public Icon findIconByHeight(short height) {
 
     for (Icon icon : this.getIcon()) {
-      if (height.equalsIgnoreCase(icon.getHeight())) {
+      if (icon.getHeight() != null && height == icon.getHeight()) {
         return icon;
       }
     }
@@ -223,7 +239,7 @@ public class AppdataComponent extends Component {
     return null;
   }
 
-  public String findIconUrl(String iconBaseRelativePath, String height) {
+  public String findIconUrl(String iconBaseRelativePath, short height) {
 
     String url = "";
 
@@ -257,6 +273,26 @@ public class AppdataComponent extends Component {
     return Optional.empty();
 
   }
+
+  public Optional<ReleaseInfo> findReleaseInfoByMostRecent(){
+
+    if(this.releases == null || this.releases.getRelease() == null || this.releases.getRelease().size() == 0){
+      return Optional.empty();
+    }
+
+    List<Release>  sortedReleases = this.releases.getRelease();
+    sortedReleases.sort(Comparator.comparing(Release::getTimestamp).reversed());
+
+    Release release = sortedReleases.get(0);
+    String description = getSerializableObjectListAsString(release.getContent());
+    description = description.replace("<description>", "");
+    description = description.replace("</description>", "");
+
+
+    return Optional.of(new ReleaseInfo(release.getVersion(), release.getTimestamp(), description));
+
+  }
+
 
   public Optional<String> findHomepageUrl() {
     return findUrlByType(URL_TYPE_HOMEPAGE);
