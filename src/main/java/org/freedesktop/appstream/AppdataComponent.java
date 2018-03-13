@@ -1,63 +1,205 @@
 package org.freedesktop.appstream;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import javax.xml.bind.JAXBElement;
+import org.freedesktop.appstream.appdata.Bundle;
+import org.freedesktop.appstream.appdata.Categories;
 import org.freedesktop.appstream.appdata.Component;
+import org.freedesktop.appstream.appdata.ContentRating;
 import org.freedesktop.appstream.appdata.Description;
 import org.freedesktop.appstream.appdata.Icon;
+import org.freedesktop.appstream.appdata.Keywords;
+import org.freedesktop.appstream.appdata.Kudos;
+import org.freedesktop.appstream.appdata.Languages;
+import org.freedesktop.appstream.appdata.Metadata;
+import org.freedesktop.appstream.appdata.Mimetypes;
 import org.freedesktop.appstream.appdata.Name;
 import org.freedesktop.appstream.appdata.Ol;
+import org.freedesktop.appstream.appdata.Provides;
 import org.freedesktop.appstream.appdata.Release;
+import org.freedesktop.appstream.appdata.Screenshot;
 import org.freedesktop.appstream.appdata.Summary;
+import org.freedesktop.appstream.appdata.Translation;
 import org.freedesktop.appstream.appdata.Ul;
 import org.freedesktop.appstream.appdata.Url;
 
 /**
  * Created by jorge on 01/05/17.
  */
-public class AppdataComponent extends Component {
+public class AppdataComponent {
 
-  private static final String ICON_TYPE_CACHED = "cached";
-  private static final String ICON_TYPE_REMOTE = "remote";
+  public static final String ICON_TYPE_CACHED = "cached";
+  public static final String ICON_TYPE_REMOTE = "remote";
 
-  private static final String URL_TYPE_HOMEPAGE = "homepage";
-  private static final String URL_TYPE_BUGTRACKER = "bugtracker";
-  private static final String URL_TYPE_FAQ = "faq";
-  private static final String URL_TYPE_HELP = "help";
-  private static final String URL_TYPE_DONATION = "donation";
-  private static final String URL_TYPE_TRANSLATE = "translate";
+  public static final String URL_TYPE_HOMEPAGE = "homepage";
+  public static final String URL_TYPE_BUGTRACKER = "bugtracker";
+  public static final String URL_TYPE_FAQ = "faq";
+  public static final String URL_TYPE_HELP = "help";
+  public static final String URL_TYPE_DONATION = "donation";
+  public static final String URL_TYPE_TRANSLATE = "translate";
+  public static final String SCREENSHOT_IMAGE_TYPE_THUMBNAIL = "thumbnail";
 
-  public AppdataComponent() {
-    super();
+  private Component parentComponent = new Component();
+  protected List<ScreenshotInfo> screenshotsInfo;
+
+
+  public String getId() {
+    return this.parentComponent.getId();
   }
 
+  public void setId(String id) {
+    this.parentComponent.setId(id);
+  }
+
+  public Translation getTranslation() {
+    return this.parentComponent.getTranslation();
+  }
+
+  public void setTranslation(Translation translation) {
+    this.parentComponent.setTranslation(translation);
+  }
+
+  public List<Name> getName() {
+    return this.parentComponent.getName();
+  }
+
+
+  public List<Summary> getSummary() {
+    return this.parentComponent.getSummary();
+  }
+
+  public String getDeveloperName() {
+    return this.parentComponent.getDeveloperName();
+  }
+
+  public void setDeveloperName(String developerName) {
+    this.parentComponent.setDeveloperName(developerName);
+  }
+
+  public List<Description> getDescription() {
+    return this.parentComponent.getDescription();
+  }
+
+
+  public List<Icon> getIcon() {
+    return this.parentComponent.getIcon();
+  }
+
+
+  public Categories getCategories() {
+    return this.parentComponent.getCategories();
+  }
+
+  public void setCategories(Categories categories) {
+    this.parentComponent.setCategories(categories);
+  }
+
+  public Keywords getKeywords() {
+    return this.parentComponent.getKeywords();
+  }
+
+  public void setKeywords(Keywords keywords) {
+    this.parentComponent.setKeywords(keywords);
+  }
+
+  public Kudos getKudos() {
+    return this.parentComponent.getKudos();
+  }
+
+  public void setKudos(Kudos kudos) {
+    this.parentComponent.setKudos(kudos);
+  }
+
+  public Mimetypes getMimetypes() {
+    return this.parentComponent.getMimetypes();
+  }
+
+  public void setMimetypes(Mimetypes mimetypes) {
+    this.parentComponent.setMimetypes(mimetypes);
+  }
+
+  public String getProjectLicense() {
+    return this.parentComponent.getProjectLicense();
+  }
+
+  public void setProjectLicense(String projectLicense) {
+    this.parentComponent.setProjectLicense(projectLicense);
+  }
+
+  public List<Url> getUrl() {
+    return this.parentComponent.getUrl();
+  }
+
+  public String getProjectGroup() {
+    return this.parentComponent.getProjectGroup();
+  }
+
+  public void setProjectGroup(String projectGroup) {
+    this.parentComponent.setProjectGroup(projectGroup);
+  }
+
+  public List<ContentRating> getContentRating() {
+    return this.parentComponent.getContentRating();
+  }
+
+  public Languages getLanguages() {
+    return this.parentComponent.getLanguages();
+  }
+
+  public void setLanguages(Languages languages) {
+    this.parentComponent.setLanguages(languages);
+  }
+
+  public Provides getProvides() {
+    return this.parentComponent.getProvides();
+  }
+
+  public void setProvides(Provides provides) {
+    this.parentComponent.setProvides(provides);
+  }
+
+  public Bundle getBundle() {
+    return this.parentComponent.getBundle();
+  }
+
+  public void setBundle(Bundle bundle) {
+    this.parentComponent.setBundle(bundle);
+  }
+
+  public Metadata getMetadata() {
+    return this.parentComponent.getMetadata();
+  }
+
+  public void setMetadata(Metadata metadata) {
+    this.parentComponent.setMetadata(metadata);
+  }
+
+  public String getType() {
+    return this.parentComponent.getType();
+  }
+
+  public void setType(String type) {
+    this.parentComponent.setType(type);
+  }
+
+  public AppdataComponent() {}
+
+
   public AppdataComponent(Component parentComponent) {
-    super();
-    this.id = parentComponent.getId();
-    this.translation = parentComponent.getTranslation();
-    this.name = parentComponent.getName();
-    this.summary = parentComponent.getSummary();
-    this.developerName = parentComponent.getDeveloperName();
-    this.description = parentComponent.getDescription();
-    this.icon = parentComponent.getIcon();
-    this.categories = parentComponent.getCategories();
-    this.keywords = parentComponent.getKeywords();
-    this.kudos = parentComponent.getKudos();
-    this.mimetypes = parentComponent.getMimetypes();
-    this.projectLicense = parentComponent.getProjectLicense();
-    this.url = parentComponent.getUrl();
-    this.projectGroup = parentComponent.getProjectGroup();
-    this.screenshots = parentComponent.getScreenshots();
-    this.contentRating = parentComponent.getContentRating();
-    this.releases = parentComponent.getReleases();
-    this.languages = parentComponent.getLanguages();
-    this.provides = parentComponent.getProvides();
-    this.bundle = parentComponent.getBundle();
-    this.metadata = parentComponent.getMetadata();
-    this.type = parentComponent.getType();
+    
+    this.parentComponent = parentComponent;
+
+    this.screenshotsInfo = new ArrayList<>();
+    if(parentComponent.getScreenshots() != null){
+      for (Screenshot screenshot: parentComponent.getScreenshots().getScreenshot()) {
+        this.screenshotsInfo.add(new ScreenshotInfo(screenshot));
+      }
+    }
+
   }
 
   private static String getObjectListAsString(List<Object> objectList) {
@@ -145,6 +287,10 @@ public class AppdataComponent extends Component {
   public String getFlatpakSdk() {
 
     return this.getBundle().getSdk();
+  }
+
+  public List<ScreenshotInfo> getScreenshots(){
+    return this.screenshotsInfo;
   }
 
   public String findDefaultName() {
@@ -236,6 +382,9 @@ public class AppdataComponent extends Component {
     return null;
   }
 
+
+
+
   public String findIconUrl(String iconBaseRelativePath, short height) {
 
     String url = "";
@@ -271,14 +420,15 @@ public class AppdataComponent extends Component {
 
   }
 
+
   public Optional<ReleaseInfo> findReleaseInfoByMostRecent() {
 
-    if (this.releases == null || this.releases.getRelease() == null
-      || this.releases.getRelease().size() == 0) {
+    if (this.parentComponent.getReleases() == null || this.parentComponent.getReleases().getRelease() == null
+      || this.parentComponent.getReleases().getRelease().size() == 0) {
       return Optional.empty();
     }
 
-    List<Release> sortedReleases = this.releases.getRelease();
+    List<Release> sortedReleases = this.parentComponent.getReleases().getRelease();
     sortedReleases.sort(Comparator.comparing(Release::getTimestamp).reversed());
 
     Release release = sortedReleases.get(0);
