@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="flatpak">
+<component type="desktop">
+    <id>org.pitivi.Pitivi.desktop</id>
+    <translation type="gettext">pitivi</translation>
+    <name>Pitivi</name>
+    <name xml:lang="sr">Питиви</name>
+    <summary>Create and edit your own movies</summary>
+    <summary xml:lang="ast">Crea y edita les tos películes</summary>
+    <summary xml:lang="bg">Създаване и редактиране на собствени филми</summary>
+    <summary xml:lang="bs">Kreiranje i pregledanje vaših vlastitih filmova</summary>
+    <summary xml:lang="ca">Creeu i editeu les vostres pel·lícules</summary>
+    <summary xml:lang="ca@valencia">Creeu i editeu les vostres pel·lícules</summary>
+    <summary xml:lang="cs">Vytvářejte a upravujte své vlastní filmy</summary>
+    <summary xml:lang="da">Opret og redigér dine egne film</summary>
+    <summary xml:lang="de">Erstellen und bearbeiten Sie Ihre eigenen Filme</summary>
+    <summary xml:lang="el">Δημιουργήστε και επεξεργαστείτε τις δικές σας ταινίες</summary>
+    <summary xml:lang="eo">Krei kaj redakti viajn proprajn filmojn</summary>
+    <summary xml:lang="es">Cree y edite sus propias películas</summary>
+    <summary xml:lang="et">Loo ja muuda enda filme</summary>
+    <summary xml:lang="eu">Sortu eta editatu zure filmak</summary>
+    <summary xml:lang="fi">Luo ja muokkaa elokuvia</summary>
+    <summary xml:lang="fr">Créer et modifier vos propres films</summary>
+    <summary xml:lang="gl">Cree e edite os seus propios filmes</summary>
+    <summary xml:lang="he">יצירה ועריכה של סרטים עצמיים</summary>
+    <summary xml:lang="hu">Saját videók létrehozása és szerkesztése</summary>
+    <summary xml:lang="id">Buat dan sunting filmmu sendiri</summary>
+    <summary xml:lang="it">Crea e modifica i propri filmati</summary>
+    <summary xml:lang="ja">自分で動画を作成・編集します</summary>
+    <summary xml:lang="ko">동영상 제작 및 편집</summary>
+    <summary xml:lang="ku">Fîlmên xwe biafirîne û sererast bike</summary>
+    <summary xml:lang="lt">Kurkite ir redaguokite savo filmus</summary>
+    <summary xml:lang="lv">Izveido un rediģē savas filmas</summary>
+    <summary xml:lang="nb">Lag og rediger dine egne videoer</summary>
+    <summary xml:lang="nds">Erstell un bewark dien eegen Filme</summary>
+    <summary xml:lang="nl">Uw eigen films maken en bewerken</summary>
+    <summary xml:lang="oc">Crear e modificar vòstras pròprias vidèos</summary>
+    <summary xml:lang="pl">Tworzenie i edycja filmów</summary>
+    <summary xml:lang="pt">Crie e edite os seus filmes</summary>
+    <summary xml:lang="pt_BR">Crie e edite os seus próprios filmes</summary>
+    <summary xml:lang="ro">Creează și editează filmele tale</summary>
+    <summary xml:lang="ru">Создание и редактирование видеороликов</summary>
+    <summary xml:lang="sk">Vytvárajte a upravujte svoje vlastné filmy</summary>
+    <summary xml:lang="sl">Ustvarite in montirajte svoje filme</summary>
+    <summary xml:lang="sr">Стварајте и уређујте ваше личне видео записе</summary>
+    <summary xml:lang="sr@latin">Stvarajte i uređujte vaše lične video zapise</summary>
+    <summary xml:lang="sv">Skapa och redigera dina egna filmer</summary>
+    <summary xml:lang="te">మీ సొంత చలనచిత్రాలను సృష్టించండి మరియు సవరించండి</summary>
+    <summary xml:lang="tr">Kendi filminizi yaratın ve düzenleyin</summary>
+    <summary xml:lang="uk">Створюйте та редагуйте власні відео</summary>
+    <summary xml:lang="vi">Tạo ra và chỉnh sửa phim của bạn</summary>
+    <summary xml:lang="zh_CN">创建和编辑自己的电影</summary>
+    <summary xml:lang="zh_HK">建立與編輯你的電影</summary>
+    <summary xml:lang="zh_TW">建立與編輯您的電影</summary>
+    <developer_name>The Pitivi Team</developer_name>
+    <developer_name xml:lang="ca">L&apos;equip Pitivi</developer_name>
+    <developer_name xml:lang="cs">Tým Pitivi</developer_name>
+    <developer_name xml:lang="da">Pitivi-holdet</developer_name>
+    <developer_name xml:lang="de">Das Pitivi Team</developer_name>
+    <developer_name xml:lang="es">El equipo de Pitivi</developer_name>
+    <developer_name xml:lang="fr">L&apos;équipe Pitivi</developer_name>
+    <developer_name xml:lang="hu">A Pitivi csapat</developer_name>
+    <developer_name xml:lang="id">Tim Pitivi</developer_name>
+    <developer_name xml:lang="lt">Pitivi komanda</developer_name>
+    <developer_name xml:lang="pl">Zespół projektu Pitivi</developer_name>
+    <developer_name xml:lang="pt_BR">A equipe do Pitivi</developer_name>
+    <developer_name xml:lang="sk">Tím aplikácie Pitivi</developer_name>
+    <developer_name xml:lang="sr">Тим Питивија</developer_name>
+    <developer_name xml:lang="sr@latin">Tim Pitivija</developer_name>
+    <developer_name xml:lang="sv">Pitivi-teamet</developer_name>
+    <developer_name xml:lang="uk">Команда Pitivi</developer_name>
+    <description><p>Pitivi is a video editor that aims to appeal to hobbyists and professionals alike, with a strong focus on efficiency, quality and usability. It integrates well with other applications and sports a beautiful user interface designed to be powerful yet easy to learn.</p><p>With a non-modal editing workflow, a framerate-independent and playhead-centric timeline, Pitivi allows you quickly and accurately trim, split and review your scenes. Pitivi&apos;s ripple and roll editing features allow spending more time on storytelling and less time on &quot;pushing clips around&quot;.</p><p>Some other features include:</p><ul><li>Accepts any file formats supported by the GStreamer multimedia framework</li><li>Can animate hundreds of special effects and filters with keyframable properties</li><li>Ability to set custom aspect ratios, framerates and rendering presets</li><li>Easy to use crossfades and SMPTE transitions</li><li>Multihead-friendly with detachable user interface components</li></ul></description>
+    <description xml:lang="bs"><p>Pitivi je video editor koji ima za cilj da se svidii hobistima i profesionalcima podjednako, s jakim naglaskom na učinkovitosti kvalitete i upotrebljivosti. On se integrira s drugim aplikacijama i kao sportski lijepo korisničko sučelje dizajnirano da bude moćno, ali jednostavno za naučiti.</p><p>Uz ne-modalnog tijeka rada za uređivanje, framerate neovisan i playhead-centric timelajnom, Pitivi omogućuje brzo i precizno podrezivanje, podjelu i pregledavanje svoje scene. Pitivi je talasanje, zamotavanje i uređivanje značajki koje omogućuju trošenje više vremena na pripovijedanje i manje vremena na &quot;guranje isječaka oko&quot;.</p><p>Neke druge značajke uključuju:</p><ul><li>Prihvaća sve formate datoteka koje podržavaju multimedijske okviru GStreamer</li><li>Može animirati stotine specijalnih efekata i filtera s keyframable svojstvima</li><li>Sposobnost za postavljanje  običaja i aspekata omjera, framerata i pružanje postavki</li><li>Jednostavan za korištenje crossfades i SMPTE prijelaza</li><li>Multi prijateljski s odvojivim korisničkim sučeljima komponenti</li></ul></description>
+    <description xml:lang="ca"><p>Pitivi és un editor de vídeo que vol ser atractiu per aficionats i professionals, amb un fort èmfasis en eficiència, qualitat i usabilitat. S&apos;integra bé amb altres aplicacions i llueix una interfície d&apos;usuari dissenyada per ser potent però fàcil d&apos;aprendre.</p><p>Amb un flux de treball d&apos;edició no modal, una freqüència de fotogrames independent i una línia de temps, Pitivi us permet retallar, dividir i revisar les vostres pel·lícules ràpidament. Les característiques d&apos;edició i desplaçament permeten invertir més temps en explicar la història i menys en moure seqüències amunt i avall.</p><p>Algunes altres característiques inclouen:</p><ul><li>Accepta qualsevol format de fitxer compatible amb l&apos;entorn de treball multimèdia GStreamer</li><li>Pot animar centenars d&apos;efectes especials i filtres amb propietats de fotogrames clau</li><li>Pot establir relacions d&apos;aspecte personalitzades, freqüències i composició de fotogrames predefinides</li><li>Fosos i transicions SMPTE senzilles d&apos;utilitzar</li><li>Components d&apos;interfície d&apos;usuari que es poden desacoblar i usar en múltiples pantalles</li></ul></description>
+    <description xml:lang="cs"><p>Pitivi je videoeditor, který si klade za cíl oslovit fandy i profesionály a který klade velký důraz na efektivitu, kvalitu a použitelnost. Je dobře integrován s dalšími aplikacemi a předvádí pěkné uživatelské rozhraní navržené s důrazem na snadné osvojení.</p><p>Pomocí volného průběhu úprav, časové ose nezávislé na snímkové rychlosti a s přehrávací hlavou, můžete v Pitivi scény velmi rychle a přitom přesně ořezávat, rozdělovat a kontrolovat. Díky řetězovým a svitkovým úpravám můžete více času věnovat vlastnímu příběhu a měně nudným pracem okolo.</p><p>Mezi dalšími funkcemi najdete:</p><ul><li>Zpracování libovolného formátu, který je podporován multimediálním rámcem GStreamer</li><li>Možnost animace pomocí stovek speciálních efektů a filtrů s vlastnosmi na klíčových snímcích</li><li>Schopnost nastavení vlastního poměru stran, snímkové rychlosti a předvoleb vykreslování</li><li>Snadné použití prolnutí a přechodů SMPTE</li><li>Podporu vícevláknového zpracování a odpojitelných součástí uživatelského rozhraní</li></ul></description>
+    <description xml:lang="da"><p>Pitivi er et program til redigering af videoer, som forsøger at appellere til både amatører og professionelle. Der er stort fokus på effektivitet, kvalitet og brugbarhed. Pitivi integrerer godt med andre programmer og har en flot brugergrænseflade, som er designet til at være funktionsrigt og dog let at lære.</p><p>Med en ikke-modal redigeringsarbejdsgang, en billedfrekvens-uafhængig og afspilningsmarkør-centreret tidslinje giver Pitivi dig mulighed for at trimme, opdele og gennemse dine scener. Pitivis redigeringsfunktioner “ripple” og “roll” lader dig bruge mere tid på historiefortælling og mindre tid på at flytte rundt på klip.</p><p>Andre funktioner inkluderer:</p><ul><li>Accepterer ethvert filformat, som understøttes af GStreamer-multimedierammen</li><li>Kan animere hundredvis af specialeffekter og filtre med nøglebilledegenskaber</li><li>Mulighed for at tilpasse højde-/breddeforhold, billedfrekvens og forudindstilling af gengivelse</li><li>Glidende overgange og SMPTE-overgange der er nemme at bruge</li><li>Nem at bruge på flere skærme med brugergrænsefladekomponenter der kan løsrives</li></ul></description>
+    <description xml:lang="de"><p>Pitivi ist ein Videoeditor, der das Ziel hat, sowohl für Amateure als auch für Experten attraktiv zu sein und dabei eine starke Ausrichtung auf Effizienz, Qualität und Benutzerfreundlichkeit hat. Pitivi fügt sich problemlos in andere Anwendungen ein und kann sich mit seiner ansprechenden Benutzeroberfläche, die so entworfen wurde, dass sie zugleich mächtig und dennoch einfach zu erlernen ist, sehen lassen.</p><p>Mit einem nichtmodalen Bearbeitungs-Arbeitsfluss, einer Bildwiederholraten-unabhängigen und Suchleisten-zentrischen Zeitleiste erlaubt es Pitivi Ihnen, Ihre Szenen schnell und genau zu trimmen, zu splitten und durchzusehen. Pitivis Bearbeitungsfunktionen »Löschen und Lücke schließen« (engl. ripple edit) und »Rollen« (engl. roll edit) erlauben es, mehr Zeit für das Geschichtenerzählen zu verwenden und weniger Zeit für das »Clip-Schubsen« aufzuwenden.</p><p>Weitere Funktionen:</p><ul><li>Arbeitet mit allen Dateiformaten, die vom GStreamer Multimedia-Framework unterstützt werden</li><li>Kann hunderte von Spezialeffekten und Filter mit schlüsselbildbezogenen Eigenschaften animieren</li><li>Die Möglichkeit, benutzerdefinierte Seitenverhältnisse, Bildwiederholraten und Erstellungs-Voreinstellungen einzustellen</li><li>Einfach zu benutzende Überblendungen und SMPTE-Übergänge</li><li>Multi-Monitor-freundlich mit loslösbaren Benutzeroberflächenelementen</li></ul></description>
+    <description xml:lang="el"><p>Το Pitivi είναι ένας επεξεργαστής βίντεο που σκοπεύει να προσελκύσει ερασιτέχνες και επαγγελματίες, που αποβλέπουν σε αποτελεσματικότητα, ποιότητα και χρηστικότητα. Ενσωματώνεται καλά με άλλες εφαρμογές και επιδεικνύει μια όμορφη διεπαφή χρήστη σχεδιασμένη να είναι ισχυρή αλλά και εύκολη στην εκμάθηση.</p><p>Με μια μη αναγκαστική ροή εργασίας της επεξεργασίας, μια λωρίδα χρόνου ανεξάρτητη από τον ρυθμό λήψεων και την κεντρική κεφαλή αναπαραγωγής, το Pitivi σας επιτρέπει να περικόψετε, να διαιρέσετε και να επιθεωρήσετε τις σκηνές σας γρήγορα και με ακρίβεια. Τα γνωρίσματα επεξεργασίας κυματισμού και κύλισης επιτρέπυν την διάθεση περισσότερου χρόνου στην αφήγηση και λιγότερο χρόνο στην &quot;προώθηση κομματιών ολόγυρα&quot;.</p><p>Κάποια άλλα γνωρίσματα περιλαμβάνουν:</p><ul><li>Αποδοχή οποιασδήποτε μορφής αρχείου όπου υποστηρίζεται από το πλαίσιο πολυμέσων GStreamer</li><li>Δυνατότητα απεικόνισης εκατοντάδων ειδικών εφέ και φίλτρων με ιδιότητες βασικού πλαισίου</li><li>Δυνατότητα ορισμού προσαρμοσμένων αναλογιών διαστάσεων, ρυθμών λήψεων και απόδοσης προεπιλογών</li><li>Εύχρηστες σταδιακές μίξεις και μεταβάσεις SMPTE</li><li>Φιλική πολλαπλή κεφαλή με αποσπώμενα συστατικά διεπαφής χρήστη</li></ul></description>
+    <description xml:lang="es"><p>Pitivi es un editor de vídeo que pretende atraer a aficionados y profesionales por igual, orientado a la usabilidad, la eficiencia y la calidad. Se integra bien con otras aplicaciones y tiene una bonita interfaz diseñada para ser potente y fácil de usar.</p><p>Con un flujo de trabajo de edición no modal, una tasa de fotogramas independiente y una línea de tiempo centrada, Pitivi le permite recortar, dividir y revisar sus películas rápidamente. Las características de edición de remolino y de desplazamiento permiten invertir más tiempo en contar la historia y menos en recortar los vídeos.</p><p>Entre otras características se incluyen:</p><ul><li>Acepta cualquier formato de archivo soportado por el entorno de trabajo multimedia GStreamer</li><li>Puede animar cientos de efectos especiales y filtros con fotogramas clave</li><li>Posibilidad de establecer relaciones de aspecto personalizadas, y configuraciones predefinidas de tasas de fotogramas y renderizado</li><li>Posibilidad de usar fundidos y transiciones SMPTE</li><li>Adaptado para varias pantallas con componentes de la interfaz de usuario desacoplables</li></ul></description>
+    <description xml:lang="eu"><p>Pitivi zaleentzako nahiz profesionalentzako bideo-editore bat da, eta eraginkortasuna, kalitatea eta erabilgarritasuna lehenesten ditu. Ondo integratzen da beste aplikazioekin; eta erabiltzaile-interfaze polita dauka, ahaltsua eta ikasteko erraza izateko diseinatua.</p><p>Pitivi-n, ediziorako lan-fuxua ez-modala da, eta denbora-lerroa, berriz, fotograma-abiadurarekiko independentea eta erreprodukzio-puntuan zentratua; hala, Pitivi-rekin, bizkor eta zehazki moztu, zatitu eta berrikus daitezke eszenak. Mozketak egitean sekuentziak egokitzeko Pitivi-k dituen &quot;ripple&quot; eta &quot;roll&quot; edizio-tresnei esker, denbora gehiago emango duzu istorioak kontatzen eta gutxiago sekuentziak eskuz moldatzen.</p><p>Ezaugarri hauek ere baditu, besteak beste:</p><ul><li>GStreamer multimedia-sistemak onartzen duen edozein fitxategi-formatu onartzen du</li><li>Ehunka efektu berezi eta iragazki anima ditzake, fotograma gakoen propietateak erabiliz</li><li>Aukera ematen du aspektu-erlazio pertsonalizatuak, fotograma-abiadurak eta errendatze lehenetsiak ezartzeko</li><li>Erraz egiten dira nahaste gurutzatuak eta SMPTE trantsizioak</li><li>Aldi berean pantaila bat baino gehiagotan erabiltzeko egokia da, erabiltzaile-interfazearen osagaiak desuztartzen baitzaizkio</li></ul></description>
+    <description xml:lang="fi"><p>Pitivi on videomuokkain, jonka on tarkoitus täyttää harrastajien ja ammattilaisten tarpeet keskittymällä käytettävyyteen, tehokkuuteen ja laatuun. Se integroituu hyvin muihin sovelluksiin ja tarjoaa nätin käyttöliittymän, joka on samanaikaisesti tehokas käyttää että helppo oppia.</p><p>Muita ominaisuuksia:</p><ul><li>Hyväksyy kaikki GStreamer-multimediakehyksen tukemat tiedostomuodot</li><li>Mahdollisuus asettaa omavalintaisia kuvasuhteita, kehysnopeuksia ja renderöintiesivalintoja</li><li>Helppokäyttöiset ristiinhäivytykset ja SMPTE-siirtymät</li><li>Toimii mainiosti usealla näytöllä, käyttöliittymän elementit ovat irrotettavissa ja siirrettävissä</li></ul></description>
+    <description xml:lang="fr"><p>Un éditeur vidéo visant aussi bien les passionnés que les professionnels, avec un fort accent sur la convivialité, l&apos;efficacité et la qualité. Pitivi s&apos;intègre harmonieusement avec les autres logiciels et présente une magnifique interface utilisateur conçue pour être puissante tout en restant simple à apprendre.</p><p>Avec son flux de travail non modal, sa piste de montage indépendante de la cadence d&apos;images et centrée sur le point de lecture, Pitivi vous permet de rogner, scinder et réviser vos scènes rapidement et avec précision. Les fonctions agiles de déplacement de séquences de Pitivi permettent de passer plus de temps sur le scénario dans son ensemble et moins de temps à manipuler des séquences.</p><p>Parmi les autres fonctionnalités :</p><ul><li>Accepte tout format de fichier pris en charge par le système multimédia GStreamer</li><li>Sait combiner des centaines de filtres et d&apos;effets spéciaux avec des propriétés par image-clé</li><li>Permet de personnaliser les rapports d&apos;affichage, la cadence d&apos;images et les pré-réglages de rendu</li><li>Fondus enchaînés et transitions SMPTE faciles à utiliser</li><li>Compatible avec le multi-écrans par ses composants d&apos;interface détachables</li></ul></description>
+    <description xml:lang="hu"><p>A Pitivi videoszerkesztő célja vonzónak lenni az amatőröknek és szakembereknek egyaránt, nagy hangsúlyt fektetve a hatékonyságra, minőségre és használhatóságra. Jól integrálódik más alkalmazásokhoz, és gyönyörű felhasználói felülete van, amelyet hatékonynak, de könnyen tanulhatónak terveztek.</p><p>Nem kizárólagos szerkesztési munkamenettel, a képkockasebesség-független és lejátszófej-központú idővonallal a Pitivi lehetővé teszi a jelenetek gyors és pontos vágását, felosztását és áttekintését. A Pitivi szerkesztési funkciói lehetővé teszik, hogy több időt töltsön a történetmeséléssel, és kevesebbet a klipek „tologatásával”.</p><p>Néhány további funkció:</p><ul><li>Bármely, a GStreamer multimédiás keretrendszer által támogatott fájlformátumot elfogad</li><li>Több száz speciális effektust és szűrőt tud animálni, kulcsképkockával ellátható tulajdonságokkal</li><li>Képes egyéni méretarányok, képkockasebességek és renderelési előbeállítások használatára</li><li>Egyszerűen használható keresztátmenetek és SMPTE átmenetek</li><li>Több monitoron is használható a leválasztható felületi összetevőinek köszönhetően.</li></ul></description>
+    <description xml:lang="id"><p>Pitivi adalah penyunting video yang bertujuan menarik para penggemar maupun profesional, dengan fokus yang kuat pada efisiensi, kualitas, dan kegunaan. Ini terintegrasi secara baik dengan aplikasi lain dan menyajikan antarmuka pengguna yang indah, yang dirancang untuk kuat namun mudah dipelajari.</p><p>Dengan alur kerja penyuntingan non-modal, lini masa yang bebas laju bingkai dan berpusat playhead, Pitivi memungkinkan Anda dengan cepat dan akurat memangkas, memecah, dan meninjau skenario Anda. Fitur penyuntingan &apos;ripple and roll&apos; Pitivi memungkinkan lebih banyak waktu untuk bercerita dan sedikit waktu untuk &quot;menggeser-geser klip&quot;.</p><p>Fitur lain termasuk:</p><ul><li>Menerima sebarang format berkas yang didukung oleh framework multimedia GStreamer</li><li>Dapat menganimasikan ratusan efek khusus dan menyaring dengan properti yang dapat di-keyframe-kan</li><li>Kemampuan menata rasio aspek, laju bingkai, dan perenderan ubahan</li><li>Transisi SMPTE dan pudar silang yang mudah dipakai</li><li>Mendukung tampilan ganda dengan komponen antarmuka pengguna yang dapat dilepas</li></ul></description>
+    <description xml:lang="lt"><p>Pitivi yra vaizdo įrašų redaktorius, kuris siekia patikti panašiams hobiistams ir profesionalams, daug dėmesio skiriant naudojamumui, efektyvumui ir kokybei. Jis gerai integruojasi su kitomis programomis bei turi gražią naudotojo sąsają, sukurtą taip, kad būtų galinga, bet tuo pat metu lengva išmokti.</p><p>Su nemodaline redagavimo seka, nuo kadrų dažnio nepriklausančia bei grojimo galvute paremta laiko linija Pitivi leidžia greitai ir tiksliai sutrumpinti, padalinti ir peržiūrėti scenas. Pitivi redagavimo savybės leidžia daugiau laiko praleisti kuriant istoriją ir mažiau klipų stumdymui.</p><p>Kai kurios kitos savybės:</p><ul><li>Palaiko bet kurį GStreamer daugialypės terpės karkaso palaikomą failo formatą</li><li>Turi daugybę specialiųjų efektų ir filtrų su kadrų savybėmis</li><li>Galimybė nustatyti pasirinktines proporcijas, kadrų dažnius ir piešimo išankstinius nustatymus</li><li>Lengvai naudojami kryžiaus ir SMOTE perėjimai</li><li>Pritaikytas daugeliui galvų su atkabinamais naudotojo sąsajos komponentais</li></ul></description>
+    <description xml:lang="pl"><p>Edytor plików wideo przeznaczony dla hobbistów i zawodowców, oferujący użyteczność, wydajność i jakość. Integrując się ze środowiskiem GNOME i innymi programami, program Pitivi ma prosty, lecz jednocześnie oferujący wiele możliwości interfejs użytkownika.</p><p>Dzięki niemodalnej edycji oraz niezależnej od liczby klatek i opartej o głowicę osi czasu, program Pitivi umożliwia szybkie i dokładne przycinanie, dzielenie i przeglądanie tworzonych scen. Funkcje edycji programu Pitivi pozwalają spędzić więcej czasu na opowiadaniu historii, a mniej na „przerzucaniu” klipów.</p><p>Inne funkcje obejmują:</p><ul><li>Można używać wszystkich formatów plików obsługiwanych przez bibliotekę multimedialną GStreamer</li><li>Można animować setki efektów specjalnych i filtrów za pomocą właściwości klatek kluczowych</li><li>Możliwość ustawiania własnych proporcji, liczby klatek i opcji renderowania</li><li>Łatwe w użyciu efekty przenikania i przejścia SMPTE</li><li>Możliwość odłączania elementów interfejsu użytkownika, co ułatwia korzystanie z wielu monitorów</li></ul></description>
+    <description xml:lang="pt"><p>O Pitivi é um editor de vídeo que tem por objetivo agradar a amadores mas também a profissionais, com forte foco na usabilidade, eficiência e qualidade. Com boa integração com outras aplicações, o Pitivi ostenta um ambiente gráfico bonito, projetado para ser poderoso e de fácil aprendizagem.</p><p>Com um fluxo de trabalho de edição não-modal, independente de taxa de molduras e cronologia centrada no indicador de reprodução, o Pitivi permite que apare divida e reveja rapidamente e com precisão as suas cenas. Os recursos de edição de ondular e rolar do Pitivi permitem que dedique mais tempo à narração e menos tempo &quot;empurrando clipes por aí&quot;.</p><p>Algumas outras características incluem:</p><ul><li>Aceitar quaisquer formatos de ficheiro suportados pela estrutura multimédia do GStreamer</li><li>Poder aplicar centenas de efeitos especiais e filtros com propriedades de molduras chave</li><li>Capacidade para definir proporções, taxas de moldura e predefinições de entrega personalizadas</li><li>Transições SMPTE e graduais fáceis de usar</li><li>Ajustável a multijanela, com componentes do ambiente gráfico destacáveis</li></ul></description>
+    <description xml:lang="pt_BR"><p>O Pitivi é um editor de vídeo que tem por objetivo atrair amadores e também profissionais, com forte foco em usabilidade, eficiência e qualidade. Com boa integração com outros aplicativos, o Pitivi ostenta uma bela interface gráfica projetada para ser poderosa e ainda de fácil aprendizagem.</p><p>Com um fluxo de trabalho de edição não-modal, independente de taxa de quadros e linha de tempo centrada no indicador de reprodução, o Pitivi permite que você rapidamente e com precisão apare, divida e reveja suas cenas. Os recursos de edição de ondulação e rolagem do Pitivi permitem que você dedique mais tempo à narração e menos tempo &quot;empurrando clipes por aí&quot;.</p><p>Algumas outras características incluem:</p><ul><li>São aceitos quaisquer formatos de arquivos suportados pelo framework multimídia do GStreamer</li><li>Pode-se aplicar centenas de efeitos especiais e filtros com propriedades de quadros chave</li><li>Há capacidade para definir taxas de proporção, taxas de quadros e predefinições de renderização personalizadas</li><li>Transições SMPTE e graduais fáceis de usar</li><li>Capacidade de multi-janela, com componentes destacáveis de interface gráfica</li></ul></description>
+    <description xml:lang="ru"><p>Среди прочих возможностей:</p><ul><li>Читает любые файлы, поддерживаемые мультимедийным фреймворком GStreamer.</li><li>Может анимировать по ключевым кадрам параметры сотен спецэффектов и фильтров.</li><li>Допускает применение произвольного соотношения сторон, частоты кадров и предустановок экспорта видео.</li><li>Позволяет использовать кроссфейды и переходы SMPTE.</li><li>Поддерживает работу с двумя и более мониторами с переносом элементов интерфейса между экранами.</li></ul></description>
+    <description xml:lang="sk"><p>Pitivi je editor videa určený pre nadšencov a profesionálov so silným zameraním na efektivitu, kvalitu a použiteľnosť. Je dobre integrovaný s ďalšími aplikáciami a má elegantný vzhľad s dôrazom na ľahko osvojiteľné a výkonné ovládanie.</p><p>S nepovinným postupom úpravy, nezávislom na počte snímok za sekundu a priamym prehrávaním v smere časovej osi umožňuje Pitivi rýchlo a presne orezať, rozdeliť a prehliadať vaše scény.  Vďaka reťazovým a zvitkovým úpravám umožňuje venovať viac času rozprávaniu príbehu ako „preťahovaniu klipov dookola“.</p><p>Medzi ďalšie funkcie patrí:</p><ul><li>Použitie formátov súborov, ktoré sú podporované multimediálnym frameworkom GStreamer</li><li>Možnosť animácie so stovkami špeciálnych efektov a filtrov s vlastnosťami na kľúčové snímky</li><li>Možnosť nastaviť vlastné proporcie, počet snímkov za sekundu a predvoľby vykresľovania</li><li>Jednoduché využitie prelínačiek a SMPTE prechodov</li><li>Viac vláknové spracovanie s využitím odpojiteľných komponentov používateľského rozhrania</li></ul></description>
+    <description xml:lang="sl"><p>Montažni program za video, namenjen navdušencem in strokovnjakom, z močnim poudarkom na uporabnosti, učinkovitosti in kakovosti. Dobro je integriran z drugimi programi in krasi ga lep uporabniški vmesnik, zaradi katerega je kljub vsej funkcionalnosti enostaven za učenje.</p><p>Med drugimi novostmi so tudi:</p><ul><li>Za uporabo enostavni prelivi in prehodi SMPTE</li></ul></description>
+    <description xml:lang="sr"><p>Питиви је видео уређивач који има за циљ да се подједнако допадне хобистима и професионалцима, са јаким нагласком на делотворност, квалитет и употребљивост. Одлично се обједињује са другим програмима и поседује лепо корисничко сучеље осмишљено да буде снажно и лако за учење.</p><p>Са не-модалним радним током уређивања, временском линијом средишне прве позиције независном од протока кадра, Питиви вам омогућава да брзо и тачно скратите, поделите и прегледате ваше сцене. Питивијеве уређивачке функције таласања и котрљања обезбеђују више времена на разради теме а мање на „премештању снимака унаоколо“.</p><p>У остале функције спадају:</p><ul><li>Прихвата било који запис датотеке подржан Гстримеровим мултимедијским радним склопом</li><li>Може да произведе стотине посебних ефеката и пропусника са својствима кључног кадра</li><li>Способност постављања произвољних односа размере, протока кадрова и подешавања исцртавања</li><li>Постепено исчезавање и СМПТЕ прелази лаки за коришћење</li><li>Вишеглавна корисност са откачивим састојцима корисничког сучеља</li></ul></description>
+    <description xml:lang="sr@latin"><p>Pitivi je video uređivač koji ima za cilj da se podjednako dopadne hobistima i profesionalcima, sa jakim naglaskom na delotvornost, kvalitet i upotrebljivost. Odlično se objedinjuje sa drugim programima i poseduje lepo korisničko sučelje osmišljeno da bude snažno i lako za učenje.</p><p>Sa ne-modalnim radnim tokom uređivanja, vremenskom linijom središne prve pozicije nezavisnom od protoka kadra, Pitivi vam omogućava da brzo i tačno skratite, podelite i pregledate vaše scene. Pitivijeve uređivačke funkcije talasanja i kotrljanja obezbeđuju više vremena na razradi teme a manje na „premeštanju snimaka unaokolo“.</p><p>U ostale funkcije spadaju:</p><ul><li>Prihvata bilo koji zapis datoteke podržan Gstrimerovim multimedijskim radnim sklopom</li><li>Može da proizvede stotine posebnih efekata i propusnika sa svojstvima ključnog kadra</li><li>Sposobnost postavljanja proizvoljnih odnosa razmere, protoka kadrova i podešavanja iscrtavanja</li><li>Postepeno isčezavanje i SMPTE prelazi laki za korišćenje</li><li>Višeglavna korisnost sa otkačivim sastojcima korisničkog sučelja</li></ul></description>
+    <description xml:lang="sv"><p>Pitivi är en videoredigerare med inriktning på både hobbyanvändare och professionella, med ett starkt fokus på effektivitet, kvalitet och användbarhet. Det integrerar bra med andra program och har ett vackert användargränssnitt framtaget för att vara kraftfullt och enkelt.</p><p>Med ett icke-modalt arbetsflöde för redigering, en bildfrekvensoberoende och uppspelningshuvudcentrerad tidslinje, gör Pitivi det möjligt för dig att snabbt och korrekt trimma, dela och förhandsgranska dina scener. Pitivis krusnings- och rullredigeringsmöjligheter gör det möjligt att lägga tiden på historieberättande istället för att &quot;flytta omkring klipp&quot;.</p><p>Några andra funktioner:</p><ul><li>Accepterar alla filformat som stöds av multimediaramverket GStreamer</li><li>Kan animera hundratals specialeffekter och filter med nyckelbildegenskaper</li><li>Förmåga att ange anpassade bildförhållanden, bildfrekvens och renderingsförinställningar</li><li>Lätt att använda övertoningar och SMPTE-övergångar</li><li>Flerskärmsvänlig med frånkopplingsbara användarkomponenter</li></ul></description>
+    <description xml:lang="tr"><p>Pitivi meraklıları ve profesyonel sayılacak kişileri hedef alan, kalite, kullanılabilirlik ve etkinlik üzerine güçlü şekilde eğilen bir video düzenleyicidir. Diğer uygulamalarla iyi tümleşir ve güçlü olduğu kadar kolay öğrenilebilen bir kullanıcı arayüzü sunar.</p><p>Kipsel olmayan bir düzenleme iş akışıyla, çerçeve oranı bağımsız ve oynatma başı merkezli zaman çizelgesi ile, Pitivi sahnelerinizi hızlıca ve doğru olarak bölmenize, gözden geçirmenize ve düzeltmenize olanak verir. Pitivi&apos;nin dalgalanma ve yuvarlanma düzenleme özellikleri &quot;klipleri etrafa itelemek&quot; yerine hikaye anlatımı üzerinde daha çok zaman geçirmenizi sağlar.</p><p>Diğer bazı özellikleri arasında şunlar yer alır:</p><ul><li>GStreamer çokluortam çatısı tarafından desteklenen her tür dosya biçimini kabul eder</li><li>Yüzlerce özel efekti canlandırabilir ve anahtar çerçevelenebilir özelliklerle filtreleyebilir</li><li>Özel en boy oranları, çerçeve oranları ve gerçekleme önayarlamaları ayarlama olanağı</li><li>Kullanımı kolay çapraz geçişler ve SMPTE geçişleri</li><li>Ayrılabilir kullanıcı arayüzü bileşenleri ile çoklu arayüz dostu</li></ul></description>
+    <description xml:lang="uk"><p>Відеоредактор для аматорів та напівпрофесіоналів з основним акцентом на зручності у користуванні, ефективності та якості. Чудово інтегруючись до інших програм, Pitivi має красивий інтерфейс, потужний і простий у вивченні.</p><p>У програмі передбачено редагування без зайвих вікон, незалежний від частоти кадрів монтажний стіл, роботу на якому зосереджено навколо курсора стола. За допомогою Pitivi ви зможете точно і швидко обрізати, розділити та переглянути сцени. Чудові можливості з редагування Pitivi нададуть вам змогу зосередитися на матеріалі і витрачати менше часу на беззмістовне пересування кліпів.</p><p>Серед інших можливостей:</p><ul><li>Робота з будь-якими форматами файлів, підтримку яких передбачено у мультимедійному комплекті бібліотек GStreamer.</li><li>Використання сотень спеціальних ефектів та фільтрів з прив’язкою до ключових кадрів відео.</li><li>Можливість встановлення нетипових розмірів кадру, частоти кадрів та шаблонів обробки остаточного відео.</li><li>Прості у користуванні переходи між частинами відео.</li><li>Зручність у користуванні на багатомоніторних конфігураціях з можливістю розташування елементів інтерфейсу на різних екранах.</li></ul></description>
+    <description xml:lang="zh_HK"><p>Pitivi 是個以「吸引愛好者，也吸引專家」為目標的影片編輯器，非常專注於效率、品質、便用。它不只與其他應用程式整合良好，更具有美觀的使用者介面，設計雖強大但仍易於學習。</p><p>其他特點包括：</p><ul><li>接受任何 GStreamer 多媒體框架所支援的檔案格式</li><li>可以自選長寬比、幀率、壓製預置設定</li><li>易用的交錯淡化與 SMPTE 轉場</li></ul></description>
+    <description xml:lang="zh_TW"><p>Pitivi 是以「吸引愛好者，也吸引專家」為目標的影片編輯器，非常專注於效率、品質、便用。它不只與其他應用程式整合良好，更具有美觀的使用者介面，設計雖強大但仍易於學習。</p><p>擁有非典範式編輯流程，以及幀率獨立、以播放頭為中心的時間軸，Pitivi 讓您可以快速且精確地修剪、裁切、檢閱各個場景。Pitivi 的漣漪與捲滾編輯特色，讓您可以更專注於說故事本身，而不是「到處拖推剪輯位置」。</p><p>其他特點包括：</p><ul><li>接受任何 GStreamer 多媒體框架所支援的檔案格式</li><li>有上百種特效與過濾器可以利用鍵幀屬性來製作動畫</li><li>可以自訂長寬比、幀率、壓製預置設定</li><li>易用的交錯淡化與 SMPTE 轉場</li><li>對多螢幕友善的可脫離式使用者介面組件</li></ul></description>
+    <icon type="cached" height="128" width="128">org.pitivi.Pitivi.png</icon>
+    <icon type="cached" height="64" width="64">org.pitivi.Pitivi.png</icon>
+    <categories>
+      <category>AudioVideo</category>
+      <category>AudioVideoEditing</category>
+      <category>Video</category>
+    </categories>
+    <keywords>
+      <keyword>editor</keyword>
+      <keyword>film</keyword>
+      <keyword>movie</keyword>
+      <keyword>video</keyword>
+      <keyword xml:lang="ca">pel·lícula</keyword>
+      <keyword xml:lang="ca">vídeo</keyword>
+      <keyword xml:lang="cs">střih</keyword>
+      <keyword xml:lang="da">redigering</keyword>
+      <keyword xml:lang="de">filmstreifen</keyword>
+      <keyword xml:lang="es">película</keyword>
+      <keyword xml:lang="es">vídeo</keyword>
+      <keyword xml:lang="fr">banc</keyword>
+      <keyword xml:lang="fr">montage</keyword>
+      <keyword xml:lang="fr">vidéo</keyword>
+      <keyword xml:lang="fr">éditeur</keyword>
+      <keyword xml:lang="hu">mozi</keyword>
+      <keyword xml:lang="hu">szerkesztő</keyword>
+      <keyword xml:lang="hu">videó</keyword>
+      <keyword xml:lang="lt">filmas</keyword>
+      <keyword xml:lang="lt">redaktorius</keyword>
+      <keyword xml:lang="lt">vaizdas</keyword>
+      <keyword xml:lang="pl">edytor</keyword>
+      <keyword xml:lang="pl">filmy</keyword>
+      <keyword xml:lang="pl">filmów</keyword>
+      <keyword xml:lang="pl">montaż</keyword>
+      <keyword xml:lang="pl">montażysta</keyword>
+      <keyword xml:lang="pl">nieliniowy</keyword>
+      <keyword xml:lang="pl">obróbka</keyword>
+      <keyword xml:lang="pl">wideo</keyword>
+      <keyword xml:lang="pl">wideoedytor</keyword>
+      <keyword xml:lang="pt_BR">filme</keyword>
+      <keyword xml:lang="pt_BR">vídeo</keyword>
+      <keyword xml:lang="sr">видео</keyword>
+      <keyword xml:lang="sr">снимак</keyword>
+      <keyword xml:lang="sr">уређивач</keyword>
+      <keyword xml:lang="sr">филм</keyword>
+      <keyword xml:lang="sr@latin">snimak</keyword>
+      <keyword xml:lang="sr@latin">uređivač</keyword>
+      <keyword xml:lang="sv">redigerare</keyword>
+      <keyword xml:lang="uk">відео</keyword>
+      <keyword xml:lang="uk">редактор</keyword>
+      <keyword xml:lang="uk">фільм</keyword>
+    </keywords>
+    <kudos>
+      <kudo>HiDpiIcon</kudo>
+      <kudo>ModernToolkit</kudo>
+      <kudo>Notifications</kudo>
+      <kudo>UserDocs</kudo>
+    </kudos>
+    <mimetypes>
+      <mimetype>text/x-xges</mimetype>
+      <mimetype>text/x-xptv</mimetype>
+    </mimetypes>
+    <project_license>LGPL-2.0+</project_license>
+    <url type="bugtracker">https://phabricator.freedesktop.org/tag/pitivi/</url>
+    <url type="donation">http://www.pitivi.org/?go=donators</url>
+    <url type="help">http://www.pitivi.org/manual/</url>
+    <url type="homepage">http://www.pitivi.org</url>
+    <url type="translate">https://wiki.gnome.org/TranslationProject#How_can_I_help.3F</url>
+    <project_group>GNOME</project_group>
+    <screenshots>
+      <screenshot type="default">
+        <image type="source">http://www.pitivi.org/i/screenshots/software_center_main.jpg</image>
+        <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/org.pitivi.Pitivi-stable/624x351/org.pitivi.Pitivi-d7fdc07d156cfe3ea428db30c9ebfb68.png</image>
+        <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/org.pitivi.Pitivi-stable/1248x702/org.pitivi.Pitivi-d7fdc07d156cfe3ea428db30c9ebfb68.png</image>
+        <image type="thumbnail" height="63" width="112">https://flathub.org/repo/screenshots/org.pitivi.Pitivi-stable/112x63/org.pitivi.Pitivi-d7fdc07d156cfe3ea428db30c9ebfb68.png</image>
+        <image type="thumbnail" height="126" width="224">https://flathub.org/repo/screenshots/org.pitivi.Pitivi-stable/224x126/org.pitivi.Pitivi-d7fdc07d156cfe3ea428db30c9ebfb68.png</image>
+        <image type="thumbnail" height="423" width="752">https://flathub.org/repo/screenshots/org.pitivi.Pitivi-stable/752x423/org.pitivi.Pitivi-d7fdc07d156cfe3ea428db30c9ebfb68.png</image>
+        <image type="thumbnail" height="846" width="1504">https://flathub.org/repo/screenshots/org.pitivi.Pitivi-stable/1504x846/org.pitivi.Pitivi-d7fdc07d156cfe3ea428db30c9ebfb68.png</image>
+      </screenshot>
+    </screenshots>
+    <languages>
+      <lang percentage="68">ast</lang>
+      <lang percentage="77">bg</lang>
+      <lang percentage="86">bs</lang>
+      <lang percentage="93">ca</lang>
+      <lang percentage="94">ca@valencia</lang>
+      <lang percentage="93">cs</lang>
+      <lang percentage="92">da</lang>
+      <lang percentage="93">de</lang>
+      <lang percentage="33">dz</lang>
+      <lang percentage="81">el</lang>
+      <lang percentage="92">en_GB</lang>
+      <lang percentage="38">eo</lang>
+      <lang percentage="93">es</lang>
+      <lang percentage="100">et</lang>
+      <lang percentage="86">eu</lang>
+      <lang percentage="70">fi</lang>
+      <lang percentage="93">fr</lang>
+      <lang percentage="86">gl</lang>
+      <lang percentage="48">he</lang>
+      <lang percentage="93">hu</lang>
+      <lang percentage="93">it</lang>
+      <lang percentage="90">ja</lang>
+      <lang percentage="54">ko</lang>
+      <lang percentage="65">ku</lang>
+      <lang percentage="93">lt</lang>
+      <lang percentage="86">lv</lang>
+      <lang percentage="77">nb</lang>
+      <lang percentage="77">nl</lang>
+      <lang percentage="59">oc</lang>
+      <lang percentage="93">pl</lang>
+      <lang percentage="91">pt</lang>
+      <lang percentage="93">pt_BR</lang>
+      <lang percentage="67">ro</lang>
+      <lang percentage="78">ru</lang>
+      <lang percentage="93">sk</lang>
+      <lang percentage="81">sl</lang>
+      <lang percentage="93">sr</lang>
+      <lang percentage="93">sr@latin</lang>
+      <lang percentage="93">sv</lang>
+      <lang percentage="67">te</lang>
+      <lang percentage="76">tr</lang>
+      <lang percentage="91">uk</lang>
+      <lang percentage="66">vi</lang>
+      <lang percentage="85">zh_CN</lang>
+      <lang percentage="85">zh_HK</lang>
+      <lang percentage="85">zh_TW</lang>
+    </languages>
+    <bundle type="flatpak" runtime="org.gnome.Platform/x86_64/3.24" sdk="org.gnome.Sdk/x86_64/3.24">app/org.pitivi.Pitivi/x86_64/stable</bundle>
+  </component>
+</components>

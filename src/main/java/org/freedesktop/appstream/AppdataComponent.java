@@ -11,6 +11,7 @@ import org.freedesktop.appstream.appdata.Categories;
 import org.freedesktop.appstream.appdata.Component;
 import org.freedesktop.appstream.appdata.ContentRating;
 import org.freedesktop.appstream.appdata.Description;
+import org.freedesktop.appstream.appdata.DeveloperName;
 import org.freedesktop.appstream.appdata.Icon;
 import org.freedesktop.appstream.appdata.Keywords;
 import org.freedesktop.appstream.appdata.Kudos;
@@ -72,12 +73,8 @@ public class AppdataComponent {
     return this.parentComponent.getSummary();
   }
 
-  public String getDeveloperName() {
+  public List<DeveloperName> getDeveloperName() {
     return this.parentComponent.getDeveloperName();
-  }
-
-  public void setDeveloperName(String developerName) {
-    this.parentComponent.setDeveloperName(developerName);
   }
 
   public List<Description> getDescription() {
@@ -343,6 +340,18 @@ public class AppdataComponent {
     for (Description description : this.getDescription()) {
       if (description.getLang() == null) {
         return getObjectListAsString(description.getContent());
+      }
+    }
+
+    return "";
+
+  }
+
+  public String findDefaultDeveloperName() {
+
+    for (DeveloperName developerName : this.getDeveloperName()) {
+      if (developerName.getLang() == null) {
+        return developerName.getValue();
       }
     }
 

@@ -293,6 +293,7 @@ public class AppdataParserTest {
 
   }
 
+
   @Test
   public void when_ParsingBuilderTranslations_Expect_ComponentInfoObtained() throws Exception {
 
@@ -334,6 +335,43 @@ public class AppdataParserTest {
   }
 
   @Test
+  public void when_ParsingPitivi_Expect_ComponentInfoObtained() throws Exception {
+
+    //Given
+    String appDataResourceFile = "appstream-test-app-pitivi.xml";
+    List<AppdataComponent> componentList = null;
+    AppdataComponent component = null;
+    String EXPECTED_FLATPAKID ="org.pitivi.Pitivi";
+    String EXPECTED_DEVELOPER_NAME ="The Pitivi Team";
+
+    String EXPECTED_HOMEPAGE_URL = "http://www.pitivi.org";
+    String EXPECTED_DONATION_URL = "http://www.pitivi.org/?go=donators";
+    String EXPECTED_HELP_URL = "http://www.pitivi.org/manual/";
+    String EXPECTED_BUGTRACKER_URL = "https://phabricator.freedesktop.org/tag/pitivi/";
+    String EXPECTED_TRANSLATE_URL = "https://wiki.gnome.org/TranslationProject#How_can_I_help.3F";
+
+    //When
+    File file = new File(classLoader.getResource(appDataResourceFile).getFile());
+    componentList = AppdataParser.parseAppdataFile(file);
+    if (componentList != null) {
+      component = componentList.get(0);
+    }
+
+    //Then
+    assertThat(componentList).isNotNull();
+    assertThat(componentList.size()).isEqualTo(1);
+    assertThat(component.getType()).isEqualToIgnoringCase(APPSTREAM_TYPE_DESKTOP);
+    assertThat(component.getFlatpakId()).isEqualToIgnoringCase(EXPECTED_FLATPAKID);
+
+    assertThat(component.findDefaultDeveloperName()).isEqualToIgnoringCase(EXPECTED_DEVELOPER_NAME);
+    assertThat(component.findHomepageUrl().get()).isEqualToIgnoringCase(EXPECTED_HOMEPAGE_URL);
+    assertThat(component.findDonationUrl().get()).isEqualToIgnoringCase(EXPECTED_DONATION_URL);
+    assertThat(component.findHelpUrl().get()).isEqualToIgnoringCase(EXPECTED_HELP_URL);
+    assertThat(component.findBugtrackerUrl().get()).isEqualToIgnoringCase(EXPECTED_BUGTRACKER_URL);
+    assertThat(component.findTranslateUrl().get()).isEqualToIgnoringCase(EXPECTED_TRANSLATE_URL);
+  }
+
+  @Test
   public void when_ParsingDiscord_Expect_ComponentInfoObtained() throws Exception {
 
     //Given
@@ -341,6 +379,7 @@ public class AppdataParserTest {
     List<AppdataComponent> componentList = null;
     AppdataComponent component = null;
     String EXPECTED_FLATPAKID ="com.discordapp.Discord";
+    String EXPECTED_DEVELOPER_NAME ="Discord";
     String EXPECTED_RUNTIME = "org.freedesktop.Platform/x86_64/1.6";
     String EXPECTED_DEFAULT_NAME = "Discord";
     String EXPECTED_DEFAULT_SUMMARY = "Chat client";
@@ -370,6 +409,7 @@ public class AppdataParserTest {
     assertThat(componentList.size()).isEqualTo(1);
     assertThat(component.getType()).isEqualToIgnoringCase(APPSTREAM_TYPE_DESKTOP);
     assertThat(component.getFlatpakId()).isEqualToIgnoringCase(EXPECTED_FLATPAKID);
+    assertThat(component.findDefaultDeveloperName()).isEqualToIgnoringCase(EXPECTED_DEVELOPER_NAME);
     assertThat(component.getFlatpakRuntime()).isEqualToIgnoringCase(EXPECTED_RUNTIME);
     assertThat(component.findDefaultName()).isEqualToIgnoringCase(EXPECTED_DEFAULT_NAME);
     assertThat(component.findDefaultSummary()).isEqualToIgnoringCase(EXPECTED_DEFAULT_SUMMARY);

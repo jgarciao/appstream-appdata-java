@@ -63,9 +63,17 @@
       </xs:simpleContent>
     </xs:complexType>
   </xs:element>
-  <xs:element name="developer_name" type="xs:string"/>
+  <xs:element name="developer_name">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute ref="xml:lang"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
 
-  <!-- schema fragment having  mixed content -->
+  <!-- Manually modified description type -->
   <xs:complexType name="description" mixed="true">
     <xs:sequence>
       <xs:element name="p" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
@@ -75,6 +83,7 @@
     <xs:attribute ref="xml:lang"/>
   </xs:complexType>
   <xs:element name="description" type="description"/>
+
 
   <xs:element name="screenshot">
     <xs:complexType>
@@ -132,6 +141,7 @@
         <xs:enumeration value="org.gnome.Platform"/>
         <xs:enumeration value="org.gtk.Gtk3theme.Adapta"/>
         <xs:enumeration value="io.lbry.lbry-app.desktop"/>
+        <xs:enumeration value="org.pitivi.Pitivi.desktop"/>
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
@@ -188,6 +198,7 @@
         <xs:enumeration value="GPL-2.0+"/>
         <xs:enumeration value="Vim"/>
         <xs:enumeration value="MIT"/>
+        <xs:enumeration value="LGPL-2.0+"/>
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
@@ -251,7 +262,7 @@
         <xs:element ref="translation" minOccurs="0"/>
         <xs:element ref="name" maxOccurs="unbounded" minOccurs="0"/>
         <xs:element ref="summary" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element ref="developer_name" minOccurs="0"/>
+        <xs:element ref="developer_name" maxOccurs="unbounded" minOccurs="0"/>
         <xs:element ref="description" maxOccurs="unbounded" minOccurs="0"/>
         <xs:element ref="icon" maxOccurs="unbounded" minOccurs="0"/>
         <xs:element ref="categories" minOccurs="0"/>
@@ -284,7 +295,7 @@
     <xs:complexType>
       <xs:simpleContent>
         <xs:extension base="xs:string">
-          <xs:attribute type="xs:string" name="type"/>
+          <xs:attribute type="xs:string" name="type" use="optional"/>
         </xs:extension>
       </xs:simpleContent>
     </xs:complexType>
