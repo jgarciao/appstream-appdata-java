@@ -269,7 +269,7 @@ public class AppdataComponent {
       idArray = this.getBundle().getValue().split("/");
 
       if (idArray.length == 4 && idArray[1] != null) {
-        flatpakID = idArray[1];
+        flatpakID = idArray[1].trim();
       }
     }
 
