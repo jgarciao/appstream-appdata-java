@@ -1,6 +1,7 @@
 package org.freedesktop.appstream;
 
 import java.io.Serializable;
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -22,6 +23,7 @@ import org.freedesktop.appstream.appdata.Name;
 import org.freedesktop.appstream.appdata.Ol;
 import org.freedesktop.appstream.appdata.Provides;
 import org.freedesktop.appstream.appdata.Release;
+import org.freedesktop.appstream.appdata.Releases;
 import org.freedesktop.appstream.appdata.Screenshot;
 import org.freedesktop.appstream.appdata.Summary;
 import org.freedesktop.appstream.appdata.Translation;
@@ -67,7 +69,6 @@ public class AppdataComponent {
   public List<Name> getName() {
     return this.parentComponent.getName();
   }
-
 
   public List<Summary> getSummary() {
     return this.parentComponent.getSummary();
@@ -183,7 +184,117 @@ public class AppdataComponent {
     this.parentComponent.setType(type);
   }
 
+  Releases getReleases(){
+    return this.parentComponent.getReleases();
+  }
+
+  void setReleases(Releases releases){
+    this.parentComponent.setReleases(releases);
+  }
+
   public AppdataComponent() {}
+
+
+  public void merge(AppdataComponent anotherComponent){
+
+    if(anotherComponent.getFlatpakId() == null || !anotherComponent.getFlatpakId().equalsIgnoreCase(this.getFlatpakId())){
+      throw new InvalidParameterException("FlatpakId must be the same to merge");
+    }
+
+    if(this.getTranslation() == null && anotherComponent.getTranslation() != null){
+      this.setTranslation(anotherComponent.getTranslation());
+    }
+
+    if(this.getName().size() < anotherComponent.getName().size()){
+      this.getName().clear();
+      this.getName().addAll(anotherComponent.getName());
+    }
+
+    if (this.getSummary().size() < anotherComponent.getSummary().size()){
+      this.getSummary().clear();
+      this.getSummary().addAll(anotherComponent.getSummary());
+    }
+
+    if (this.getDeveloperName().size() < anotherComponent.getDeveloperName().size()){
+      this.getDeveloperName().clear();
+      this.getDeveloperName().addAll(anotherComponent.getDeveloperName());
+    }
+
+    if(this.getDescription().size() < anotherComponent.getDescription().size()){
+      this.getDescription().clear();
+      this.getDescription().addAll(anotherComponent.getDescription());
+    }
+
+    if(this.getIcon().size() < anotherComponent.getIcon().size()){
+      this.getIcon().clear();
+      this.getIcon().addAll(anotherComponent.getIcon());
+    }
+
+    if(this.getCategories() == null && anotherComponent.getCategories() != null){
+      this.setCategories(anotherComponent.getCategories());
+    }
+
+    if(this.getKeywords() == null && anotherComponent.getKeywords() != null){
+      this.setKeywords(anotherComponent.getKeywords());
+    }
+
+    if(this.getKudos() == null && anotherComponent.getKudos() != null){
+      this.setKudos(anotherComponent.getKudos());
+    }
+
+    if(this.getMimetypes() == null && anotherComponent.getMimetypes() != null){
+      this.setMimetypes(anotherComponent.getMimetypes());
+    }
+
+    if(this.getProjectLicense() == null && anotherComponent.getProjectLicense() != null){
+      this.setProjectLicense(anotherComponent.getProjectLicense());
+    }
+
+    if(this.getUrl().size() < anotherComponent.getUrl().size()){
+      this.getUrl().clear();
+      this.getUrl().addAll(anotherComponent.getUrl());
+    }
+
+    if(this.getProjectGroup() == null && anotherComponent.getProjectGroup() != null){
+      this.setProjectGroup(anotherComponent.getProjectGroup());
+    }
+
+    if(this.getScreenshots().size() < anotherComponent.getScreenshots().size()){
+      this.getScreenshots().clear();
+      this.getScreenshots().addAll(anotherComponent.getScreenshots());
+    }
+
+    if(this.getContentRating().size() < anotherComponent.getContentRating().size()){
+      this.getContentRating().clear();
+      this.getContentRating().addAll(anotherComponent.getContentRating());
+    }
+
+    if(this.getReleases() == null  && anotherComponent.getReleases() != null){
+      this.setReleases(anotherComponent.getReleases());
+    }
+
+    if(this.getLanguages() == null && anotherComponent.getLanguages() != null){
+      this.setLanguages(anotherComponent.getLanguages());
+    }
+
+    if(this.getProvides() == null && anotherComponent.getProvides() != null){
+      this.setProvides(anotherComponent.getProvides());
+    }
+
+    if(this.getBundle() == null && anotherComponent.getBundle() != null){
+      this.setBundle(anotherComponent.getBundle());
+    }
+
+    if(this.getMetadata() == null && anotherComponent.getMetadata() != null){
+      this.setMetadata(anotherComponent.getMetadata());
+    }
+
+    if(this.getType() == null && anotherComponent.getType() != null){
+      this.setType(anotherComponent.getType());
+    }
+
+  }
+
 
 
   public AppdataComponent(Component parentComponent) {
@@ -289,6 +400,7 @@ public class AppdataComponent {
   public List<ScreenshotInfo> getScreenshots(){
     return this.screenshotsInfo;
   }
+
 
   public String findDefaultName() {
 

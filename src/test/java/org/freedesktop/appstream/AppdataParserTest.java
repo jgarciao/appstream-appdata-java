@@ -560,6 +560,277 @@ public class AppdataParserTest {
     assertThat(component.getCategories().getCategory().get(0)).isEqualToIgnoringCase(EXPECTED_CATEGORY_FIRST);
   }
 
+
+  @Test
+  public void when_MergingComponentData_Expect_ComponentInfoObtained() throws Exception {
+
+    //Given
+    String appDataResourceFile = "appstream-test-app-duplicated-entry.xml";
+    List<AppdataComponent> componentList = null;
+    AppdataComponent component = null;
+    AppdataComponent component2 = null;
+    String EXPECTED_FLATPAKID ="org.mozilla.Thunderbird";
+    String EXPECTED_RUNTIME = "org.gnome.Platform/x86_64/3.28";
+    String EXPECTED_DEFAULT_NAME = "Thunderbird";
+    String EXPECTED_DEFAULT_SUMMARY = "EMail Client";
+    String EXPECTED_DEFAULT_DESCRIPTION = "<p>Mozilla Thunderbird is a free, open-source, and cross-platform email, news, RSS, and chat client developed by the Mozilla Foundation.</p>\n";
+
+    String EXPECTED_HOMEPAGE_URL = "https://www.mozilla.org/en-US/thunderbird/";
+    String EXPECTED_DONATION_URL = "http://www.gnome.org/friends/";
+    String EXPECTED_BUGTRACKER_URL = "https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-builder";
+
+
+    String EXPECTED_PROJECT_LICENSE = "MPL-2.0";
+
+    short EXPECTED_ICONHEIGHT_128 = 128;
+    String EXPECTED_ICONURL_128 = "/repo/appstream/x86_64/icons/128x128/org.mozilla.Thunderbird.png";
+    short EXPECTED_ICONHEIGHT_64 = 64;
+    String EXPECTED_ICONURL_64 = "/repo/appstream/x86_64/icons/64x64/org.mozilla.Thunderbird.png";
+    int EXPECTED_SCREENSHOT_COUNT = 1;
+    short EXPECTED_SCHEENSHOT0_HEIGHT = 846;
+    String EXPECTED_SCREENSHOT0_URL = "https://flathub.org/repo/screenshots/org.mozilla.Thunderbird-stable/1504x846/org.mozilla.Thunderbird-2c4899b0d7f7c95fae89b60643336417.png";
+    short EXPECTED_SCHEENSHOT1_HEIGHT = 351;
+    String EXPECTED_SCREENSHOT1_URL = "https://flathub.org/repo/screenshots/org.gnome.Builder-stable/624x351/org.gnome.Builder-19b4818c4fda40f94d8e6ccc1379dc6d.png";
+
+    int EXPECTEC_CATEGORY_COUNT = 2;
+    String EXPECTED_CATEGORY_FIRST = "Email";
+
+    String EXPECTED_RELEASE_VERSION = "52.7.0";
+    String EXPECTED_RELEASE_DESCRIPTION  = "";
+
+    int EXPECTED_RELEASE_TIMESTAMP = 1521763200;
+
+    //When
+    File file = new File(classLoader.getResource(appDataResourceFile).getFile());
+    componentList = AppdataParser.parseAppdataFile(file);
+    if (componentList != null && componentList.size() == 2) {
+      component = componentList.get(0);
+      component2 = componentList.get(1);
+    }
+
+    //Then
+    assertThat(componentList).isNotNull();
+    assertThat(componentList.size()).isEqualTo(2);
+
+
+    //Check info present in component
+    assertThat(component.getType()).isEqualToIgnoringCase(APPSTREAM_TYPE_DESKTOP);
+    assertThat(component.getFlatpakId()).isEqualToIgnoringCase(EXPECTED_FLATPAKID);
+    assertThat(component.getFlatpakRuntime()).isEqualToIgnoringCase(EXPECTED_RUNTIME);
+    assertThat(component.findDefaultName()).isEqualToIgnoringCase(EXPECTED_DEFAULT_NAME);
+    assertThat(component.findDefaultSummary()).isEqualToIgnoringCase(EXPECTED_DEFAULT_SUMMARY);
+    assertThat(component.findDefaultDescription()).isEqualToIgnoringCase(EXPECTED_DEFAULT_DESCRIPTION);
+    assertThat(component.getProjectLicense()).isEqualToIgnoringCase(EXPECTED_PROJECT_LICENSE);
+    assertThat(component.findHomepageUrl().get()).isEqualToIgnoringCase(EXPECTED_HOMEPAGE_URL);
+
+    assertThat(component.getScreenshots()).isNotNull();
+    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT)).isPresent();
+    assertThat(component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT).get()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
+
+    assertThat(component.findReleaseInfoByMostRecent()).isPresent();
+    assertThat(component.findReleaseInfoByMostRecent().get().getVersion()).isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
+    assertThat(component.findReleaseInfoByMostRecent().get().getTimestamp()).isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
+    assertThat(component.findReleaseInfoByMostRecent().get().getDescription()).isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
+
+
+    //Check missing info at component
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128)).isNull();
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64)).isNull();
+    assertThat(component.getCategories()).isNull();
+
+
+    //Check info present in component2
+    assertThat(component2.getFlatpakId()).isEqualToIgnoringCase(EXPECTED_FLATPAKID);
+
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_128)).isNotNull();
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_128).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_128);
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_128).getValue()).isNotNull();
+    assertThat(component2.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_128)).isEqualToIgnoringCase(EXPECTED_ICONURL_128);
+
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_64)).isNotNull();
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_64).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_64);
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_64).getValue()).isNotNull();
+    assertThat(component2.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64)).isEqualToIgnoringCase(EXPECTED_ICONURL_64);
+
+    assertThat(component2.getCategories()).isNotNull();
+    assertThat(component2.getCategories().getCategory().size()).isEqualTo(EXPECTEC_CATEGORY_COUNT);
+    assertThat(component2.getCategories().getCategory().get(0)).isEqualToIgnoringCase(EXPECTED_CATEGORY_FIRST);
+
+    //Merge component with component2
+    component.merge(component2);
+
+
+    assertThat(component.getType()).isEqualToIgnoringCase(APPSTREAM_TYPE_DESKTOP);
+    assertThat(component.getFlatpakId()).isEqualToIgnoringCase(EXPECTED_FLATPAKID);
+    assertThat(component.getFlatpakRuntime()).isEqualToIgnoringCase(EXPECTED_RUNTIME);
+    assertThat(component.findDefaultName()).isEqualToIgnoringCase(EXPECTED_DEFAULT_NAME);
+    assertThat(component.findDefaultSummary()).isEqualToIgnoringCase(EXPECTED_DEFAULT_SUMMARY);
+    assertThat(component.findDefaultDescription()).isEqualToIgnoringCase(EXPECTED_DEFAULT_DESCRIPTION);
+    assertThat(component.getProjectLicense()).isEqualToIgnoringCase(EXPECTED_PROJECT_LICENSE);
+    assertThat(component.findHomepageUrl().get()).isEqualToIgnoringCase(EXPECTED_HOMEPAGE_URL);
+
+    assertThat(component.getScreenshots()).isNotNull();
+    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT)).isPresent();
+    assertThat(component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT).get()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
+
+    assertThat(component.findReleaseInfoByMostRecent()).isPresent();
+    assertThat(component.findReleaseInfoByMostRecent().get().getVersion()).isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
+    assertThat(component.findReleaseInfoByMostRecent().get().getTimestamp()).isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
+    assertThat(component.findReleaseInfoByMostRecent().get().getDescription()).isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
+
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128)).isNotNull();
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_128);
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getValue()).isNotNull();
+    assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_128)).isEqualToIgnoringCase(EXPECTED_ICONURL_128);
+
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64)).isNotNull();
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_64);
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getValue()).isNotNull();
+    assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64)).isEqualToIgnoringCase(EXPECTED_ICONURL_64);
+
+    assertThat(component.getCategories()).isNotNull();
+    assertThat(component.getCategories().getCategory().size()).isEqualTo(EXPECTEC_CATEGORY_COUNT);
+    assertThat(component.getCategories().getCategory().get(0)).isEqualToIgnoringCase(EXPECTED_CATEGORY_FIRST);
+
+  }
+
+  @Test
+  public void when_MergingComponentDataReverse_Expect_ComponentInfoObtained() throws Exception {
+
+    //Given
+    String appDataResourceFile = "appstream-test-app-duplicated-entry.xml";
+    List<AppdataComponent> componentList = null;
+    AppdataComponent component = null;
+    AppdataComponent component2 = null;
+    String EXPECTED_FLATPAKID ="org.mozilla.Thunderbird";
+    String EXPECTED_RUNTIME = "org.gnome.Platform/x86_64/3.28";
+    String EXPECTED_DEFAULT_NAME = "Thunderbird";
+    String EXPECTED_DEFAULT_SUMMARY = "EMail Client";
+    String EXPECTED_DEFAULT_DESCRIPTION = "<p>Mozilla Thunderbird is a free, open-source, and cross-platform email, news, RSS, and chat client developed by the Mozilla Foundation.</p>\n";
+
+    String EXPECTED_HOMEPAGE_URL = "https://www.mozilla.org/en-US/thunderbird/";
+    String EXPECTED_DONATION_URL = "http://www.gnome.org/friends/";
+    String EXPECTED_BUGTRACKER_URL = "https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-builder";
+
+
+    String EXPECTED_PROJECT_LICENSE = "MPL-2.0";
+
+    short EXPECTED_ICONHEIGHT_128 = 128;
+    String EXPECTED_ICONURL_128 = "/repo/appstream/x86_64/icons/128x128/org.mozilla.Thunderbird.png";
+    short EXPECTED_ICONHEIGHT_64 = 64;
+    String EXPECTED_ICONURL_64 = "/repo/appstream/x86_64/icons/64x64/org.mozilla.Thunderbird.png";
+    int EXPECTED_SCREENSHOT_COUNT = 1;
+    short EXPECTED_SCHEENSHOT0_HEIGHT = 846;
+    String EXPECTED_SCREENSHOT0_URL = "https://flathub.org/repo/screenshots/org.mozilla.Thunderbird-stable/1504x846/org.mozilla.Thunderbird-2c4899b0d7f7c95fae89b60643336417.png";
+    short EXPECTED_SCHEENSHOT1_HEIGHT = 351;
+    String EXPECTED_SCREENSHOT1_URL = "https://flathub.org/repo/screenshots/org.gnome.Builder-stable/624x351/org.gnome.Builder-19b4818c4fda40f94d8e6ccc1379dc6d.png";
+
+    int EXPECTEC_CATEGORY_COUNT = 2;
+    String EXPECTED_CATEGORY_FIRST = "Email";
+
+    String EXPECTED_RELEASE_VERSION = "52.7.0";
+    String EXPECTED_RELEASE_DESCRIPTION  = "";
+
+    int EXPECTED_RELEASE_TIMESTAMP = 1521763200;
+
+    //When
+    File file = new File(classLoader.getResource(appDataResourceFile).getFile());
+    componentList = AppdataParser.parseAppdataFile(file);
+    if (componentList != null && componentList.size() == 2) {
+      component = componentList.get(0);
+      component2 = componentList.get(1);
+    }
+
+    //Then
+    assertThat(componentList).isNotNull();
+    assertThat(componentList.size()).isEqualTo(2);
+
+
+    //Check info present in component
+    assertThat(component.getType()).isEqualToIgnoringCase(APPSTREAM_TYPE_DESKTOP);
+    assertThat(component.getFlatpakId()).isEqualToIgnoringCase(EXPECTED_FLATPAKID);
+    assertThat(component.getFlatpakRuntime()).isEqualToIgnoringCase(EXPECTED_RUNTIME);
+    assertThat(component.findDefaultName()).isEqualToIgnoringCase(EXPECTED_DEFAULT_NAME);
+    assertThat(component.findDefaultSummary()).isEqualToIgnoringCase(EXPECTED_DEFAULT_SUMMARY);
+    assertThat(component.findDefaultDescription()).isEqualToIgnoringCase(EXPECTED_DEFAULT_DESCRIPTION);
+    assertThat(component.getProjectLicense()).isEqualToIgnoringCase(EXPECTED_PROJECT_LICENSE);
+    assertThat(component.findHomepageUrl().get()).isEqualToIgnoringCase(EXPECTED_HOMEPAGE_URL);
+
+    assertThat(component.getScreenshots()).isNotNull();
+    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT)).isPresent();
+    assertThat(component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT).get()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
+
+    assertThat(component.findReleaseInfoByMostRecent()).isPresent();
+    assertThat(component.findReleaseInfoByMostRecent().get().getVersion()).isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
+    assertThat(component.findReleaseInfoByMostRecent().get().getTimestamp()).isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
+    assertThat(component.findReleaseInfoByMostRecent().get().getDescription()).isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
+
+
+    //Check missing info at component
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128)).isNull();
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64)).isNull();
+    assertThat(component.getCategories()).isNull();
+
+
+    //Check info present in component2
+    assertThat(component2.getFlatpakId()).isEqualToIgnoringCase(EXPECTED_FLATPAKID);
+
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_128)).isNotNull();
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_128).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_128);
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_128).getValue()).isNotNull();
+    assertThat(component2.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_128)).isEqualToIgnoringCase(EXPECTED_ICONURL_128);
+
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_64)).isNotNull();
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_64).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_64);
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_64).getValue()).isNotNull();
+    assertThat(component2.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64)).isEqualToIgnoringCase(EXPECTED_ICONURL_64);
+
+    assertThat(component2.getCategories()).isNotNull();
+    assertThat(component2.getCategories().getCategory().size()).isEqualTo(EXPECTEC_CATEGORY_COUNT);
+    assertThat(component2.getCategories().getCategory().get(0)).isEqualToIgnoringCase(EXPECTED_CATEGORY_FIRST);
+
+    //Merge component2 with component
+    component2.merge(component);
+
+
+    assertThat(component2.getType()).isEqualToIgnoringCase(APPSTREAM_TYPE_DESKTOP);
+    assertThat(component2.getFlatpakId()).isEqualToIgnoringCase(EXPECTED_FLATPAKID);
+    assertThat(component2.getFlatpakRuntime()).isEqualToIgnoringCase(EXPECTED_RUNTIME);
+    assertThat(component2.findDefaultName()).isEqualToIgnoringCase(EXPECTED_DEFAULT_NAME);
+    assertThat(component2.findDefaultSummary()).isEqualToIgnoringCase(EXPECTED_DEFAULT_SUMMARY);
+    assertThat(component2.findDefaultDescription()).isEqualToIgnoringCase(EXPECTED_DEFAULT_DESCRIPTION);
+    assertThat(component2.getProjectLicense()).isEqualToIgnoringCase(EXPECTED_PROJECT_LICENSE);
+    assertThat(component2.findHomepageUrl().get()).isEqualToIgnoringCase(EXPECTED_HOMEPAGE_URL);
+
+    assertThat(component2.getScreenshots()).isNotNull();
+    assertThat(component2.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component2.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT)).isPresent();
+    assertThat(component2.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT).get()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
+
+    assertThat(component2.findReleaseInfoByMostRecent()).isPresent();
+    assertThat(component2.findReleaseInfoByMostRecent().get().getVersion()).isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
+    assertThat(component2.findReleaseInfoByMostRecent().get().getTimestamp()).isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
+    assertThat(component2.findReleaseInfoByMostRecent().get().getDescription()).isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
+
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_128)).isNotNull();
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_128).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_128);
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_128).getValue()).isNotNull();
+    assertThat(component2.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_128)).isEqualToIgnoringCase(EXPECTED_ICONURL_128);
+
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_64)).isNotNull();
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_64).getHeight()).isEqualTo(EXPECTED_ICONHEIGHT_64);
+    assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_64).getValue()).isNotNull();
+    assertThat(component2.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64)).isEqualToIgnoringCase(EXPECTED_ICONURL_64);
+
+    assertThat(component2.getCategories()).isNotNull();
+    assertThat(component2.getCategories().getCategory().size()).isEqualTo(EXPECTEC_CATEGORY_COUNT);
+    assertThat(component2.getCategories().getCategory().get(0)).isEqualToIgnoringCase(EXPECTED_CATEGORY_FIRST);
+
+  }
+
   @Test
   public void when_ParsingLbry_Expect_ComponentInfoObtained() throws Exception {
 
