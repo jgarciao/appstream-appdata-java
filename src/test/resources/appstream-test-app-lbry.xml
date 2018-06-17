@@ -5,8 +5,8 @@
     <name>LBRY</name>
     <summary>A browser and wallet for LBRY, the decentralized, user-controlled content marketplace.</summary>
     <description><p>LBRY is a free, open, and community-run digital marketplace.</p><p>You own your data. You control the network. Indeed, you are the network.</p><p>Hollywood films, college lessons, amazing streamers and more are on the first media network ruled by you.</p></description>
-    <icon type="cached" height="128" width="128">io.lbry.lbry-app.png</icon>
-    <icon type="cached" height="64" width="64">io.lbry.lbry-app.png</icon>
+    <icon height="128" width="128" type="cached">io.lbry.lbry-app.png</icon>
+    <icon height="64" width="64" type="cached">io.lbry.lbry-app.png</icon>
     <categories>
       <category>AudioVideo</category>
       <category>Video</category>
@@ -96,44 +96,15 @@
       <content_attribute id="money-purchasing">mild</content_attribute>
       <content_attribute id="money-gambling">none</content_attribute>
     </content_rating>
-    <content_rating type="oars-1.1">
-      <content_attribute id="violence-cartoon">none</content_attribute>
-      <content_attribute id="violence-fantasy">none</content_attribute>
-      <content_attribute id="violence-realistic">none</content_attribute>
-      <content_attribute id="violence-bloodshed">none</content_attribute>
-      <content_attribute id="violence-sexual">none</content_attribute>
-      <content_attribute id="violence-desecration">none</content_attribute>
-      <content_attribute id="violence-slavery">none</content_attribute>
-      <content_attribute id="violence-worship">none</content_attribute>
-      <content_attribute id="drugs-alcohol">none</content_attribute>
-      <content_attribute id="drugs-narcotics">none</content_attribute>
-      <content_attribute id="drugs-tobacco">none</content_attribute>
-      <content_attribute id="sex-nudity">none</content_attribute>
-      <content_attribute id="sex-themes">none</content_attribute>
-      <content_attribute id="sex-homosexuality">none</content_attribute>
-      <content_attribute id="sex-prostitution">none</content_attribute>
-      <content_attribute id="sex-adultery">none</content_attribute>
-      <content_attribute id="sex-appearance">none</content_attribute>
-      <content_attribute id="language-profanity">none</content_attribute>
-      <content_attribute id="language-humor">none</content_attribute>
-      <content_attribute id="language-discrimination">none</content_attribute>
-      <content_attribute id="social-chat">none</content_attribute>
-      <content_attribute id="social-info">mild</content_attribute>
-      <content_attribute id="social-audio">intense</content_attribute>
-      <content_attribute id="social-location">none</content_attribute>
-      <content_attribute id="social-contacts">none</content_attribute>
-      <content_attribute id="money-purchasing">mild</content_attribute>
-      <content_attribute id="money-gambling">none</content_attribute>
-    </content_rating>
     <releases>
-      <release timestamp="1517270400" version="0.20.0">
+      <release version="0.21.3" timestamp="1524441600">
+        <description><p>Added:</p><ul><li>Block blacklisted content (#1361)</li></ul></description>
+      </release>
+      <release version="0.21.2" timestamp="1521676800">
+        <description><p>Added:</p><ul><li>Save app state when closing to tray (#968)</li><li>Added startup-troubleshooting FAQ URL to daemon error (#1039)</li><li>Added ability to export wallet transactions to JSON and CSV format (#976)</li><li>Add Rewards FAQ to LBRY app (#1041)</li><li>Notifications when the channel a user subscribes to uploads new content (#1066)</li><li>Codacy support for Github contributions (#1059)</li><li>App category for Linux (#877)</li><li>Add YouTube Sync reward (#1147)</li><li>Retain previous screen sizing on startup (#338)</li></ul><p>Changed:</p><ul><li>Update LBRY Protocol to 0.19.1 (See change log for 0.19.0 and 0.19.1)</li><li>Improved privacy by allowing users to turn off the file view counter and better understand privacy settings (#1074 / #1116)</li><li>Disabled auto dark mode if dark mode is selected (#1006)</li><li>Refactor Electron&apos;s main process (#951)</li><li>Refactor lbryuri.js into separate named exports (#957)</li><li>Keep node_modules up-to-date when yarn.lock changes due to git (#955)</li><li>Do not kill an existing daemon, instead check if one exists (#973)</li><li>Enable play button immediately after user clicks download (#987)</li><li>Significantly improved search performance (#1032)</li><li>Allow editing of claims when bid is greater than current balance (#1105)</li></ul><p>Fixed:</p><ul><li>Fixed sort by date of published content (#986)</li><li>Fix night mode start time, set to 9PM (#1050)</li><li>Disable drag and drop of files into the app (#1045)</li><li>Fixed uninformative error message (#1046)</li><li>Update documentation for DevTools and fix some ESLint warnings (#911)</li><li>Fix right click bug (#928)</li><li>Fix Election linting errors (#929)</li><li>App will no longer reset when minimizing to tray (#1042)</li><li>Error when clicking LBRY URLs when app is closed on macOS (#1119)</li><li>LBRY URLs not working on Linux (#1120)</li><li>Fix Windows notifications not showing (#1145)</li><li>Fix export issues (#1163)</li></ul></description>
+      </release>
+      <release version="0.20.0" timestamp="1517270400">
         <description><p>Added:</p><ul><li>Added Automatic Dark Mode (#950)</li><li>Re-introduce build dir / dist dir option for isolated build environments (#933)</li><li>Added sms as a method for reward identity verification (#946)</li><li>Added auto-update (#808)</li></ul><p>Changed:</p><ul><li>Refactored Electron&apos;s main process (#951)</li><li>Refactored lbryuri.js into separate named exports (#957)</li><li>Upgraded Daemon to version 18.2 (#961)</li><li>Upgraded Electron for security patch (commit)</li></ul><p>Fixed:</p><ul><li>Fixed issues in documentation (#945)</li><li>Fixed linting errors (#929)</li></ul></description>
-      </release>
-      <release timestamp="1515369600" version="0.19.4">
-        <description><p>Added:</p><ul><li>Video state tracking in redux - developer only (#890)</li></ul><p>Changed:</p><ul><li>Improved text content in app (#921)</li></ul><p>Fixed:</p><ul><li>Right click works in the app again (#928)</li><li>Icons are now the rights size (#925)</li><li>Fixed tip sending error (#918)</li></ul></description>
-      </release>
-      <release timestamp="1514592000" version="0.19.3">
-        <description><p>Changed:</p><ul><li>Improved internal code structuring by adding linting integration -- developers only (#891)</li><li>Improved developer documentation (#910)</li></ul><p>Removed:</p><ul><li>Removed email verification reward (#914)</li></ul><p>Fixed:</p><ul><li>Added snackbar text in place where it was coming up blank (#902)</li></ul></description>
       </release>
     </releases>
     <bundle type="flatpak" runtime="org.freedesktop.Platform/x86_64/1.6" sdk="org.freedesktop.Sdk/x86_64/1.6">app/io.lbry.lbry-app/x86_64/stable</bundle>

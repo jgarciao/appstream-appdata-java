@@ -33,12 +33,12 @@
     <summary xml:lang="zh_CN">视频编辑器</summary>
     <summary xml:lang="zh_TW">影像編輯器</summary>
     <description><p>Kdenlive is a non linear video editor. It is based on the MLT framework and accepts many audio and video formats, allows you to add effects, transitions and render into the format of your choice.</p><p>Features:</p><ul><li>Intuitive multitrack interface.</li><li>Many effects and transitions.</li><li>Color scopes</li><li>Basic DVD Wizard</li></ul></description>
-    <description xml:lang="ar"><p>«كدينلايڤ» هو محرّر فيديوهات غير خطّي. بُني على إطار عمل MLT ويقبل العديد من نُسق الصّوت والفيديو. كما ويسمح بإضافة التّأثيرات والانتقالات.</p><p>الميزات:</p><ul><li>تأثيرات وانتقالات عديدة.</li><li>نطاقات الألوان</li><li>مُرشد DVD أساسيّ</li></ul></description>
+    <description xml:lang="ar"><p>«كدينلايڤ» هو محرّر فيديوهات غير خطّي. بُني على إطار عمل MLT ويقبل العديد من نُسق الصّوت والفيديو. كما ويسمح بإضافة التّأثيرات والانتقالات.</p><p>الميزات:</p><ul><li>واجهة متعدّدة المسارات بديهيّة.</li><li>تأثيرات وانتقالات عديدة.</li><li>نطاقات الألوان</li><li>مُرشد DVD أساسيّ</li></ul></description>
     <description xml:lang="bs"><p>Svojstva:</p><ul/></description>
     <description xml:lang="ca"><p>El Kdenlive és un editor no lineal de vídeo. Està basat en l&apos;entorn de treball MLT i accepta molts formats d&apos;àudio i vídeo, permetent afegir efectes, transicions i representacions en el format de la vostra elecció.</p><p>Característiques:</p><ul><li>Interfície multipista intuïtiva.</li><li>Molts efectes i transicions.</li><li>Àmbits de color</li><li>Assistent bàsic per als DVD</li></ul></description>
     <description xml:lang="ca_valencia"><p>El Kdenlive és un editor no lineal de vídeo. Està basat en l&apos;entorn de treball MLT i accepta molts formats d&apos;àudio i vídeo, permetent afegir efectes, transicions i representacions en el format de la vostra elecció.</p><p>Característiques:</p><ul><li>Interfície multipista intuïtiva.</li><li>Molts efectes i transicions.</li><li>Àmbits de color</li><li>Assistent bàsic per als DVD</li></ul></description>
     <description xml:lang="cs"><p>Kdenlive je nelineární video editor. Je založený na frameworku MLT a přehrává mnoho zvukových a video formátů, umožňuje přidat efekty, přechody a renderuje do formátu podle vašeho výběru.</p><p>Vlastnosti:</p><ul><li>Intuitivní vícepohledové rozhraní.</li><li>Spousta efektů a přechodů.</li><li>Rozsahy barev</li><li>Základní průvodce DVD</li></ul></description>
-    <description xml:lang="da"><p>Funktioner:</p><ul/></description>
+    <description xml:lang="da"><p>Kdenlive er et ikke-lineært videoredigeringsprogram. Det er baseret på MLT-framework og accepterer mange lyd- og videoformater, som giver dig mulighed for at tilføje effekter, overgange og rendere i det format du ønsker.</p><p>Funktioner:</p><ul><li>Intuitiv multispor-grænseflade.</li><li>Mange effekter og overgange.</li><li>Farveskoper</li><li>Grundlæggende dvd-guide</li></ul></description>
     <description xml:lang="de"><p>Kdenlive ist ein Video-Editor für nichtlinearen Schnitt. Es basiert auf MLT und verarbeitet viele Audio- und Video-Formate. Sie können Effekte und Übergänge benutzen und in Formate Ihrer Wahl umwandeln.</p><p>Funktionen:</p><ul><li>Intuitive Mehrspur-Benutzeroberfläche.</li><li>Viele Effekte und Übergänge.</li><li>Farbbereiche</li><li>Einfacher DVD-Assistent</li></ul></description>
     <description xml:lang="el"><p>Το Kdenlive είναι ένας μη γραμμικός επεξεργαστής βίντεο. Βασίζεται στο πλαίσιο εργασίας MLT και δέχεται πολλούς τύπους ήχου και βίντεο, επιτρέπει την προσθήκη εφέ, μεταβάσεων και αποτύπωσης στον τύπο αποθήκευσης της επιλογής σας.</p><p>Χαρακτηριστικά:</p><ul><li>Διαισθητική πολυκάναλη διεπαφή.</li><li>Πολλά εφέ και μεταβάσεις.</li><li>Εμβέλειες χρωμάτων</li><li>Βασικός οδηγός DVD</li></ul></description>
     <description xml:lang="en_GB"><p>Kdenlive is a non linear video editor. It is based on the MLT framework and accepts many audio and video formats, allows you to add effects, transitions and render into the format of your choice.</p><p>Features:</p><ul><li>Intuitive multitrack interface.</li><li>Many effects and transitions.</li><li>Colour scopes</li><li>Basic DVD Wizard</li></ul></description>
@@ -74,10 +74,12 @@
       <keyword>mlt</keyword>
       <keyword>video</keyword>
       <keyword xml:lang="ar">تحرير</keyword>
+      <keyword xml:lang="ar">تعدد</keyword>
       <keyword xml:lang="ar">صوت</keyword>
       <keyword xml:lang="ar">فيديو</keyword>
       <keyword xml:lang="ar">كدي</keyword>
-      <keyword xml:lang="ar">محرر</keyword>
+      <keyword xml:lang="ar">مسارات</keyword>
+      <keyword xml:lang="ar">واجهة</keyword>
       <keyword xml:lang="ca">edició</keyword>
       <keyword xml:lang="ca">vídeo</keyword>
       <keyword xml:lang="ca">àudio</keyword>
@@ -156,21 +158,22 @@
     <project_group>KDE</project_group>
     <screenshots>
       <screenshot type="default">
-        <image type="source">https://kdenlive.org/wp-content/data/kdenlive-screenshot.png</image>
-        <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/org.kde.kdenlive-stable/624x351/org.kde.kdenlive-097e6cd6748a6b371b413b947f956a0e.png</image>
-        <image type="thumbnail" height="63" width="112">https://flathub.org/repo/screenshots/org.kde.kdenlive-stable/112x63/org.kde.kdenlive-097e6cd6748a6b371b413b947f956a0e.png</image>
-        <image type="thumbnail" height="126" width="224">https://flathub.org/repo/screenshots/org.kde.kdenlive-stable/224x126/org.kde.kdenlive-097e6cd6748a6b371b413b947f956a0e.png</image>
-        <image type="thumbnail" height="423" width="752">https://flathub.org/repo/screenshots/org.kde.kdenlive-stable/752x423/org.kde.kdenlive-097e6cd6748a6b371b413b947f956a0e.png</image>
+        <image type="source">https://cdn.kde.org/screenshots/kdenlive/screenshot-monitors.png</image>
+        <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/org.kde.kdenlive-stable/624x351/org.kde.kdenlive-cafab05e4cbb473c160a6adbc41532e2.png</image>
+        <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/org.kde.kdenlive-stable/1248x702/org.kde.kdenlive-cafab05e4cbb473c160a6adbc41532e2.png</image>
+        <image type="thumbnail" height="63" width="112">https://flathub.org/repo/screenshots/org.kde.kdenlive-stable/112x63/org.kde.kdenlive-cafab05e4cbb473c160a6adbc41532e2.png</image>
+        <image type="thumbnail" height="126" width="224">https://flathub.org/repo/screenshots/org.kde.kdenlive-stable/224x126/org.kde.kdenlive-cafab05e4cbb473c160a6adbc41532e2.png</image>
+        <image type="thumbnail" height="423" width="752">https://flathub.org/repo/screenshots/org.kde.kdenlive-stable/752x423/org.kde.kdenlive-cafab05e4cbb473c160a6adbc41532e2.png</image>
+        <image type="thumbnail" height="846" width="1504">https://flathub.org/repo/screenshots/org.kde.kdenlive-stable/1504x846/org.kde.kdenlive-cafab05e4cbb473c160a6adbc41532e2.png</image>
       </screenshot>
     </screenshots>
     <releases>
-      <release timestamp="1517875200" version="17.12.2"/>
-      <release timestamp="1515283200" version="17.12.1"/>
+      <release timestamp="1528329600" version="18.04.2"/>
     </releases>
     <provides>
       <binary>kdenlive</binary>
       <binary>kdenlive_render</binary>
     </provides>
-    <bundle type="flatpak" runtime="org.kde.Platform/x86_64/5.9" sdk="org.kde.Sdk/x86_64/5.9">app/org.kde.kdenlive/x86_64/stable</bundle>
+    <bundle type="flatpak" runtime="org.kde.Platform/x86_64/5.11" sdk="org.kde.Sdk/x86_64/5.11">app/org.kde.kdenlive/x86_64/stable</bundle>
   </component>
 </components>

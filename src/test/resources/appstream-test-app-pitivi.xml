@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <components version="0.8" origin="flatpak">
-<component type="desktop">
+  <component type="desktop">
     <id>org.pitivi.Pitivi.desktop</id>
     <translation type="gettext">pitivi</translation>
     <name>Pitivi</name>

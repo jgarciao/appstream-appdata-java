@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="flatpak">
+  <component type="desktop">
+    <id>org.gimp.GIMP</id>
+    <translation type="gettext">gimp20</translation>
+    <name>GNU Image Manipulation Program</name>
+    <name xml:lang="ar">برنامج جنو لمعالجة الصور</name>
+    <name xml:lang="ast">Programa de manipulación d&apos;Imaxe GNU</name>
+    <name xml:lang="be">GIMP — праґрама праекту GNU для працы зь відарысамі</name>
+    <name xml:lang="bg">Редактор на изображения (GIMP)</name>
+    <name xml:lang="br">Goulev da zornata skeudennoù GNU</name>
+    <name xml:lang="bs">Gnuov program za obradu slika (GNU Image Manipulation Program)</name>
+    <name xml:lang="ca">Programa de retoc d&apos;imatges de GNU</name>
+    <name xml:lang="ca@valencia">Programa de retoc d&apos;imatges de GNU</name>
+    <name xml:lang="csb">Editora òbrôzów GIMP</name>
+    <name xml:lang="dz">་་ཨི་མེཇི་་མ་ནུ་པུ་ལེ་ཤཱན་་པོརོ་གརམ།</name>
+    <name xml:lang="el">Πρόγραμμα επεξεργασίας εικόνων GNU</name>
+    <name xml:lang="eo">Bildmanipulilo (GIMP = GNU Image Manipulation Program)</name>
+    <name xml:lang="es">Programa de manipulación de imágenes de GNU</name>
+    <name xml:lang="et">GIMP - GNU pilditöötlusprogramm</name>
+    <name xml:lang="eu">GNUren Irudiak Manipulatzeko Programa</name>
+    <name xml:lang="fa">برنامهٔ روتوش تصاویر گنو</name>
+    <name xml:lang="fi">GIMP-kuvankäsittely</name>
+    <name xml:lang="fr">Éditeur d’image GIMP</name>
+    <name xml:lang="gl">Programa de Manipulación de Imaxes de GNU</name>
+    <name xml:lang="gu">GNU ચિત્ર જાળવણી કાર્યક્રમ</name>
+    <name xml:lang="he">תוכנת עיבוד התמונה של GNU</name>
+    <name xml:lang="hr">GIMP program za manipulaciju slikama</name>
+    <name xml:lang="hu">A GNU képszerkesztő program</name>
+    <name xml:lang="id">GNU Program Manipulasi Gambar</name>
+    <name xml:lang="is">GNU Myndvinnsluforrit</name>
+    <name xml:lang="ja">GIMP (GNU Image Manipulation Program)</name>
+    <name xml:lang="km">កម្មវិធី​រៀបចំ​រូបភាពរបស់ GNU</name>
+    <name xml:lang="kn">GNU ಇಮೇಜ್ ಮ್ಯಾನಿಪುಲೇಶನ್ ಪ್ರೊಗ್ರಾಮ್</name>
+    <name xml:lang="ko">그누 이미지 처리 프로그램</name>
+    <name xml:lang="lt">GNU paveikslėlių manipuliavimo programa</name>
+    <name xml:lang="lv">GNU attēlu apstrādes programma</name>
+    <name xml:lang="mk">ГНУ програма за манипулација со слики</name>
+    <name xml:lang="my">GNU ရုပ်ပုံ စီမံကိုင်တွယ်ရေး ပရိုဂရမ်</name>
+    <name xml:lang="nb">GNU bildebehandlingsprogram</name>
+    <name xml:lang="nds">GNU Billbewarkenprogramm</name>
+    <name xml:lang="ne">जी एन यू छवि परिचालन कार्यक्रम</name>
+    <name xml:lang="nn">GNU bilethandteringsprogram</name>
+    <name xml:lang="oc">Editor d&apos;imatge GIMP</name>
+    <name xml:lang="pa">ਗਨੂ ਈਮੇਜ਼ ਮੈਨੂਪਲੇਸ਼ਨ ਪਰੋਗਰਾਮ</name>
+    <name xml:lang="pl">Edytor obrazów GIMP</name>
+    <name xml:lang="pt">Programa de Manipulação de Imagens GNU</name>
+    <name xml:lang="pt_BR">Programa de manipulação de imagem do GNU</name>
+    <name xml:lang="ro">GIMP</name>
+    <name xml:lang="sk">GNU program na manipuláciu s obrázkami</name>
+    <name xml:lang="sl">GIMP – program GNU za obdelavo slik</name>
+    <name xml:lang="sr">Гнуов програм за обраду слика</name>
+    <name xml:lang="sr@latin">Gnuov program za obradu slika</name>
+    <name xml:lang="sv">GNU:s bildmanipuleringsprogram</name>
+    <name xml:lang="ta">க்னூ பட கையாளல் நிரல்</name>
+    <name xml:lang="te">గ్నూ ఇమేజ్ మానిప్యులేషన్ ప్రోగ్రామ్</name>
+    <name xml:lang="tr">GNU Görüntü İşleme Programı</name>
+    <name xml:lang="tt">Sürät Eşkärtüçe GNU-Yasılım</name>
+    <name xml:lang="vi">Chương Trình Thao Tác Ảnh GNU</name>
+    <name xml:lang="zh_CN">GNU 图像处理程序</name>
+    <name xml:lang="zh_HK">GNU 圖片處理程式</name>
+    <name xml:lang="zh_TW">GNU 影像處理程式</name>
+    <summary>Create images and edit photographs</summary>
+    <summary xml:lang="ar">أنشئ صورا وحرّر لقطات</summary>
+    <summary xml:lang="ast">Cree imáxenes y edite semeyes</summary>
+    <summary xml:lang="be">Стварэньне відарысаў і праўленьне фатаздымкаў</summary>
+    <summary xml:lang="bg">Създаване на изображения и редакция на снимки</summary>
+    <summary xml:lang="br">Krouiñ hag embann skeudennoù pe luc&apos;hskeudennoù</summary>
+    <summary xml:lang="bs">Napravite slike i obradite fotografije</summary>
+    <summary xml:lang="ca">Creeu imatges i editeu fotografies</summary>
+    <summary xml:lang="ca@valencia">Creeu imatges i editeu fotografies</summary>
+    <summary xml:lang="cs">Vytvářejte obrázky a upravujte fotografie</summary>
+    <summary xml:lang="da">Opret billeder og redigér fotografier</summary>
+    <summary xml:lang="de">Bilder erstellen und Fotografien bearbeiten</summary>
+    <summary xml:lang="dz">གཟུགས་བརྙན་ཚུ་ གསར་བསྐྲུན་འབད་ནི་དང་ དཔར་ཚུ་ཞུན་དག་འབད།</summary>
+    <summary xml:lang="el">Δημιουργία εικόνων και επεξεργασία φωτογραφιών</summary>
+    <summary xml:lang="eo">Krei bildojn aŭ redakti fotaĵojn</summary>
+    <summary xml:lang="es">Cree imágenes y edite fotografías</summary>
+    <summary xml:lang="et">Joonistamine ja fotode töötlemine</summary>
+    <summary xml:lang="eu">Sortu irudiak eta editatu argazkiak</summary>
+    <summary xml:lang="fi">Luo kuvia ja muokkaa valokuvia</summary>
+    <summary xml:lang="fr">Créer des images et modifier des photographies</summary>
+    <summary xml:lang="gd">Cruthaich dealbhan is deasaich dealbhan camara</summary>
+    <summary xml:lang="gl">Crear imaxes e editar fotografías</summary>
+    <summary xml:lang="gu">ચિત્રો બનાવો અને ફોટાઓમાં ફેરફાર કરો</summary>
+    <summary xml:lang="hr">Stvarajte slike i uređujte fotografije</summary>
+    <summary xml:lang="hu">Képek létrehozása és fotók szerkesztése</summary>
+    <summary xml:lang="id">Buat gambar dan sunting foto</summary>
+    <summary xml:lang="is">Búa til myndir og breyta ljósmyndum</summary>
+    <summary xml:lang="it">Crea immagini e modifica fotografie</summary>
+    <summary xml:lang="ja">画像の作成と写真の編集を行います</summary>
+    <summary xml:lang="kk">Суреттерді жасау және фотоларды түзету</summary>
+    <summary xml:lang="km">បង្កើត​រូបភាព និង កែសម្រួល​រូបថត</summary>
+    <summary xml:lang="kn">ಚಿತ್ರಗಳನ್ನು ರಚಿಸಿ ಹಾಗು ಫೋಟೋಗ್ರಾಫ್‌ಗಳನ್ನು ಸಂಪಾದಿಸಿ</summary>
+    <summary xml:lang="ko">이미지를 만들고 사진을 편집합니다</summary>
+    <summary xml:lang="lt">Kurti paveikslėlius ir redaguoti fotografijas</summary>
+    <summary xml:lang="lv">Veido attēlus vai rediģē fotogrāfijas</summary>
+    <summary xml:lang="mk">Направи слики и уреди фотографии</summary>
+    <summary xml:lang="my">ရုပ်ပုံများကို ဖန်တီးပြီး ဓါတ်ပုံများကို တည်းဖြတ်ပါ</summary>
+    <summary xml:lang="nb">Lag bilder og rediger fotografier</summary>
+    <summary xml:lang="ne">छवि सिर्जना गर्नुहोस् र फोटोग्राफ सम्पादन गर्नुहोस्</summary>
+    <summary xml:lang="nl">Afbeeldingen of foto&apos;s aanmaken en bewerken</summary>
+    <summary xml:lang="nn">Lag teikningar eller rediger foto</summary>
+    <summary xml:lang="oc">Crear d&apos;imatges e modificar de fotografias</summary>
+    <summary xml:lang="pa">ਚਿੱਤਰ ਬਣਾਓ ਅਤੇ ਤਸਵੀਰਾਂ ਸੋਧੋ</summary>
+    <summary xml:lang="pl">Tworzenie oraz obróbka obrazów i fotografii</summary>
+    <summary xml:lang="pt">Criar imagens e editar fotografias</summary>
+    <summary xml:lang="pt_BR">Crie e edite imagens ou fotografias</summary>
+    <summary xml:lang="ro">Creează imagini și editează fotografii</summary>
+    <summary xml:lang="ru">Создание изображений и редактирование фотографий</summary>
+    <summary xml:lang="sk">Vytvárajte a upravujte obrázky alebo fotografie</summary>
+    <summary xml:lang="sl">Ustvari slike in uredi fotografije</summary>
+    <summary xml:lang="sr">Направите нове сличице и средите ваше фотографије</summary>
+    <summary xml:lang="sr@latin">Napravite slike i uredite fotografije</summary>
+    <summary xml:lang="sv">Skapa bilder och redigera fotografier</summary>
+    <summary xml:lang="ta">பிம்பங்களை உருவாக்கவும் மற்றும் படங்களை திருத்தவும்</summary>
+    <summary xml:lang="te">బొమ్మలను సృష్టించు మరియు చిత్రాలను సవరించు</summary>
+    <summary xml:lang="tr">Görüntü oluşturur ve fotoğraf düzenler</summary>
+    <summary xml:lang="uk">Створення зображень та редагування фотографій</summary>
+    <summary xml:lang="vi">Tạo và biên soạn ảnh hay ảnh chụp</summary>
+    <summary xml:lang="zh_CN">创建图像或编辑照片</summary>
+    <summary xml:lang="zh_HK">建立圖像與編輯照片</summary>
+    <summary xml:lang="zh_TW">建立圖像與編輯照片</summary>
+    <description><p>GIMP is an acronym for GNU Image Manipulation Program. It is a freely distributed program for such tasks as photo retouching, image composition and image authoring.</p><p>It has many capabilities. It can be used as a simple paint program, an expert quality photo retouching program, an online batch processing system, a mass production image renderer, an image format converter, etc.</p><p>GIMP is expandable and extensible. It is designed to be augmented with plug-ins and extensions to do just about anything. The advanced scripting interface allows everything from the simplest task to the most complex image manipulation procedures to be easily scripted. GIMP is available for Linux, Microsoft Windows and OS X.</p></description>
+    <description xml:lang="ar"><p>جمب هو اختصار برنامج جنو لمعالجة الصور. هو برنامج حر لأمور مثل تعديل الصور و تركيبها و تحسينها.</p><p>له الكثير من الإمكانيات. يمكن استخدامه كبرنامج رسم بسيط، أو كبرنامج احترافي لتعديل الصور، أو كنظام لمعالجة الصور في دفعات، أو كمحول بين أنساق الصور، إلخ.</p><p>صمم جمب ليمكن تعزيزه بملحقات و إضافات لفعل كل شيء تقريبًا. واجهة البرمجة المتقدمة تتيح كتابة برامج تفسيرية لعمل كل شيء من أبسط المهام إلى أعقد عمليات معالجة الصور. يتوفر جمب على لينكس و ويندوز و ماك.</p></description>
+    <description xml:lang="bs"><p>GIMP je akronim za GNU Image Manipulation Program(GNU program za manipulaciju slikom). To je slobodno distribuiran program za namjene kao što su dotjerivanje slike, kompoziciju slike i autorstvo.</p><p>Ima mnoge mogućnosti. Može se koristiti kao jednostavni program za crtanje, program za dotjerivanje slika ekspertne kvalitete, sistem za grupno online procesiranje,  prikazivač masivno proizvedenih slika, koverter formata slike itd.</p><p>GIMP je proširiv i dopunjiv. Dizajniran je da bude proširen sa dodacima i proširenjima za bilo šta. Napredni interfejs za pisanje dozvoljava sve, od najjednostavnijih zadataka do jednostavnog pisanja najkompleksnijih procedura manipulacije slikom. GIMP je dostupan za Linux, Microsoft Windows i OS X.</p></description>
+    <description xml:lang="ca"><p>El GIMP és un acrònim de GNU Image Manipulation Program (Programa de retoc d&apos;imatges GNU), i és un programa que es distribueix de manera lliure per algunes tasques com el retoc de fotografies, la composició i la creació d&apos;imatges.</p><p>Té un gran potencial: pot utilitzar-se com a programa només per dibuixar, com una aplicació professional de retoc fotogràfic, com un sistema en línia de processament per lots, per renderitzar imatges en massa d&apos;imatges, per convertir imatges entre formats, etc.</p><p>El GIMP és ampliable i extensible. Està dissenyat per augmentar-se amb connectors i extensions, per fer-hi gairebé de tot. La interfície avançada d&apos;scripts ho permet tot, es poden realitzar fàcilment amb scripts des de la tasca més simple als processos més complexos de manipulació d&apos;imatges. El GIMP està disponible per a Linux, Microsoft Windows i OS X.</p></description>
+    <description xml:lang="ca@valencia"><p>El GIMP és un acrònim de GNU Image Manipulation Program (Programa de manipulació d&apos;imatges GNU), i és un programa que es distribueix de manera lliure per a algunes tasques com ara el retoc de fotografies, la composició i la creació d&apos;imatges.</p><p>Té un gran potencial: pot utilitzar-se com a programa només per a dibuixar, com una aplicació professional de retoc fotogràfic, com un sistema en línia de processament per lots, per a renderitzar imatges en sèrie, per a convertir imatges entre formats, etc.</p><p>El GIMP és ampliable i extensible. Està dissenyat per a augmentar-se amb connectors i extensions, per a fer-hi gairebé de tot. La interfície avançada d&apos;scripts ho permet tot, es poden realitzar fàcilment amb scripts des de la tasca més simple als processos més complexos de manipulació d&apos;imatges . El GIMP està disponible per a Linux, per a Microsoft Windows i per a OS X.</p></description>
+    <description xml:lang="da"><p>GIMP er en forkortelse af GNU Image Manipulation Program. Programmet kan frit videregives og anvendes til opgaver såsom billedretouchering, billedkomposition og oprettelse af nye billeder.</p><p>Den har mange anvendelsesmuligheder. Det kan bruges som et simpelt tegneprogram, et avanceret retoucheringsprogram af høj kvalitet, et online batchbehandlingssystem, en masseproduktion-billedoptegning, et billedkonverteringsprogram, osv.</p><p>GIMP kan udvides. Programmet er designet til at blive suppleret med udvidelsesmoduler og udvidelser til at gøre næsten alt. Den avancerede scriptinggrænseflade giver mulighed for nemt at scripte alt fra den simpleste opgave til de mest komplekse billedmanipulationsprocedurer. GIMP fås til Linux, Microsoft Windows og OS X.</p></description>
+    <description xml:lang="de"><p>GIMP ist ein Akronym für »GNU Image Manipulation Program«. Es ist ein frei veröffentlichtes Programm z.B. zum  Retuschieren von Fotos, zur Bildkomposition und Bilderstellung.</p><p>Es hat viele Einsatzmöglichkeiten. Es kann als einfaches Malprogramm, als Retuschierprogramm für Experten, als Stapelverarbeitungssystem, als Bildersteller für Massenproduktion, als Bildformatumwandler u.v.m eingesetzt werden.</p><p>GIMP ist erweiterbar. Es ist darauf ausgelegt mit Plugins und Erweiterungen bereichert zu werden, um nahezu alles erledigen zu können. Die fortgeschrittene Skript-Schnittstelle ermöglicht alles von der einfachsten Aufgabe bis hin zu den komplexesten Bildbearbeitungsvorgängen zu skripten. GIMP ist für Linux, Microsoft Windows und OS X verfügbar.</p></description>
+    <description xml:lang="el"><p>Το GIMP είναι ένα ακρωνύμιο για το πρόγραμμα επεξεργασίας εικόνας GNU. Διανέμεται ελεύθερα για τέτοιες εργασίες όπως επεξεργασία φωτογραφίας, σύνθεση εικόνας και δημιουργία εικόνας.</p><p>Έχει πολλές δυνατότητες. Μπορεί να χρησιμοποιηθεί ως ένα απλό πρόγραμμα χρωματισμού, ένα υψηλής ποιότητας πρόγραμμα επεξεργασίας φωτογραφίας, ένα δικτυακό ομαδικό σύστημα επεξεργασίας, μία απόδοση εικόνας μαζικής παραγωγής, ένας μετατροπέας τύπου εικόνας, κλπ.</p><p>Το GIMP είναι αναπτυσσόμενο και επεκτάσιμο. Είναι σχεδιασμένο να επαυξάνεται με πρόσθετα και επεκτάσεις για να κάνει σχεδόν οτιδήποτε. Η προχωρημένη διεπαφή σεναρίου επιτρέπει ο,τιδήποτε από την πιο απλή εργασία μέχρι τις πιο σύνθετες διαδικασίες επεξεργασίας εικόνας να γίνονται εύκολα σενάρια. Το GIMP είναι διαθέσιμο για Λίνουξ, Microsoft Windows και OS X.</p></description>
+    <description xml:lang="es"><p>GIMP es el acrónimo de Programa de Manipulación de Imágenes de GNU. Se distribuye libre y gratuitamente para tareas de retocado de fotos, composición de imágenes y autoría de imágenes.</p><p>Tiene muchas características. Se puede usar como un simple programa de dibujo, un programa de retoque fotográfico profesional, un sistema de procesado por lotes, un generador de imágenes renderizadas en masa, un conversor de formato de imágenes, etc.</p><p>GIMP es ampliable y extensible. Está diseñado para poder mejorarlo con complementos y extensiones para hacer casi cualquier cosa. La interfaz de programación avanzada permite hacer un script para cualquier cosa, desde una tarea sencilla hasta los procedimientos de manipulación de imágenes más complejos. GIMP también está disponible para Microsoft Windows y OS X.</p></description>
+    <description xml:lang="eu"><p>GNUren Irudiak Manipulatzeko Programaren akronimoa da GIMP. Argazkiak moldatzeko, irudiak konposatzeko eta irudiak sortzeko programa bat da, modu librean banatzen dena.</p><p>Gaitasun anitzekoa da. Margotzeko programa xume bat bezala, argazkiak moldatzeko adituen kalitateko programa bezala, lineako talde-lanak prozesatzeko sistema gisa, irudiak errendatzeko ekoizpen handiko sistema gisa, irudiak formatuz bihurtzeko bezala eta abar erabil daiteke.</p><p>GIMP hedagarria da. Plugin eta osagaien bidez handiagotzeko eta edozer egiteko diseinatuta dago, Script aurreratuen interfazeak zeregin sinpleenetik konplexuenera lantzea baimentzen du irudiak ukitzeko prozesuetan. Linux, Microsoft Windows eta OS X sistemetan erabilgarri dago GIMP.</p></description>
+    <description xml:lang="fi"><p>GIMP on lyhenne englanninkielisistä sanoista GNU Image Manipulation Program, vapaasti suomennettuna GNU-kuvankäsittelyohjelma. Se on vapaasti jaeltava ohjelma kuvien käsittelyä ja koostamista varten.</p><p>Se sisältää lukuisia ominaisuuksia. GIMP soveltuu yksinkertaiseksi piirrosohjelmaksi, ammattilaisen työkaluksi, kuvamuotojen muuntajaksi ja niin edelleen.</p><p>GIMP on laajennettavissa. Se on suunniteltu täydennettävksi lisäosilla ja laajennuksilla, jotka voivat tehdä melkeinpä mitä vain. Kehittynyt skriptausliittymä sallii kaikenlaisen automatisoinnin yksinkertaisista tehtävistä aina haastaviin kuvankäsittelytoimenpiteisiin. GIMP on saataville Linuxille, Microsoft Windowsille ja OS X:lle.</p></description>
+    <description xml:lang="fr"><p>GIMP est l’acronyme de GNU Image Manipulation Program. C’est un programme libre destiné à des tâches comme la retouche de photographies, la composition et la création d’images.</p><p>Ses capacités sont très nombreuses. On peut s’en servir comme d’un simple programme de peinture, d’un programme expert de retouche photo, d’un système de traitement par lots en ligne, d’un convertisseur de format d’image, etc.</p><p>GIMP est extensible. Il est prévu pour être complété par des extensions appelées greffons qui lui permettent de réaliser à peu près tout. l’interface avancée de script offre la possibilité d’effectuer facilement depuis la plus simple tâche jusqu’aux procédures de manipulation d’image les plus complexes. GIMP est disponible pour Linux, Microsoft Windows et OS X.</p></description>
+    <description xml:lang="gd"><p>Tha GIMP &apos;na ghiorrachadh air GNU Image Manipulation Program. &apos;S e prògram saor an-asgaidh a tha ann airson rudan mar deasachadh, cruthachadh is ùghdarrasadh dhealbhan.</p><p>Tha e gu math comasach. &apos;S urrainn dhut a chleachdadh mar phrògram airson peantadh simplidh, sàr-phrògram airson mion-deasachadh dhealbhan, siostam pròiseasadh batch air loidhne, reandaraiche airson tomadan mòra a dhealbhan, iompachair dhealbhan is iomadh rud eile.</p></description>
+    <description xml:lang="gl"><p>GIMP é o acrónimo de GNU Image Manipulation Program (Programa de manipulación de imaxes de GNU). É un programa que se distribué de forma libre para as tarefas de retoque, composición imaxes e autoría de imaxes.</p><p>Conta con moitas características. Pode usarse como un programa simple de debuxo, un programa de retoque de imaxes de calidade para expertos, un sistema de procesado de imaxes en lote, un renderizador de imaxes de producción en masa, un conversor de formatos de imaxe, etc.</p><p>GIMP é expandíbel e extensíbel. Está deseñado para ser aumentado mediante engadidos e extensións para que poida facer case calquera cousa. A interface de scripting avanzado permítelle de forma doada crear scripts para calquera cousa desde as tarefas máis doadas ate os procedementos de manipulación de imaxes máis complexos. GIMP está dispoñíbel para Linux, Microsoftw Windows e OS X.</p></description>
+    <description xml:lang="hr"><p>GIMP je skraćenica za GNU Image Manipulation Program (program za manipulaciju slikama). Program se slobodno distribuira za zadatke poput retuširanja fotografija, oblikovanje i stvaranje slika.</p><p>Ima mnogo mogućnosti. Može se koristiti kao jednostavan program za slikanje, stručni program za kvalitetno retuširanje fotografija, skupni mrežni sustav obrade, prikaz slika za masovnu proizvodnju, pretvorbu formata slike, itd.</p><p>GIMP ima proširive mogućnosti. Dizajniran je tako da se može proširiti priključcima i proširenjima kako bi mogao učiniti gotovo sve. Napredno sučelje skriptiranja omogućuje sve od najjednostavnijeg zadatka do najsloženijih postupaka manipulacije slikom u svrhu olakšavanja skriptiranja. GIMP je dostupan za Linux, Microsoft Windows i OS X.</p></description>
+    <description xml:lang="hu"><p>A GIMP a GNU Image Manipulation Program rövidítése. Ez egy szabadon terjesztett program fényképretusálás, képösszeállítás és képszerkesztési feladatokhoz.</p><p>Számos képességgel rendelkezik. Használható egyszerű rajzprogramként, profi minőségű fényképretusáló programként, online kötegelt feldolgozó rendszerként, tömeggyártó kép renderelőként vagy akár képformátum átalakítóként, stb.</p><p>A GIMP kiegészíthető és bővíthető. Úgy tervezték, hogy bővíthető legyen bővítményekkel és kiterjesztésekkel, amikkel szinte minden meg lehet csinálni. A speciális parancsfájlfelület lehetővé tesz mindent a legegyszerűbb feladatoktól kezdve a legkomplexebb képmanipulációs eljárásokig egyszerű parancsfájlokkal. A GIMP elérhető Linux, Microsoft Windows és OS X rendszerekre is.</p></description>
+    <description xml:lang="is"><p>GIMP er skammstöfun fyrir GNU Image Manipulation Program. Það er frjálst forrit sem má dreifa að vild og nýtist við viðgerðir á myndum, ýmsa myndvinnslu, myndasamsetningu og margt fleira.</p><p>Það er með marga nytsamlega eiginleika. Hægt er að nota það sem einfalt málunarforrit, sem myndaviðgerðatól fyrir sérfræðinga, sem magnvinnslukerfi á neti, sem myndgerðartól í magnvinnslu, sem myndsniðaumbreyti og margt fleira.</p><p>GIMP er útvíkkanlegt og viðbætanlegt. Hönnun þess gerir ráð fyrir að hægt sé að bæta við nýjum eiginleikum með hjálparforritum (plug-ins) og viðbótum (extensions), möguleikarnir eru ótæmandi. Háþróað skriftuviðmót gerir einfalt að bæta við allt frá einföldum aðgerðum til mjög flókinnar myndmeðhöndlunar með hjálp auðlæsilegra skrifta. GIMP er einnig fáanlegt fyrir Microsoft Windows og OS X.</p></description>
+    <description xml:lang="it"><p>GIMP è un acronimo di GNU Image Manipulation Program. È un programma distribuito liberamente per svolgere compiti come il fotoritocco, la composizione e la creazione di immagini.</p><p>Ha molte capacità. Può essere usato come semplice programma di disegno, come programma di fotoritocco avanzato, sistema di elaborazione automatica on-line, renderizzatore in serie di immagini, convertitore di formato immagine, ecc.</p><p>GIMP è espandibile ed estensibile. È stato progettato per essere ampliato con plug-in ed estensioni per fare praticamente qualsiasi cosa. L&apos;interfaccia avanzata di scripting semplifica la conversione in procedura dal compito più semplice fino all&apos;elaborazione di immagini più complessa. GIMP è disponibile per Linux, Microsoft Windows ed OS X.</p></description>
+    <description xml:lang="ko"><p>김프(GIMP)는 그누 이미지 처리 프로그램 (GNU Image Manipulation Program)의 머리글자입니다. 사진 리터칭이나 이미지 합성, 이미지 제작 등과 같은 작업을 하기 위해 자유롭게 배포된 프로그램입니다.</p><p>김프는 많은 기능을 가지고 있습니다. 그림 그리는 프로그램, 전문가용 사진 리터칭 프로그램으로는 물론, 온라인 배치 프로그래밍, 이미지 대량 생산 렌더러, 이미지 포맷 변환기 등으로 사용 될 수 있습니다.</p></description>
+    <description xml:lang="lt"><p>GIMP yra GNU paveikslėlių keitimo programos santrumpa. Tai yra laisvai platinama programa tokiems veiksmams kaip nuotraukų retušavimas, paveikslėlių kompozicija ir kūrimas.</p><p>Ji turi daug galimybių. Ją galima naudoti kaip paprastą piešimo programą, eksperto kokybės nuotraukų retušavimo programą, internetinę masinio apdorojimo sistemą, masinio kiekio paveikslėlių piešimo programą, paveikslėlių formato konvertuotoją ir t. t.</p></description>
+    <description xml:lang="lv"><p>GIMP ir saīsinājums no GNU Image Manipulation Program (GNU attēlu manipulēšanas programma). Tā ir brīvi izplatāma programma fotogrāfiju retušēšanai, attēlu veidošanai un līdzīgiem uzdevumiem.</p><p>Tajā ir daudz iespēju. To var izmantot kā vienkāršu zīmēšanas lietotni, profesionālas kvalitātes fotogrāfiju retušēšanas lietotni, tiešsaistes pakešu apstrādes sistēmu, masu produkcijas attēlu renderētāju, attēlu formātu konvertētāju utt.</p><p>GIMP ir paplašināma programma. Tā ir veidota tā, lai to varētu paplašināt ar spraudņiem un papildinājumiem, ar kuriem var izdarīt gandrīz visu. Ar paplašināto skriptēšanas saskarni var skriptēt visu, sākot no vienkāršākajiem uzdevumiem līdz kompleksām attēlu manipulācijas procedūrām. GIMP ir pieejams uz Linux, Microsoft Windows un OS X operētājsistēmām.</p></description>
+    <description xml:lang="nl"><p>GIMP is en acroniem voor GNU Image Manipulation Program. Het is een programma dat vrij wordt verspreid, en dat gebruikt wordt voor het bijwerken van foto&apos;s en het samenstellen en bewerken van afbeeldingen.</p><p>Het biedt vele mogelijkheden. Zo kan het worden gebruikt als eenvoudig tekenprogramma, professioneel fotobewerkingsprogramma, online systeem voor batch-verwerking, programma voor de massaproductie van afbeeldingen, programma voor het omzetten van afbeeldingsformaten, enz.</p><p>GIMP is uitbreidbaar. Het is ontworpen om te worden aangevuld met plug-ins en extensies, zodat het bijna alle taken aankan. Met de geavanceerd scripting interface kunt u voor alles, van de eenvoudigste taak tot de meest ingewikkelde beeldbewerkingsprocedures, gemakkelijk een script maken. GIMP is beschikbaar voor Linux, Microsoft Windows en OS X.</p></description>
+    <description xml:lang="nn"><p>GIMP er akronym for GNU Image Manipulation Program (GNU sitt biletbehandlingsprogram). Det er eit gratis program for retusjering av foto, biletkomposisjon og biletredigering.</p><p>Det har mange eigenskapar og kan brukast som eit enkelt teikne- og maleprogram, til retusjering av foto med topp kvalitet, til satsvis prosessering på nett, for å masseprodusera bilete, for å byte mellom ulike biletformat og mykje meir.</p><p>GIMP kan gjere mykje og kan lett utvidast. Programmet kan gjerst større med programutvidingar (plug-ins) og kan såleis utvidast til å gjere nesten kva som helst. Det er også innebygd avanserte skriptfunksjonar, slik at det er lett å lage spesielle verktøy for enkle oppgåver eller kompliserte bilethansamingar. GIMP er tilgjengeleg for Linux, Windows og OS X.</p></description>
+    <description xml:lang="pl"><p>GIMP to program do manipulowania obrazami projektu GNU. Jest on wolnym oprogramowaniem służącym do retuszowania zdjęć i tworzenia obrazów.</p><p>Daje on wiele możliwości. Może być używany jako prosty program do rysowania, narzędzie do retuszowania zdjęć dla ekspertów, system do masowego przetwarzania plików obrazów przez sieć, program renderujący obrazy, konwerter formatów obrazów itp.</p><p>GIMP jest wysoce rozszerzalny. Za pomocą wtyczek i rozszerzeń można osiągnąć niemalże wszystko. Zaawansowany interfejs skryptów umożliwia łatwe automatyzowanie wszystkich działań, od najprostszych zadań do złożonych procedur manipulacji obrazami. GIMP jest dostępny dla systemów Linux, Microsoft Windows i OS X.</p></description>
+    <description xml:lang="pt"><p>GIMP é um acrónimo pra GNU Image Manipulation Program. É um programa distribuído gratuitamente para tarefas como retoques, composição e criação de imagens.</p><p>Tem muitas capacidades. Pose ser usado como um simples programa de pintura, um programa perito em retocar fotografias, um sistema online processador de lotes, um desenhador de imagens em massa, um conversor de formatos, etc.</p><p>O GIMP é expansível e estensível. Foi desenhado para ser aumentado com extensões com as quais fazer praticamente tudo. O ambiente de scripting avançado permite escrever scripts para tudo, desde a tarefa mais simples até aos mais complexos procedimentos de manipulação de imagens. O GIMP está disponível para Linux, Microsoft Windows e OS X.</p></description>
+    <description xml:lang="sk"><p>GIMP je skratka pre GNU Image Manipulation Program. Je to voľne šíriteľný program na retušovanie fotografií, vytváranie a autorizovanie obrázkov.</p><p>Disponuje mnohými možnosťami. Môže byť použitý ako jednoduchý kresliaci program, profesionálny program na retušovanie fotografií, internetový dávkový systém na spracovanie fotografií, vykresľovač obrázkov hromadnej výroby, konvertor formátov obrázkov, atď.</p><p>GIMP je nepostrádateľný a rozšíriteľný. Je navrhnutý s rozšíreniami pomocou zásuvných modulov a rozšírení, ktoré dokážu vykonať takmer čokoľvek. Pokročilé rozhranie jednoducho ovládateľné pomocou skriptov vám umožňuje vykonať všetko od najľahšej úlohy až po tie najzložitejšie manipulačné procedúry. Program GIMP je dostupný pre systémy Linux, Microsoft Windows a OS X.</p></description>
+    <description xml:lang="sl"><p>GIMP je okrajšava polnega angleškega imena, GNU Image Manipulation Program. Je prosto dostopen program, namenjen retuši fotografij, tvorbi in avtorstvu slik.</p><p>Ima veliko zmogljivih funkcij. Uporabite ga lahko kot enostavni program za risanje, kot strokovno kakovosten program za retušo fotografij, spletni sistem za paketno obdelavo, masovni upodobljevalnik slik, pretvornik med slikovnimi zapisi itn.</p><p>GIMP je razširljiv. Zasnovan je tako, da ga je mogoče dopolnjevati z vtičniki in razširitvami, da zmore pravzaprav vse. Napredni vmesnik skriptanja omogoča skriptanje vsega, od najenostavnejših nalog do najkompleksnejših procedur obdelave slik. GIMP je na voljo tudi za sisteme Microsoft Windows in OS X.</p></description>
+    <description xml:lang="sr"><p>Гимп је скраћени назив за Гнуов програм за обраду слика. Слободно је расподељив за задатке као што је сређивање фотографија, слагање слика и издавање слика.</p><p>Поседује многе могућности. Може бити коришћен као једноставан програм за сликање, као напредан програм за дотеривање фотографија, као систем за групно обрађивање на мрежи, као исцртавач слика масовне производње, као претварач записа слика, итд.</p><p>Гимп можете надоградити уздуж и попреко! Можете да га напуните разним прикључцима и проширењима како би радио баш све што пожелите. Он поседује напредне и једноставне алате који олакшавају писање скрипти за обављање једноставних задатака али и најсложенијих процеса обраде слкика. Гимп је доступан за Линукс, Мајкрософт Виндоуз и ОС Икс.</p></description>
+    <description xml:lang="sv"><p>GIMP är en akronym för GNU Image Manipulation Program. Det är ett fritt distribuerat program för sådana uppgifter som fotoretuschering, bildkomposition och bildskapande.</p><p>Det har många funktioner. Det kan användas som ett enkelt ritprogram, ett fotoretuscheringsprogram på expertnivå, ett online massbearbetningssystem, en massproduktionsbildåtergivare, en bildformatsomvandlare, etc.</p><p>GIMP är utbyggbart och tänjbart. Det är avsett att kompletteras med insticksprogram och tillägg för att göra nästan vad som helst. Det avancerade skriptgränssnittet tillåter allt från den enklaste uppgift till de mest komplexa bildmanipuleringsförfaranden att enkelt skrivas. GIMP är tillgängligt för Linux, Microsoft Windows och OS X.</p></description>
+    <description xml:lang="tr"><p>GIMP, GNU Görüntü İşleme Programı&apos;nın (GNU Image Manipulation Program) kısaltmasıdır. Fotoğraf rötuşlama, görüntü kompozisyonu ve görüntü oluşturma gibi görevler için özgürce dağıtılan bir programdır.</p><p>Birçok yeteneğe sahiptir. Basit bir boyama programı, uzman kalite fotoğraf rötuş programı, çevrimiçi toplu işleme sistemi, seri üretim görüntü işleyici, görüntü biçim dönüştürücü vb. olarak kullanılabilir.</p><p>GIMP genişletilebilir ve geliştirilebilirdir. Eklentiler ve uzantılar ile genişletilebilecek şekilde tasarlanmıştır. Gelişmiş komut arayüzü en basit görevden en karmaşık görüntü işleme yöntemlerine kadar her şeyi kolayca hazırlamanıza olanak sağlar. GIMP Linux, Microsoft Windows ve OS X işletim sistemlerinde kullanılabilirdir.</p></description>
+    <description xml:lang="uk"><p>GIMP – це абревіатура від GNU Image Manipulation Program (програма GNU для маніпулювання зображеннями). Це вільно розповсюджувана програма для таких завдань, як ретушування фотографій, компонування та створення зображень.</p><p>Вона має багато можливостей. Її можна використати як простеньку програму для малювання, як програму ретушування високоякісних фотографій, як інтернет-систему пакетної обробки, як відтворювач масових зображень, як перетворювач між різними графічними форматами тощо.</p><p>GIMP легко розбирається і розширюється. Вона розроблена, щоби через доповнення модулями і розширеннями робити усе, що завгодно. Додатковий інтерфейс сценаріїв дозволяє легко запрограмувати усе від найпростіших завдань до найскладніших процедур обробки зображень. GIMP доступний для Linux, Microsoft Windows та OS X.</p></description>
+    <description xml:lang="zh_CN"><p>GIMP 是 GNU 图像处理程序(GNU Image Manipulation Program)的缩写。GIMP 是一个可自由分发的程序，可用于照片的后期处理、图像合成处理和图像出版。</p><p>GIMP 功能强大。它可以作为简单的画图程序、专家级的照片后期程序、在线批处理程序、大批量图像渲染器或者图片格式转化器等。</p><p>GIMP 可扩张亦可拓展。全功能的插件和扩展使其用途广泛。无论是最简单的任务还是最复杂的图像处理过程，GIMP 的先进脚本接口都允许你将它们轻松写成脚本。GIMP 可用于 Linux、Microsoft Windows 和 OS X。</p></description>
+    <icon height="128" width="128" type="cached">org.gimp.GIMP.png</icon>
+    <icon height="64" width="64" type="cached">org.gimp.GIMP.png</icon>
+    <categories>
+      <category>2DGraphics</category>
+      <category>Graphics</category>
+      <category>RasterGraphics</category>
+    </categories>
+    <keywords>
+      <keyword>GIMP</keyword>
+      <keyword>Photoshop</keyword>
+      <keyword>design</keyword>
+      <keyword>graphic</keyword>
+      <keyword>illustration</keyword>
+      <keyword>painting</keyword>
+      <keyword xml:lang="ca">dibuix</keyword>
+      <keyword xml:lang="ca">disseny</keyword>
+      <keyword xml:lang="ca">gràfics</keyword>
+      <keyword xml:lang="ca">il·lustració</keyword>
+      <keyword xml:lang="ca@valencia">disseny</keyword>
+      <keyword xml:lang="ca@valencia">gràfic</keyword>
+      <keyword xml:lang="ca@valencia">il·lustració</keyword>
+      <keyword xml:lang="ca@valencia">pintura</keyword>
+      <keyword xml:lang="da">grafisk</keyword>
+      <keyword xml:lang="da">male</keyword>
+      <keyword xml:lang="da">tegne</keyword>
+      <keyword xml:lang="de">Design</keyword>
+      <keyword xml:lang="de">Grafik</keyword>
+      <keyword xml:lang="de">Illustration</keyword>
+      <keyword xml:lang="de">Malen</keyword>
+      <keyword xml:lang="el">βαφή</keyword>
+      <keyword xml:lang="el">γραφικό</keyword>
+      <keyword xml:lang="el">επεξήγηση</keyword>
+      <keyword xml:lang="el">σχεδίαση</keyword>
+      <keyword xml:lang="es">dibujo</keyword>
+      <keyword xml:lang="es">diseño</keyword>
+      <keyword xml:lang="es">gráfico</keyword>
+      <keyword xml:lang="es">ilustración</keyword>
+      <keyword xml:lang="eu">diseinua</keyword>
+      <keyword xml:lang="eu">ilustrazioa</keyword>
+      <keyword xml:lang="eu">irudia</keyword>
+      <keyword xml:lang="eu">margotzea</keyword>
+      <keyword xml:lang="fi">grafiikka</keyword>
+      <keyword xml:lang="fi">kuva</keyword>
+      <keyword xml:lang="fi">maalaus</keyword>
+      <keyword xml:lang="fi">suunnittelu</keyword>
+      <keyword xml:lang="fi">valokuva</keyword>
+      <keyword xml:lang="fr">conception</keyword>
+      <keyword xml:lang="fr">graphisme</keyword>
+      <keyword xml:lang="fr">image</keyword>
+      <keyword xml:lang="fr">peinture</keyword>
+      <keyword xml:lang="gl">debuxo</keyword>
+      <keyword xml:lang="gl">deseño</keyword>
+      <keyword xml:lang="gl">gráfico</keyword>
+      <keyword xml:lang="gl">ilustración</keyword>
+      <keyword xml:lang="hr">dizajn</keyword>
+      <keyword xml:lang="hr">grafika</keyword>
+      <keyword xml:lang="hr">ilustrcija</keyword>
+      <keyword xml:lang="hr">slikanje</keyword>
+      <keyword xml:lang="hu">dizájn</keyword>
+      <keyword xml:lang="hu">festés</keyword>
+      <keyword xml:lang="hu">grafika</keyword>
+      <keyword xml:lang="hu">illusztráció</keyword>
+      <keyword xml:lang="hu">tervezés</keyword>
+      <keyword xml:lang="is">hönnun</keyword>
+      <keyword xml:lang="is">mynd</keyword>
+      <keyword xml:lang="is">myndskreyting</keyword>
+      <keyword xml:lang="is">myndvinnsla</keyword>
+      <keyword xml:lang="is">málun</keyword>
+      <keyword xml:lang="it">disegno</keyword>
+      <keyword xml:lang="it">fotoritocco</keyword>
+      <keyword xml:lang="it">grafica</keyword>
+      <keyword xml:lang="it">illustrazioni</keyword>
+      <keyword xml:lang="lv">dizains</keyword>
+      <keyword xml:lang="lv">glezna</keyword>
+      <keyword xml:lang="lv">grafika</keyword>
+      <keyword xml:lang="lv">ilustrācija</keyword>
+      <keyword xml:lang="nl">grafisch</keyword>
+      <keyword xml:lang="nl">illustratie</keyword>
+      <keyword xml:lang="nl">ontwerp</keyword>
+      <keyword xml:lang="nl">tekenen</keyword>
+      <keyword xml:lang="pl">dizajn</keyword>
+      <keyword xml:lang="pl">fotografia</keyword>
+      <keyword xml:lang="pl">graficzny</keyword>
+      <keyword xml:lang="pl">grafika</keyword>
+      <keyword xml:lang="pl">ilustracja</keyword>
+      <keyword xml:lang="pl">ilustrowanie</keyword>
+      <keyword xml:lang="pl">malarstwo</keyword>
+      <keyword xml:lang="pl">malowanie</keyword>
+      <keyword xml:lang="pl">obrazki</keyword>
+      <keyword xml:lang="pl">obrazy</keyword>
+      <keyword xml:lang="pl">projektowanie</keyword>
+      <keyword xml:lang="pl">renderowanie</keyword>
+      <keyword xml:lang="pl">retuszowanie</keyword>
+      <keyword xml:lang="pl">rysowanie</keyword>
+      <keyword xml:lang="pl">rysownictwo</keyword>
+      <keyword xml:lang="pl">rysunek</keyword>
+      <keyword xml:lang="pl">wtyczki</keyword>
+      <keyword xml:lang="pl">wzornictwo</keyword>
+      <keyword xml:lang="pl">zdjęcia</keyword>
+      <keyword xml:lang="pt">desenho</keyword>
+      <keyword xml:lang="pt">gráficos</keyword>
+      <keyword xml:lang="pt">ilustração</keyword>
+      <keyword xml:lang="pt">pintura</keyword>
+      <keyword xml:lang="sk">dizajn</keyword>
+      <keyword xml:lang="sk">grafický</keyword>
+      <keyword xml:lang="sk">grafika</keyword>
+      <keyword xml:lang="sk">ilustrácia</keyword>
+      <keyword xml:lang="sk">kresba</keyword>
+      <keyword xml:lang="sk">maľba</keyword>
+      <keyword xml:lang="sk">maľovanie</keyword>
+      <keyword xml:lang="sk">návrh</keyword>
+      <keyword xml:lang="sl">grafika</keyword>
+      <keyword xml:lang="sl">ilustracija</keyword>
+      <keyword xml:lang="sl">oblikovanje</keyword>
+      <keyword xml:lang="sl">slikanje</keyword>
+      <keyword xml:lang="sr">crtanje</keyword>
+      <keyword xml:lang="sr">dizajn</keyword>
+      <keyword xml:lang="sr">grafika</keyword>
+      <keyword xml:lang="sr">ilustracija</keyword>
+      <keyword xml:lang="sr">obrada fotografija</keyword>
+      <keyword xml:lang="sr">Гимп</keyword>
+      <keyword xml:lang="sr">графика</keyword>
+      <keyword xml:lang="sr">дизајн</keyword>
+      <keyword xml:lang="sr">илустрација</keyword>
+      <keyword xml:lang="sr">обрада фотографија</keyword>
+      <keyword xml:lang="sr">цртање</keyword>
+      <keyword xml:lang="sv">grafik</keyword>
+      <keyword xml:lang="sv">illustrera</keyword>
+      <keyword xml:lang="sv">målning</keyword>
+      <keyword xml:lang="sv">rita</keyword>
+      <keyword xml:lang="uk">графіка</keyword>
+      <keyword xml:lang="uk">гімп</keyword>
+      <keyword xml:lang="uk">дизайн</keyword>
+      <keyword xml:lang="uk">малювання</keyword>
+      <keyword xml:lang="uk">ілюстрації</keyword>
+      <keyword xml:lang="uk">ґімп</keyword>
+      <keyword xml:lang="zh_CN">图形</keyword>
+      <keyword xml:lang="zh_CN">绘画</keyword>
+      <keyword xml:lang="zh_CN">设计</keyword>
+    </keywords>
+    <kudos>
+      <kudo>HiDpiIcon</kudo>
+      <kudo>HighContrast</kudo>
+      <kudo>ModernToolkit</kudo>
+      <kudo>UserDocs</kudo>
+    </kudos>
+    <mimetypes>
+      <mimetype>application/pdf</mimetype>
+      <mimetype>application/postscript</mimetype>
+      <mimetype>image/bmp</mimetype>
+      <mimetype>image/g3fax</mimetype>
+      <mimetype>image/gif</mimetype>
+      <mimetype>image/heic</mimetype>
+      <mimetype>image/heif</mimetype>
+      <mimetype>image/jp2</mimetype>
+      <mimetype>image/jpeg</mimetype>
+      <mimetype>image/png</mimetype>
+      <mimetype>image/svg+xml</mimetype>
+      <mimetype>image/tiff</mimetype>
+      <mimetype>image/x-compressed-xcf</mimetype>
+      <mimetype>image/x-exr</mimetype>
+      <mimetype>image/x-fits</mimetype>
+      <mimetype>image/x-gimp-gbr</mimetype>
+      <mimetype>image/x-gimp-gih</mimetype>
+      <mimetype>image/x-gimp-pat</mimetype>
+      <mimetype>image/x-icon</mimetype>
+      <mimetype>image/x-pcx</mimetype>
+      <mimetype>image/x-portable-anymap</mimetype>
+      <mimetype>image/x-portable-bitmap</mimetype>
+      <mimetype>image/x-portable-graymap</mimetype>
+      <mimetype>image/x-portable-pixmap</mimetype>
+      <mimetype>image/x-psd</mimetype>
+      <mimetype>image/x-psp</mimetype>
+      <mimetype>image/x-sgi</mimetype>
+      <mimetype>image/x-tga</mimetype>
+      <mimetype>image/x-webp</mimetype>
+      <mimetype>image/x-wmf</mimetype>
+      <mimetype>image/x-xbitmap</mimetype>
+      <mimetype>image/x-xcf</mimetype>
+      <mimetype>image/x-xcursor</mimetype>
+      <mimetype>image/x-xpixmap</mimetype>
+      <mimetype>image/x-xwindowdump</mimetype>
+    </mimetypes>
+    <project_license>GPL-3.0+ AND LGPL-3.0+</project_license>
+    <url type="bugtracker">https://bugzilla.gnome.org/page.cgi?id=browse.html&amp;product=GIMP</url>
+    <url type="donation">https://www.gimp.org/donating/</url>
+    <url type="help">https://www.gimp.org/docs/</url>
+    <url type="homepage">https://www.gimp.org/</url>
+    <project_group>GNOME</project_group>
+    <screenshots>
+      <screenshot type="default">
+        <image type="source">https://www.gimp.org/screenshots/Screenshot-gimp-2.10-painting.jpg</image>
+        <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/org.gimp.GIMP-stable/624x351/org.gimp-9a006ea8c92d7eef681324078fe8d9ad.png</image>
+        <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/org.gimp.GIMP-stable/1248x702/org.gimp-9a006ea8c92d7eef681324078fe8d9ad.png</image>
+        <image type="thumbnail" height="63" width="112">https://flathub.org/repo/screenshots/org.gimp.GIMP-stable/112x63/org.gimp-9a006ea8c92d7eef681324078fe8d9ad.png</image>
+        <image type="thumbnail" height="126" width="224">https://flathub.org/repo/screenshots/org.gimp.GIMP-stable/224x126/org.gimp-9a006ea8c92d7eef681324078fe8d9ad.png</image>
+        <image type="thumbnail" height="423" width="752">https://flathub.org/repo/screenshots/org.gimp.GIMP-stable/752x423/org.gimp-9a006ea8c92d7eef681324078fe8d9ad.png</image>
+        <image type="thumbnail" height="846" width="1504">https://flathub.org/repo/screenshots/org.gimp.GIMP-stable/1504x846/org.gimp-9a006ea8c92d7eef681324078fe8d9ad.png</image>
+      </screenshot>
+      <screenshot>
+        <image type="source">https://www.gimp.org/screenshots/Screenshot-gimp-2.10-photo-editing.jpg</image>
+        <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/org.gimp.GIMP-stable/624x351/org.gimp-37da35c76c5fb2ac1c6544b65f71fc7f.png</image>
+        <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/org.gimp.GIMP-stable/1248x702/org.gimp-37da35c76c5fb2ac1c6544b65f71fc7f.png</image>
+        <image type="thumbnail" height="63" width="112">https://flathub.org/repo/screenshots/org.gimp.GIMP-stable/112x63/org.gimp-37da35c76c5fb2ac1c6544b65f71fc7f.png</image>
+        <image type="thumbnail" height="126" width="224">https://flathub.org/repo/screenshots/org.gimp.GIMP-stable/224x126/org.gimp-37da35c76c5fb2ac1c6544b65f71fc7f.png</image>
+        <image type="thumbnail" height="423" width="752">https://flathub.org/repo/screenshots/org.gimp.GIMP-stable/752x423/org.gimp-37da35c76c5fb2ac1c6544b65f71fc7f.png</image>
+        <image type="thumbnail" height="846" width="1504">https://flathub.org/repo/screenshots/org.gimp.GIMP-stable/1504x846/org.gimp-37da35c76c5fb2ac1c6544b65f71fc7f.png</image>
+      </screenshot>
+    </screenshots>
+    <releases>
+      <release version="2.10.2" timestamp="1526774400">
+        <description><p>This second release in the GIMP 2.10 series, so soon after 2.10.0, is mostly the usual bug-fixing version after a major release, with a few dozen bugs fixed.</p><p>It also features a new plug-in for the support of the HEIF format, both for importing and exporting, as well as 2 new filters: &quot;Spherize&quot; and &quot;Recursive Transform&quot;. These are nice examples of our relaxed feature policy in stable micro releases.</p></description>
+        <description xml:lang="pl"><p>To drugie wydanie z serii GIMP 2.10, tak szybko od 2.10.0, jest głównie wersją naprawiającą błędy po dużym wydaniu, w której naprawiono kilkanaście błędów.</p><p>Zawiera także nową wtyczkę do obsługi formatu HEIF (do importu i eksportu), a także dwa nowe filtry: „Utwórz kulę” i „Przekształcenie rekurencyjne”. To dobry przykład naszych rozluźnionych zasad wprowadzania nowych funkcji w stabilnych wydaniach.</p></description>
+        <description xml:lang="sv"><p>Denna andra utgåva i GIMP 2.10-serien, så snart efter 2.10.0, är mestadels den vanliga felfixversionen efter en stor utgåva, med några få dussin fel fixade.</p><p>Den har också en ny insticksmodul för stöd för HEIF-formatet, både för import och export, så väl som 2 nya filter: ”Sfär” och ”Rekursiv transform”. Dessa är bra exempel på vår lättade policy kring ny funktionalitet i stabila mikroutgåvor.</p></description>
+      </release>
+      <release version="2.10.0" timestamp="1524787200">
+        <description><p>First release of the 2.10 series which prominently features the port to a new image processing engine, GEGL. The most outstanding changes are:</p><ul><li>High bit depth color processing (16/32-bit per color channel)</li><li>Color management is a core feature now, most widgets and preview areas are color-managed</li><li>On-canvas effect preview, with split view for before/after processing pixels</li><li>Multi-threaded and hardware-accelerated rendering, processing and painting</li><li>Most tools improved, several new transformation tools</li><li>Improved support for many image formats, in particular better PSD importing</li><li>Newly supported image formats: OpenEXR, RGBE, WebP, HGT…</li><li>Improved digital painting: canvas rotation and flipping, symmetry painting, MyPaint brushes…</li><li>Metadata viewing and editing for Exif, XMP, IPTC, and DICOM</li><li>Basic HiDPI support: automatically or user-selected icon size</li><li>New themes for GIMP: Light, Gray, Dark, and System</li><li>And much, much more…</li></ul><p>For more information, see https://www.gimp.org/news/2018/04/27/gimp-2-10-0-released/</p></description>
+        <description xml:lang="ca"><p>Primera versió de la sèrie 2.10, que com a canvi destacat inclou la migració a una nova versió del motor de processament d&apos;imatges GEGL. Els canvis més destacats són:</p><ul><li>Processament de color de profunditat de bit alta (16/32-bit per canal de color)</li><li>La gestió de color és una funció principal ara, la majora dels ginys i àrees de previsualització usen la gestió de color.</li><li>Previsualització de l&apos;efecte al llenç, amb vista dividida abans i després del processament dels píxels.</li><li>Renderització, processament i dibuixat amb múltiples fils i acceleració per maquinari.</li><li>La majoria d&apos;eines inclouen millores, diverses eines noves de transformació.</li><li>Millora en la compatibilitat de molts formats d&apos;imatges, en particular millor importació PSD</li><li>Compatibilitat amb nous formats d&apos;imatge: OpenEXR, RGBE, WebP, HGT…</li><li>Millora en el dibuix digital: rotació i cap girament del llenç, dibuix en simetria, pinzells del MyPaint…</li><li>Visualització i edició de metadades per Exif, XMP, IPTC, i DICOM</li><li>Compatibilitat bàsica amb HiDPI: mida de la icona automàtica o seleccionada per l&apos;usuari</li><li>Nous temes pel GIMP: llum, gris, fosc i sistema.</li><li>i molt, molt més...</li></ul></description>
+        <description xml:lang="da"><p>Første udgave af 2.10-serien som introducerer overgangen til en ny billedbehandlingsmotor, GEGL. De vigtigste ændringer er:</p><ul><li>Farvebehandling ved høj bitdybde (16/32 bit pr. farvekanal)</li><li>Farvestyring er nu en kernefunktion; de fleste kontroller og forhåndsvisningsområder er farvestyrede</li><li>Forhåndsvisning af effekter direkte på lærredet med opsplittet visning af pixels før og efter behandling</li><li>Flertrådet og hardware-accelereret gengivelse, behandling og maling</li><li>De fleste værktøjer er forbedrede, og der er adskillige ny transformeringsværktøjer</li><li>Forbedret understøttelse af mange billedformater, i særdeleshed bedre import af PSD</li><li>Nye billedformater: OpenEXR, RGBE, WebP, HGT …</li><li>Forbedret digital maling: rotation og vending af lærredet, symmetrimaling, MyPaint-pensler …</li><li>Visning og redigering af metadata for Exif, XMP, IPTC og DICOM</li><li>Grundlæggende HiDPI-understøttelse: automatisk eller brugervalgt ikonstørrelse</li><li>Nye temaer til GIMP: lys, grå, mørk og system</li><li>Og meget, meget mere …</li></ul><p>Mere information kan findes på https://www.gimp.org/news/2018/04/27/gimp-2-10-0-released/</p></description>
+        <description xml:lang="de"><p>Die erste Veröffentlichung der Reihe 2.10, die die Portierung auf die neue Bildverarbeitungsengine GEGL vorstellt. Die bemerkenswertesten Änderungen sind:</p><ul><li>Farbverarbeitung in größerer Bittiefe (16/32-bit pro Farbkanal)</li><li>Die Farbverwaltung ist nun ein Kern-Funktionsmerkmal, die meisten Widgets und Vorschaubereiche stehen unter Farbverwaltung</li><li>Vorschau von Effekten direkt auf der Leinwand, mit geteilter Vorher-Nachher-Ansicht der verarbeiteten Pixel</li><li>Multi-threaded und hardwarebeschleunigte Darstellung, Verarbeitung und Malen</li><li>Die meisten Werkzeuge wurden verbessert, verschiedene Transformationswerkzeuge neu eingeführt</li><li>Verbesserte Unterstützung für viele Bildformate, insbesondere besserer PSD-Import</li><li>Neu unterstützte Bildformate: OpenEXR, RGBE, WebP, HGT …</li><li>Verbessertes digitales Malen: Drehen und Spiegeln der Leinwand, symmetrisches Malen, MyPaint-Pinsel …</li><li>Anzeigen und Bearbeiten von Metadaten in den Dateiformaten Exif, XMP, IPTC und DICOM</li><li>Grundlegende HiDPI-Unterstützung: automatische oder benutzerdefinierte Symbolgröße</li><li>Neue Themen für GIMP: Hell, Grau, Dunkel und System</li><li>Und vieles, vieles mehr …</li></ul></description>
+        <description xml:lang="el"><p>Πρώτη έκδοση της σειράς 2.10 που αναδεικνύεται βασικά ως η θύρα σε μια νέα μηχανή επεξεργασίας εικόνας, την GEGL. Οι πιο σημαντικές αλλαγές είναι:</p><ul><li>Επεξεργασία χρωματικού βάθους υψηλών δυαδικών (16/32 δυαδικά ανά χρωματικό κανάλι)</li><li>Η χρωματική διαχείριση είναι ένα κύριο γνώρισμα τώρα, τα περισσότερα γραφικά στοιχεία και οι περιοχές προεπισκόπησης διαχειρίζονται χρωματικά</li><li>Προεπισκόπηση εφέ στον καμβά, με διαίρεση προβολής για εικονοστοιχεία επεξεργασίας πριν/μετά</li><li>Πολυνηματική και επιταχυνόμενου υλικού απόδοση, επεξεργασία και βαφή</li><li>Βελτίωση των περισσότερων εργαλείων, αρκετά νέα εργαλεία μετασχηματισμών</li><li>Βελτιωμένη υποστήριξη για πολλές μορφές εικόνας, ιδιαίτερα καλύτερη εισαγωγή PSD</li><li>Νεοϋποστηριζόμενες μορφές εικόνων: OpenEXR, RGBE, WebP, HGT…</li><li>Βελτιωμένη ψηφιακή βαφή: περιστροφή και αναστροφή του καμβά, συμμετρική βαφή πινέλα MyPaint...</li><li>Προβολή μεταδεδομένων και επεξεργασία για Exif, XMP, IPTC και DICOM</li><li>Βασική υποστήριξη HiDPI: αυτόματο ή επιλεγμένο από τον χρήστη μέγεθος εικόνας</li><li>Νέα θέματα για το GIMP: Ανοιχτό, γκρίζο, σκούρο και συστήματος</li><li>Και πολλά περισσότερα...</li></ul><p>Για περισσότερες πληροφορίες, δείτε https://www.gimp.org/news/2018/04/27/gimp-2-10-0-released/</p></description>
+        <description xml:lang="es"><ul><li>Temas nuevos para GIMP: claro, gris, oscuro y del sistema</li><li>Y mucho, mucho más…</li></ul></description>
+        <description xml:lang="fr"><p>Première version de la série 2.10 qui concerne surtout le passage à GEGL, un nouvel outil de traitement de l&apos;image. Les principaux changement sont :</p><ul><li>Traitement de la couleur en grande profondeur de bits (16 à 32 bits par canal de couleur)</li><li>La gestion de la couleur appartient maintenant au cœur de GIMP, la plupart des éléments graphiques et des zones d’aperçu sont en gestion de couleur</li><li>Aperçus directement sur le canevas, avec partage en deux vues, avant et après le traitement des pixels</li><li>Peinture, traitement et rendu accélérés au niveau matériel et en multi-processeurs</li><li>La plupart des outils ont été améliorés, avec plusieurs nouveaux outils de transformation</li><li>Gestion améliorée de plusieurs formats d’image, en particulier une meilleure importation du PSD</li><li>Gestion de nouveaux formats d’image : OpenEXR, RVBE, WebP, HGT…</li><li>Amélioration de la peinture numérique : rotation et retournement du canevas, peinture en symétrie, brosses MyPaint…</li><li>Affichage et modification des métadonnées pour Exif, XMP, IPTC, et DICOM</li><li>Gestion HiDPI élémentaire : taille d’icône sélectionnée par l&apos;utilisateur ou automatiquement</li><li>Nouveaux thèmes pour GIMP : Clair, Gris, Sombre, et Système</li><li>Et beaucoup, beaucoup plus…</li></ul><p>Pour plus d’informations, reportez-vous à https://www.gimp.org/news/2018/04/17/gimp-2-10-0-released/</p></description>
+        <description xml:lang="hu"><p>A 2.10-es sorozat első kiadása elsődlegesen az új képfeldolgozó motorra, a GEGL-re váltásról szól. A legfontosabb változások a következőek:</p><ul><li>Magas bitmélységű képfeldolgozás (16/32 bites színenkénti csatorna)</li><li>A színkezelés most már egy központi funkció, a legtöbb ablakelem és előnézeti terület színkezelt</li><li>Vásznon megjelenő hatás előnézet, osztott nézettel a feldolgozás előtti és utáni képpontokkal</li><li>Többszálú és hardveresen gyorsított renderelés, feldolgozás és festés</li><li>A legtöbb eszköz fejlődött, számos új átalakítóeszköz</li><li>Fejlesztett támogatás sok képformátumhoz, különösképpen jobb PSD importálás</li><li>Újonnan támogatott képformátumok: OpenEXR, RGBE, WebP, HGT…</li><li>Fejlesztett digitális festés: vászonforgatás és felhajtás, szimmetrikus festés, MyPaint ecsetek…</li><li>Metaadatok megtekintése és szerkesztése Exif, XMP, IPTC és DICOM esetén</li><li>Alapvető HiDPI támogatás: automatikusan vagy felhasználó által kiválasztott ikonméret</li><li>Új GIMP témák: Világos, Szürke, Sötét és Rendszer</li><li>És még sok más…</li></ul></description>
+        <description xml:lang="is"><ul><li>Litastýring er núna kjarnaeiginleiki, flestir viðmótshlutar og forskoðunarsvæði eru litastýrð</li><li>Nýstudd skráasnið mynda: OpenEXR, RGBE, WebP, HGT…</li><li>Skoðun og meðhöndlun lýsigagna fyrir EXIF, XMP, IPTC og DICOM</li><li>Og margt, margt fleira…</li></ul><p>Til að fá frekari upplýsingar, skoðaðu https://www.gimp.org/news/2018/04/27/gimp-2-10-0-released/</p></description>
+        <description xml:lang="it"><p>Primo rilascio della serie 2.10 che come offre principalmente il port di un nuovo motore di elaborazione immagini, GEGL. I cambiamenti più di spicco sono:</p><ul><li>Elaborazione ad alta profondità di colore (16/32 bit per canale)</li><li>Ora la gestione del colore è una funzionalità di base, il colore di buona parte delle finestre e delle aree di anteprima è gestito</li><li>Anteprima automatica, con vista divisa prima/dopo dell&apos;elaborazione dei pixel</li><li>Elaborazione del disegno e del rendering multi thread e accelerato in hardware</li><li>Molti strumenti migliorati, diversi nuovi strumenti di trasformazione</li><li>Migliorato il supporto a molti formati immagine, in particolare l&apos;importazione di PSD</li><li>Nuovi formati immagine supportati: OpenEXR, WebP, HGT...</li><li>Migliorato il disegno digitale: rotazione e ribaltamento immagini, disegno simmetrico, pennelli MyPaint...</li><li>Visualizzazione metadati per Exif, MXP, IPTC, e DICOM</li><li>Supporto base HiDPI: dimensione icone automatica o selezionabile dall&apos;utente</li><li>Nuovi temi per GIMP: Light, Gray, Dark, e System</li><li>E molto, molto altro ancora...</li></ul><p>Per ulteriori informazioni, consultare https://www.gimp.org/news/2018/04/27/gimp-2-10-0-released/</p></description>
+        <description xml:lang="lv"><p>Pirmais 2.10 laidiens, kurā ir izcelta pāriešana uz jaunu attēlu apstrādes dzini — GEGL. Ievērojamākās izmaiņas:</p><ul><li>Augsts bitu dziļums krāsu apstrādei (16/32 biti uz krāsu kanālu)</li><li>Krāsu pārvaldība tagad ir pamatiespēja, vairums sīkrīkiem un priekšskatījumiem ir krāsu pārvaldība</li><li>“Uz audekla” efektu priekšskatīšana ar sadalītu skatu, kur redzams pirs/pēc pikseļu apstrādes</li><li>Vairāku pavedienu un aparatūras paātrināta renderēšana, apstrāde un zīmēšana</li><li>Lielākā daļa rīku ir uzlaboti, ir pievienoti jauni pārveidošanas rīki</li><li>Ir uzlabots atbalsts vairākiem attēlu formātiem, it īpaši labākai PSD importēšanai</li><li>Jauni atbalstītie datņu formāti: OpenEXR, RGBE, WebP, HGT…</li><li>Uzlabota digitālā zīmēšana: audekla pagriešana un apmešana, simetriskā zīmēšana, MyPaint otas…</li><li>Exif, XMP, IPTC un DICOM metadatu skatīšana un rediģēšana</li><li>Pamata HiDPI atbalsts: automātisks vai lietotāja izvēlēts ikonu izmērs</li><li>Jauni GIMP motīvi: gaišs, pelēks, tumšs un sistēmas</li><li>Un vēl daudz vairāk…</li></ul><p>Lai uzzinātu vairāk, skatiet  https://www.gimp.org/news/2018/04/27/gimp-2-10-0-released/</p></description>
+        <description xml:lang="pl"><p>Pierwsze wydanie z serii 2.10, w której przede wszystkim przeniesiono program do nowego mechanizmu przetwarzania obrazów, GEGL. Najbardziej wyróżniające się zmiany:</p><ul><li>Przetwarzanie kolorów o wysokiej głębi (16/32 bity na kanał kolorów)</li><li>Zarządzanie kolorami to teraz główna funkcja, większość widżetów i obszarów podglądu podlega zarządzaniu kolorami</li><li>Podgląd efektów na obrazie, z podzielonym widokiem na przed/po przetworzeniu pikseli</li><li>Wielowątkowe i przyspieszane sprzętowo renderowanie, przetwarzanie i malowanie</li><li>Ulepszono większość narzędzi, dodano kilka nowych narzędzi przekształceń</li><li>Ulepszona obsługa wielu formatów obrazów, zwłaszcza lepsze importowanie obrazów PSD</li><li>Nowo obsługiwane formaty obrazów: OpenEXR, RGBE, WebP, HGT…</li><li>Ulepszone malowanie cyfrowe: obracanie i odbijanie płótna, malowanie symetryczne, pędzle programu MyPaint…</li><li>Przeglądanie i modyfikowanie metadanych Exif, XMP, IPTC i DICOM</li><li>Podstawowa obsługa monitorów o wysokiej rozdzielczości: automatyczne lub wybrane przez użytkownika rozmiary ikon</li><li>Nowe motywy programu: jasny, szary, ciemny i systemowy</li><li>Oraz wiele, wiele więcej…</li></ul><p>https://www.gimp.org/news/2018/04/27/gimp-2-10-0-released/ zawiera więcej informacji (w języku angielskim).</p></description>
+        <description xml:lang="ru"><p>Главным новшеством первой версии GIMP в серии 2.10 стал порт на GEGL, новый движок обработки графики. Основные изменения таковы:</p><ul><li>Обработка с высокой разрядностью (16/32 бит на цветовой канал)</li><li>Управление цветом стало полноправной возможностью программы, большинство виджетов и областей предпросмотра теперь цветоуправляемы</li><li>Предпросмотр эффектов прямо на холсте, с раздельным просмотром пикселей до и после обработки</li><li>Многопоточная и аппаратно-ускоренные отрисовка, обработка и рисование</li><li>Улучшения в уже существовавших инструментах и несколько новых инструментов трансформации</li><li>Улучшена поддержка многих форматов файлов, в частности, усовершенствован импорт PSD</li><li>Добавлена поддержка новых форматов файлов: OpenEXR, RGBE, WebP, HGT…</li><li>Улучшен инструментарий для художников: появилось вращение и зеркалирование холста, добавлена кисть MyPaint…</li><li>Появились средства просмотра и редактирования метаданных Exif, XMP, IPTC и DICOM</li><li>Базовая поддержка HiDPI: автоматический или пользовательский выбор размеров значков</li><li>Новые темы интерфейса для GIMP: светлая, серая, тёмная и системная</li><li>И многое, многое другое…</li></ul></description>
+        <description xml:lang="sv"><p>Den första utgåvan av 2.10-serien vilken introducerar övergången till en ny bildbehandlingsmotor, GEGL. De främsta ändringarna är:</p><ul><li>Färgbearbetning med högt bitdjup (16/32-bit per färgkanal)</li><li>Färghantering är nu en kärnfunktion, de flesta komponenter och förhandsgranskningsområden är färghanterade</li><li>Effektförhandsgranskning på ritytan, med delad vy för bildpunkter före/efter bearbetning</li><li>Flertrådad och hårdvaruaccelererad rendering, bearbetning och målning</li><li>De flesta verktygen har förbättrats, flera nya transformeringsverktyg</li><li>Förbättrat stöd för många bildformat, i synnerhet bättre PSD-import</li><li>Nya bildformat som stöds: OpenEXR, RGBE, WebP, HGT…</li><li>Förbättrat digitalt målande: rotation och vändande av rityta, symmetrimålning, MyPaint-penslar…</li><li>Visning och redigering av Exif-, XMP-, IPTC- och DICOM-metadata</li><li>Grundläggande HiDPI-stöd: automatisk eller användarvald ikonstorlek</li><li>Nya teman för GIMP: Light, Gray, Dark och System</li><li>Samt mycket mer…</li></ul><p>För mer information, se https://www.gimp.org/news/2018/04/27/gimp-2-10-0-released/</p></description>
+        <description xml:lang="uk"><p>Головною особливістю першої версії у серії 2.10 є портування на новий рушій обробки зображень, GEGL. Найпомітніші зміни:</p><ul><li>Обробка зображень із високою розрядністю кольорів (16/32 бітів на канал кольору)</li><li>Тепер керування кольорами є основною можливістю — ним можна скористатися у більшості віджетів та на панелях перегляду</li><li>Попередній перегляд застосування ефектів на полотні із поділом на зони до і після обробки пікселів</li><li>Можливості багатопотокового показу, обробки і малювання із використанням апаратного прискорення</li><li>Поліпшено більшість інструментів, реалізовано декілька нових засобів перетворення</li><li>Поліпшено підтримку багатьох форматів зображень, зокрема імпортування даних PSD</li><li>Нові підтримувані формати зображень: OpenEXR, RGBE, WebP, HGT…</li><li>Поліпшено можливості з цифрового малювання: обертання і віддзеркалення полотна, симетричне малювання, пензлі MyPaint…</li><li>Перегляд і редагування метаданих для Exif, XMP, IPTC і DICOM</li><li>Базова підтримка HiDPI: визначення розмірів піктограм у автоматичному режимі або вручну користувачем</li><li>Нові теми для GIMP: світла, сіра, темна і загальносистемна</li><li>А також багато чого іншого…</li></ul></description>
+        <description xml:lang="zh_CN"><p>2.10 系列的第一个发布版本的重要特性为移植到新的图像处理引擎 GEGL 。最显著的改变有：</p><ul><li>高位深色彩处理(16/32 位每色彩通道)</li><li>色彩管理现在是一项核心特性，大部分组件和预览区域已获得色彩管理</li><li>画布上的效果预览，包含对像素处理前/后的分割视图</li><li>多线程和硬件加速渲染、处理及绘画</li><li>大部分工具得到改进，并添加了一些新的变换工具</li><li>对许多图像格式支持的提升，特别是更好的 PSD 导入支持</li><li>新支持的图像格式：OpenEXR、RGBE、WebP、HGT……</li><li>数字绘画的提升：画布旋转和翻转、对称绘画、MyPaint 笔刷……</li><li>对 Exif、XMP、IPTC 和 DICOM 等元数据的查看和编辑</li><li>基本的高分屏支持：自动或用户选择的图标大小</li><li>GIMP 的新主题：亮、灰、暗和系统</li><li>还有很多很多……</li></ul></description>
+      </release>
+      <release version="2.10.0~rc2" timestamp="1523923200">
+        <description><p>In this second release candidate before GIMP 2.10.0, while debugging is still a prime target, a new focus has been put on speed and optimization in order to provide a smoother painting experience. Bigger changes are:</p><ul><li>Major core optimizations for painting and display, including parallelized painting code.</li><li>Symmetries are now preserved in XCF files (saved as image parasites).</li><li>&quot;Light&quot; and &quot;Dark&quot; themes rewritten from scratch to get rid of various usability issues. &quot;Lighter&quot; and &quot;Darker&quot; themes removed.</li><li>New GimpToolGyroscope on-canvas control, currently used for the Panorama Projection filter. The widget provides on-canvas interaction for 3D rotation (yaw, pitch, roll).</li><li>Plug-in debugging improved to output stack traces from plug-ins with --stack-trace-mode command line option not only on receiving signals but also on warnings and critical errors when &quot;fatal-warnings&quot; debug key is set.</li></ul><p>For more information, see https://www.gimp.org/news/2018/04/17/gimp-2-10-0-rc2-released/</p></description>
+        <description xml:lang="ca"><ul><li>Optimitzacions importants pel traçat i la visualització, incloent-hi l&apos;execució en paral·lel del codi de traçat.</li><li>Les simetries es preserven ara en fitxers XCF (desats com a paràsits d&apos;imatge)</li><li>El temes «clar» i «fosc» s&apos;han escrit des de zero per solucionar diversos problemes d&apos;usabilitat. El temes «més clar» i «més fosc» s&apos;han eliminat.</li></ul></description>
+        <description xml:lang="da"><p>Fejlfinding er stadig et primært mål i denne anden udgivelseskandidat før GIMP 2.10.0, men der er nyt fokus på hastighed og optimering for at kunne levere en mere flydende maleoplevelse. Større ændringer er:</p><ul><li>Større kerneoptimeringer af maling og visning, inklusive paralleliseret malekode.</li><li>Symmetrier bevares nu i XCF-filer (gemt som billedparasitter).</li><li>Temaerne “Lys” og “Mørk” er genskrevet fra bunden for at slippe for forskellige problemer med brugervenlighed. Temaerne “Lysere” og “mørkere” er fjernet.</li><li>Ny GimpToolGyroscope-kontrol direkte på lærredet som bruges til panoramaprojektionsfilteret. Kontrollen giver interaktion direkte på lærredet for 3D-rotation (drejning omkring alle tre akser)</li><li>Fejlfinding af udvidelsesmoduler er forbedret til at udskrive stakspor fra udvidelsesmoduler med kommandolinjetilvalget --stack-trace-mode; ikke kun når der modtages signaler, men også ved advarsler og kritiske fejl når fejlfindingsnøglen “fatal-warnings” er angivet.</li></ul><p>Mere information kan findes på https://www.gimp.org/news/2018/04/17/gimp-2-10-0-rc2-released/</p></description>
+        <description xml:lang="de"><p>In diesem zweiten Freigabe-Kandidat für GIMP 2.10.0 wurde besonderes Augenmerk auf Geschwindigkeit und Optimierungen gelegt, um ein reibungsloseres Erlebnis beim Malen zu erzielen. Die Fehlerdiagnose steht immer noch im Fokus. Größere Änderungen sind:</p><ul><li>Wichtige Kernoptimierungen für Malen und Anzeige, wie parallelisierter Mal-Code.</li><li>Symmetrien werden nun in XCF-Dateien gespeichert (als parasitäre Bildbestandteile).</li><li>Die Themen »Hell« und »Dunkel« wurden vollständig neu geschrieben, um diverse Probleme der Benutzerfreundlichkeit zu beseitigen. Die Themen »Heller« und »Dunkler« wurden vollständig entfernt.</li></ul></description>
+        <description xml:lang="el"><p>Σε αυτήν την δεύτερη υποψήφια έκδοση πριν το GIMP 2.10.0, ενώ η αποσφαλμάτωση εξακολουθεί να είναι κύριος στόχος, μια νέα εστίαση έχει τεθεί στην ταχύτητα και βελτιστοποίηση για να δοθεί μια πιο ομαλή εμπειρία βαφής. Οι μεγαλύτερες αλλαγές είναι:</p><ul><li>Μεγάλες βασικές βελτιστοποιήσεις για βαφή και εμφάνιση, περιλαμβάνοντας παράλληλο κώδικα βαφής.</li><li>Οι συμμετρίες διατηρούνται τώρα σε αρχεία XCF (αποθηκευόμενες ως παράσιτα εικόνας).</li><li>Τα &quot;ανοιχτά&quot; και &quot;σκοτεινά&quot; θέματα ξαναγράφτηκαν από την αρχή για να απαλλαχτούν από διάφορα προβλήματα χρηστικότητας. Τα &quot;πιο ανοιχτά&quot; και τα &quot;πιο σκούρα&quot; θέματα αφαιρέθηκαν.</li><li>Το νέο στοιχείο ελέγχου στον καμβά GimpToolGyroscope, χρησιμοποιείται προς το παρόν για το φίλτρο προβολής πανοράματος. Το γραφικό στοιχείο παρέχει αλληλεπίδραση στον καμβά για 3Δ περιστροφή (ταλάντωση).</li><li>Η αποσφαλμάτωση προσθέτου βελτιώθηκε ώστε να εμφανίζει τις ιχνηλατήσεις στοιβών από πρόσθετα με την επιλογή γραμμής εντολής --stack-trace-mode όχι μόνο κατά την λήψη σημάτων, αλλά επίσης σε προειδοποιήσεις και κρίσιμα σφάλματα όταν ορίζεται το κλειδί αποσφαλμάτωσης &quot;προειδοποιήσεις κρίσιμων σφαλμάτων&quot;.</li></ul><p>Για περισσότερες πληροφορίες, δείτε https://www.gimp.org/news/2018/04/17/gimp-2-10-0-rc2-released/</p></description>
+        <description xml:lang="fr"><p>Dans cette seconde version candidate avant GIMP 2.10.0, alors que le débogage est toujours le but principal, une nouvelle cible a été déterminée concernant la vitesse et l&apos;optimisation afin d’offrir un vécu plus facile lors de la peinture. Les plus grands changements sont :</p><ul><li>Optimisations majeures du cœur concernant la peinture et l&apos;affichage, y compris du code de peinture multi-cœur en parallèle.</li><li>Les symétries sont maintenant préservées dans les fichiers XCF (enregistrées en tant que parasites d’image).</li><li>Les thèmes « Clair » et « Sombre » ont été complètement ré-écrits pour les débarrasser de divers problèmes d’utilisation. Les thèmes « Plus clair » et « Plus foncé » ont été supprimés.</li><li>Nouvelle commande sur canevas GimpToolGyroscope, couramment utilisée par le filtre Projection panorama. Fournit une interaction sur canevas pour la rotation 3D (lacet, tangage, roulis).</li><li>Débogage de greffon amélioré pour produire des traces de pile à partir des greffons avec l&apos;option en ligne de  commande --stack-trace-mode non seulement lors de la réception de signaux mais aussi lors des avertissements et des erreurs critiques quand la clé de débogage « fatal-warning » est définie.</li></ul><p>Pour plus d’informations, reportez-vous à https://www.gimp.org/news/2018/04/17/gimp-2-10-0-rc2-released/</p></description>
+        <description xml:lang="hu"><p>A GIMP 2.10.0 második kiadásra jelölt verziójában ugyan még mindig a hibakeresés a legfőbb cél, fókuszba került a sebesség és az optimalizáció, hogy még simább festési élményt nyújtsunk. A legfőbb változások a következőek:</p><ul><li>Jelentős alapvető módosítások a festés és megjelenítés terén, ebbe bele értve a festési kód párhuzamosítását.</li><li>A szimmetriák most már mentésre kerülnek az XCF fájlokban (képparazitaként kerülnek mentésre).</li><li>A „Világos” és „Sötét” témák újraírásra kerültek, hogy megszabaduljunk a különböző használhatósági problémáktól. A „Világosabb” és „Sötétebb” téma el lett távolítva.</li><li>Új GimpToolGyroscope vásznon lévő vezérlő, amit jelenleg a Panoráma vetítési szűrő használ. Az ablakelem interakciót biztosít a vásznon a 3D-s forgatáshoz (legyezés, bólintás, döntés).</li><li>A bővítmények hibakeresése javult, most már van veremkiíratás a bővítményekből a --stack-trace-mode parancssori kapcsolóval, nem csak a szignálok, hanem a figyelmeztetések és kritikus hibák esetén is, ha a „fatal-warnings” hibakeresési kapcsoló be van állítva.</li></ul><p>További információkért lásd: https://www.gimp.org/news/2018/04/17/gimp-2-10-0-rc2-released/</p></description>
+        <description xml:lang="is"><p>Til að fá frekari upplýsingar, skoðaðu https://www.gimp.org/news/2018/04/17/gimp-2-10-0-rc2-released/</p></description>
+        <description xml:lang="it"><p>In questo secondo candidato al rilascio prima di GIMP 2.10.0, mentre la stabilità è ancora l&apos;obiettivo primario, è stato data importanza anche alla velocità e all&apos;ottimizzazione in modo da fornire un&apos;esperienza di disegno ancora migliore. I cambiamenti maggiori sono:</p><ul><li>Grande ottimizzazione del nucleo nel disegno e nella visualizzazione, comprendente la parallelizzazione del codice di disegno.</li><li>Le simmetrie ora vengono mantenute nei file XCF (salvate come parassiti dell&apos;immagine).</li><li>I temi &quot;Light&quot; e &quot;Dark&quot; sono stati riscritti da zero per eliminare diversi problemi di usabilità. I temi &quot;Lighter&quot; e &quot;Darker&quot; sono stati rimossi.</li><li>Nuovo strumento di controllo sull&apos;immagine StrumentoGiroscopioGimp, attualmente usato per il filtro di proiezione panoramica. La finestra fornisce interazione sul disegno per la rotazione 3D (imbardata, beccheggio, rollio).</li><li>Il debug dei plugin è migliorato; ora genera le tracce dello stack dei plugin tramite l&apos;opzione a riga di comando --stack-trace-mode non solo alla ricezione di segnali ma anche quando ci sono avvertimenti e errori critici, se viene impostata la chiave di debug &quot;fatal-warnings&quot;.</li></ul><p>Per ulteriori informazioni, consultare https://www.gimp.org/news/2018/04/17/gimp-2-10-rc2-released/</p></description>
+        <description xml:lang="lv"><p>Šajā otrajā laidiena kandidātā pirms GIMP 2.10.0, kurā atkļūdošana vēl aizvien ir primārais mērķis, tiks likts uzsvars uz ātrumu un optimizēšanu, lai gleznošana būtu vieglāka. Lielākās izmaiņas:</p><ul><li>Lielas kodola optimizācijas zīmēšanai un attēlošanai, tai skaitā paralelizēts zīmēšanas kods.</li><li>Simetrijas tagad tiek saglabātas XCF datnēs (saglabāti kā attēla trokšņi).</li><li>Gaišie un tumšie motīvi ir uzrakstīti no jauna, lai atbrīvotos no dažādām lietojamības problēmām. Tika izņemti motīvi “Gaišāks” un “Tumšāks”.</li></ul><p>Lai uzzinātu vairāk, skatiet https://www.gimp.org/news/2018/04/17/gimp-2-10-0-rc2-released/</p></description>
+        <description xml:lang="pl"><p>W drugim wydaniu kandydackim przed GIMP 2.10.0, chociaż debugowanie jest nadal głównym celem, skupiliśmy się także na prędkości i optymalizacji, aby rysowanie było płynniejsze. Większe zmiany w tym wydaniu:</p><ul><li>Duże optymalizacje rdzenia programu w zakresie rysowania i wyświetlania, w tym wielowątkowy kod rysowania.</li><li>Symetrie w plikach XCF są teraz zachowywane (zapisywane jako dane pasożytnicze obrazu).</li><li>„Jasny” i „Ciemny” motyw zostały przepisane od zera, aby pozbyć się różnych problemów z interfejsem. Usunięto motywy „Jaśniejszy” i „Ciemniejszy”.</li><li>Nowe narzędzie sterowania na płótnie GimpToolGyroscope, obecnie używane przez filtr rzutu panoramy. Ten widżet zapewnia sterowanie obrotem 3D na płótnie (odchylenie, kąt, walec).</li><li>Ulepszono debugowanie wtyczek, aby otrzymywać wyjątki za pomocą opcji wiersza poleceń --stack-trace-mode nie tylko po sygnałach przychodzących, ale także po ostrzeżeniach i błędach krytycznych, kiedy ustawiony jest klucz debugowania „fatal-warnings”.</li></ul><p>https://www.gimp.org/news/2018/04/17/gimp-2-10-0-rc2-released/ zawiera więcej informacji (w języku angielskim).</p></description>
+        <description xml:lang="ru"><ul><li>Существенное ускорение рисования за счёт вывода рисования в отдельный поток</li><li>Симметрия рисования теперь сохраняется в файлах XCF.</li><li>Светлая и темная темы переписаны с нуля и теперь не содержат прежних проблем</li></ul></description>
+        <description xml:lang="sv"><p>I denna andra releasekandidat innan GIMP 2.10.0 har, om än felsökning fortfarande är ett primärt mål, nytt fokus satts på hastighet och optimering för att tillhandahålla en jämnare målningsupplevelse. Större ändringar:</p><ul><li>Stora kärnoptimeringar för målning och visning, inklusive parallelliserad målningskod.</li><li>Symmetrier bibehålls nu i XCF-filer (sparade som bildparasiter).</li><li>Temana ”Light” och ”Dark” är omskrivna från grunden för att komma åt diverse användbarhetsproblem. Temana ”Lighter” och ”Darker” har tagits bort.</li><li>Ny kontroll direkt på ritytan för GimpToolGyroscope-styrning, används för närvarande för Panoramaprojiceringsfiltret. Komponenten tillhandahåller interaktion på ritytan för 3D-rotation (gir, stigning, rullning).</li><li>Felsökning för insticksmoduler förbättrad för att mata ut stackspår från insticksmoduler med kommandoradsflaggan --stack-trace-mode inte bara då signaler mottas utan också vid varningar och kritiska fel då felsökningsnyckeln ”fatal-warnings” har ställts in.</li></ul><p>För mer information, se https://www.gimp.org/news/2018/04/17/gimp-2-10-0-rc2-released/</p></description>
+        <description xml:lang="uk"><p>У другому кандидаті на випуск GIMP 2.10.0, усуваючи виявлені вади, ми зробили акцент на пришвидшення роботи програми та оптимізацію із метою удосконалення умов малювання. Найпомітніші зміни:</p><ul><li>Значна оптимізація ядра програми для малювання і показу зображення, зокрема паралелізація коду малювання.</li><li>Збереження симетрії у файлах XCF (зберігається у форматі додатків до зображення).</li><li>Переписано світлу та темну теми, щоб усунути різноманітні проблеми зі зручністю у користуванні. Вилучено теми «Світліша» і «Темніша».</li><li>Новий засіб керування на полотні, GimpToolGyroscope, у поточній версії використовується для фільтра панорамної проекції. У віджеті передбачено взаємодію на полотні для обертання у просторі (відхилення, закручування, обертання).</li><li>Поліпшено можливості діагностики у додатках: виведення трасування стека від додатків за допомогою параметра командного рядка --stack-trace-mode надає змогу переглядати не лише отримання сигналів, але і попередження і критичні помилки, якщо встановлено ключ діагностики «fatal-warnings».</li></ul><p>Докладніший опис можна знайти тут: https://www.gimp.org/news/2018/04/17/gimp-2-10-0-rc2-released/</p></description>
+        <description xml:lang="zh_CN"><p>在 2.10.0 正式版之前的第二个候选版中，虽然调试仍然是主要目标，但有侧重地进行了流畅度优化，以提供顺滑的绘画体验。较大的改动有：</p><ul><li>对绘画和显示的核心优化，包括并行绘画代码。</li><li>对称绘画可被保存在 XCF 文件中(作为图像内嵌信息)。</li><li>从零重写“亮”和“暗”主题以避免一些可用性问题。删除了“更亮”和“更暗”主题。</li><li>用于全景设计滤镜的全新 GimpToolGyroscope 画布上控制。该组件为 3D 旋转(偏离、前冲、转动)提供了画布上的交互。</li><li>对当“fatal-warnings”键值被设置时，不仅在接受信号上而且在警告和严重错误上，从带有 --stack-trace-mode 命令行选项插件的输出堆栈追溯的插件调试提升。</li></ul></description>
+      </release>
+    </releases>
+    <provides>
+      <binary>gimp-2.10</binary>
+    </provides>
+    <languages>
+      <lang percentage="75">ar</lang>
+      <lang percentage="31">ast</lang>
+      <lang percentage="63">be</lang>
+      <lang percentage="29">bg</lang>
+      <lang percentage="63">br</lang>
+      <lang percentage="72">bs</lang>
+      <lang percentage="99">ca</lang>
+      <lang percentage="98">ca@valencia</lang>
+      <lang percentage="65">cs</lang>
+      <lang percentage="99">da</lang>
+      <lang percentage="98">de</lang>
+      <lang percentage="28">dz</lang>
+      <lang percentage="99">el</lang>
+      <lang percentage="29">en_CA</lang>
+      <lang percentage="65">en_GB</lang>
+      <lang percentage="57">eo</lang>
+      <lang percentage="89">es</lang>
+      <lang percentage="65">et</lang>
+      <lang percentage="97">eu</lang>
+      <lang percentage="59">fi</lang>
+      <lang percentage="99">fr</lang>
+      <lang percentage="66">gd</lang>
+      <lang percentage="60">gl</lang>
+      <lang percentage="30">hr</lang>
+      <lang percentage="99">hu</lang>
+      <lang percentage="41">id</lang>
+      <lang percentage="98">is</lang>
+      <lang percentage="99">it</lang>
+      <lang percentage="56">ja</lang>
+      <lang percentage="28">km</lang>
+      <lang percentage="56">ko</lang>
+      <lang percentage="69">lt</lang>
+      <lang percentage="99">lv</lang>
+      <lang percentage="31">mk</lang>
+      <lang percentage="52">my</lang>
+      <lang percentage="59">nb</lang>
+      <lang percentage="36">ne</lang>
+      <lang percentage="61">nl</lang>
+      <lang percentage="73">nn</lang>
+      <lang percentage="62">oc</lang>
+      <lang percentage="59">pa</lang>
+      <lang percentage="100">pl</lang>
+      <lang percentage="84">pt</lang>
+      <lang percentage="61">pt_BR</lang>
+      <lang percentage="63">ro</lang>
+      <lang percentage="97">ru</lang>
+      <lang percentage="70">sk</lang>
+      <lang percentage="87">sl</lang>
+      <lang percentage="86">sr</lang>
+      <lang percentage="63">sr@latin</lang>
+      <lang percentage="100">sv</lang>
+      <lang percentage="62">ta</lang>
+      <lang percentage="63">te</lang>
+      <lang percentage="64">tr</lang>
+      <lang percentage="99">uk</lang>
+      <lang percentage="62">vi</lang>
+      <lang percentage="99">zh_CN</lang>
+      <lang percentage="57">zh_HK</lang>
+      <lang percentage="77">zh_TW</lang>
+    </languages>
+    <bundle type="flatpak" runtime="org.gnome.Platform/x86_64/3.28" sdk="org.gnome.Sdk/x86_64/3.28">app/org.gimp.GIMP/x86_64/stable</bundle>
+    <metadata>
+      <value key="X-Flatpak-Tags">stable</value>
+    </metadata>
+  </component>
+</components>
