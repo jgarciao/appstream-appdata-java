@@ -497,6 +497,196 @@ public class AppdataParserTest {
   }
 
   @Test
+  public void when_ParsingPhotos_Expect_ComponentInfoObtained() throws Exception {
+
+    //Given
+    String appDataResourceFile = "appstream-test-app-photos.xml";
+    List<AppdataComponent> componentList = null;
+    AppdataComponent component = null;
+    String EXPECTED_FLATPAKID = "com.endlessm.photos";
+    String EXPECTED_RUNTIME = "org.gnome.Platform/x86_64/3.26";
+    String EXPECTED_DEFAULT_NAME = "Photo Editor";
+    String EXPECTED_DEFAULT_SUMMARY = "Easily edit and share all of your favorite photos";
+    String EXPECTED_DEFAULT_DESCRIPTION =
+      "<p>Have you ever wanted to edit your own photos like the pros and create beautiful images you can share with those you love? " +
+        "Well, now you can do that in just a few steps! We have a variety of attractive, artful filters so you can customize your " +
+        "photos and create one-of-a-kind works of art from your everyday life. With this handy app, you can post your creations " +
+        "directly to Facebook, so everyone can see your awesome pictures!</p>\n";
+
+    String EXPECTED_HOMEPAGE_URL = "http://www.endlessm.com";
+    String EXPECTED_DONATION_URL = "http://www.gnome.org/friends/";
+    String EXPECTED_BUGTRACKER_URL = "https://gitlab.gnome.org/GNOME/gnome-builder/issues";
+
+    String EXPECTED_PROJECT_LICENSE = "GPL-3.0+";
+
+    short EXPECTED_ICONHEIGHT_128 = 128;
+    //String EXPECTED_ICONURL_128 = "/repo/appstream/x86_64/icons/128x128/com.endlessm.photos.png";
+    short EXPECTED_ICONHEIGHT_64 = 64;
+    String EXPECTED_ICONURL_64 = "/repo/appstream/x86_64/icons/64x64/com.endlessm.photos.png";
+    int EXPECTED_SCREENSHOT_COUNT = 9;
+    short EXPECTED_SCHEENSHOT0_HEIGHT = 846;
+    String EXPECTED_SCREENSHOT0_URL = "https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-4ba1969595153deb52d30027a2287df5.png";
+    //short EXPECTED_SCHEENSHOT1_HEIGHT = 351;
+    //String EXPECTED_SCREENSHOT1_URL = "https://flathub.org/repo/screenshots/org.gnome.Builder-stable/624x351/org.gnome.Builder-19b4818c4fda40f94d8e6ccc1379dc6d.png";
+
+    int EXPECTEC_CATEGORY_COUNT = 2;
+    String EXPECTED_CATEGORY_FIRST = "Graphics";
+
+    String EXPECTED_RELEASE_VERSION = "1.0.1";
+    String EXPECTED_RELEASE_DESCRIPTION = "";
+    int EXPECTED_RELEASE_TIMESTAMP = 1524700800;
+
+    //When
+    File file = new File(classLoader.getResource(appDataResourceFile).getFile());
+    componentList = AppdataParser.parseAppdataFile(file);
+    if (componentList != null) {
+      component = componentList.get(0);
+    }
+
+    //Then
+    assertThat(componentList).isNotNull();
+    assertThat(componentList.size()).isEqualTo(1);
+    assertThat(component.getType()).isEqualToIgnoringCase(APPSTREAM_TYPE_DESKTOP);
+    assertThat(component.getFlatpakId()).isEqualToIgnoringCase(EXPECTED_FLATPAKID);
+    assertThat(component.getFlatpakRuntime()).isEqualToIgnoringCase(EXPECTED_RUNTIME);
+    assertThat(component.findDefaultName()).isEqualToIgnoringCase(EXPECTED_DEFAULT_NAME);
+    assertThat(component.findDefaultSummary()).isEqualToIgnoringCase(EXPECTED_DEFAULT_SUMMARY);
+    assertThat(component.findDefaultDescription())
+      .isEqualToIgnoringCase(EXPECTED_DEFAULT_DESCRIPTION);
+    assertThat(component.getProjectLicense()).isEqualToIgnoringCase(EXPECTED_PROJECT_LICENSE);
+
+    assertThat(component.findHomepageUrl().get()).isEqualToIgnoringCase(EXPECTED_HOMEPAGE_URL);
+    assertThat(component.findDonationUrl()).isNotPresent();
+    assertThat(component.findBugtrackerUrl()).isNotPresent();
+
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128)).isNull();
+
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getHeight())
+      .isEqualTo(EXPECTED_ICONHEIGHT_64);
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getValue()).isNotNull();
+    assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64))
+      .isEqualToIgnoringCase(EXPECTED_ICONURL_64);
+
+    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(
+      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT))
+      .isPresent();
+    assertThat(
+      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT).get())
+      .isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
+
+    assertThat(component.getCategories()).isNotNull();
+    assertThat(component.getCategories().getCategory().size()).isEqualTo(EXPECTEC_CATEGORY_COUNT);
+    assertThat(component.getCategories().getCategory().get(0))
+      .isEqualToIgnoringCase(EXPECTED_CATEGORY_FIRST);
+
+    assertThat(component.findReleaseInfoByMostRecent()).isPresent();
+    assertThat(component.findReleaseInfoByMostRecent().get().getVersion())
+      .isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
+    assertThat(component.findReleaseInfoByMostRecent().get().getTimestamp())
+      .isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
+    assertThat(component.findReleaseInfoByMostRecent().get().getDescription())
+      .isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
+
+  }
+
+  @Test
+  public void when_ParsingAlbion_Expect_ComponentInfoObtained() throws Exception {
+
+    //Given
+    String appDataResourceFile = "appstream-test-app-albion.xml";
+    List<AppdataComponent> componentList = null;
+    AppdataComponent component = null;
+    String EXPECTED_FLATPAKID = "com.albiononline.AlbionOnline";
+    String EXPECTED_RUNTIME = "org.gnome.Platform/x86_64/3.24";
+    String EXPECTED_DEFAULT_NAME = "Albion Online";
+    String EXPECTED_DEFAULT_SUMMARY = "MMORPG open medieval fantasy game";
+    String EXPECTED_DEFAULT_DESCRIPTION =
+      "<p>Albion Online is a sandbox MMORPG set in an open medieval fantasy world. It has a fully player-driven economy; " +
+        "all equipment items are player-crafted. You can freely combine armor pieces and weapons in our unique classless " +
+        "system – you are what you wear. Explore the world and tackle challenging PvE content. Engage other adventurers in " +
+        "small- or large-scale PvP, and conquer territories. Gather. Craft. Trade. Conquer. Leave your mark in the world.</p>\n";
+
+    String EXPECTED_HOMEPAGE_URL = "https://albiononline.com/";
+    String EXPECTED_DONATION_URL = "http://www.gnome.org/friends/";
+    String EXPECTED_BUGTRACKER_URL = "https://gitlab.gnome.org/GNOME/gnome-builder/issues";
+
+    String EXPECTED_PROJECT_LICENSE = "LicenseRef-proprietary";
+
+    short EXPECTED_ICONHEIGHT_128 = 128;
+    String EXPECTED_ICONURL_128 = "/repo/appstream/x86_64/icons/128x128/com.albiononline.AlbionOnline.png";
+    short EXPECTED_ICONHEIGHT_64 = 64;
+    String EXPECTED_ICONURL_64 = "/repo/appstream/x86_64/icons/64x64/com.albiononline.AlbionOnline.png";
+    int EXPECTED_SCREENSHOT_COUNT = 3;
+    short EXPECTED_SCHEENSHOT0_HEIGHT = 846;
+    String EXPECTED_SCREENSHOT0_URL = "https://flathub.org/repo/screenshots/com.albiononline.AlbionOnline-stable/1504x846/com.albiononline.AlbionOnline-f57087efec24ed451515f4f690d9b1ba.png";
+
+    int EXPECTEC_CATEGORY_COUNT = 2;
+    String EXPECTED_CATEGORY_FIRST = "Game";
+
+    String EXPECTED_RELEASE_VERSION = "1.0.34.184";
+    String EXPECTED_RELEASE_DESCRIPTION = "";
+    int EXPECTED_RELEASE_TIMESTAMP = 1514592000;
+
+    //When
+    File file = new File(classLoader.getResource(appDataResourceFile).getFile());
+    componentList = AppdataParser.parseAppdataFile(file);
+    if (componentList != null) {
+      component = componentList.get(0);
+    }
+
+    //Then
+    assertThat(componentList).isNotNull();
+    assertThat(componentList.size()).isEqualTo(1);
+    assertThat(component.getType()).isEqualToIgnoringCase(APPSTREAM_TYPE_DESKTOP);
+    assertThat(component.getFlatpakId()).isEqualToIgnoringCase(EXPECTED_FLATPAKID);
+    assertThat(component.getFlatpakRuntime()).isEqualToIgnoringCase(EXPECTED_RUNTIME);
+    assertThat(component.findDefaultName()).isEqualToIgnoringCase(EXPECTED_DEFAULT_NAME);
+    assertThat(component.findDefaultSummary()).isEqualToIgnoringCase(EXPECTED_DEFAULT_SUMMARY);
+    assertThat(component.findDefaultDescription())
+      .isEqualToIgnoringCase(EXPECTED_DEFAULT_DESCRIPTION);
+    assertThat(component.getProjectLicense()).isEqualToIgnoringCase(EXPECTED_PROJECT_LICENSE);
+
+    assertThat(component.findHomepageUrl().get()).isEqualToIgnoringCase(EXPECTED_HOMEPAGE_URL);
+    assertThat(component.findDonationUrl()).isNotPresent();
+    assertThat(component.findBugtrackerUrl()).isNotPresent();
+
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getHeight())
+      .isEqualTo(EXPECTED_ICONHEIGHT_128);
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128).getValue()).isNotNull();
+    assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_128))
+      .isEqualToIgnoringCase(EXPECTED_ICONURL_128);
+
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getHeight())
+      .isEqualTo(EXPECTED_ICONHEIGHT_64);
+    assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_64).getValue()).isNotNull();
+    assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64))
+      .isEqualToIgnoringCase(EXPECTED_ICONURL_64);
+
+    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(
+      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT))
+      .isPresent();
+    assertThat(
+      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT).get())
+      .isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
+
+    assertThat(component.getCategories()).isNotNull();
+    assertThat(component.getCategories().getCategory().size()).isEqualTo(EXPECTEC_CATEGORY_COUNT);
+    assertThat(component.getCategories().getCategory().get(0))
+      .isEqualToIgnoringCase(EXPECTED_CATEGORY_FIRST);
+
+    assertThat(component.findReleaseInfoByMostRecent()).isPresent();
+    assertThat(component.findReleaseInfoByMostRecent().get().getVersion())
+      .isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
+    assertThat(component.findReleaseInfoByMostRecent().get().getTimestamp())
+      .isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
+    assertThat(component.findReleaseInfoByMostRecent().get().getDescription())
+      .isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
+
+  }
+
+  @Test
   public void when_ParsingDiscord_Expect_ComponentInfoObtained() throws Exception {
 
     //Given
