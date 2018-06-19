@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://www.w3.org/XML/1998/namespace"
-    schemaLocation="appstream-lang.xsd"/>
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+      schemaLocation="appstream-lang.xsd"/>
+
   <xs:element name="metadata">
     <xs:complexType>
       <xs:sequence>
@@ -37,8 +38,8 @@
       <xs:sequence>
         <xs:element ref="description" minOccurs="0"/>
       </xs:sequence>
-      <xs:attribute type="xs:int" name="timestamp" use="optional"/>
       <xs:attribute type="xs:string" name="version" use="optional"/>
+      <xs:attribute type="xs:int" name="timestamp" use="optional"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="kudo">
@@ -56,9 +57,9 @@
     <xs:complexType>
       <xs:simpleContent>
         <xs:extension base="xs:string">
-          <xs:attribute type="xs:string" name="type" use="optional"/>
           <xs:attribute type="xs:short" name="height" use="optional"/>
           <xs:attribute type="xs:short" name="width" use="optional"/>
+          <xs:attribute type="xs:string" name="type" use="optional"/>
         </xs:extension>
       </xs:simpleContent>
     </xs:complexType>
@@ -73,7 +74,7 @@
     </xs:complexType>
   </xs:element>
 
-  <!-- Manually modified description type -->
+  <!-- schema fragment having  mixed content -->
   <xs:complexType name="description" mixed="true">
     <xs:sequence>
       <xs:element name="p" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
@@ -82,12 +83,36 @@
     </xs:sequence>
     <xs:attribute ref="xml:lang"/>
   </xs:complexType>
+
   <xs:element name="description" type="description"/>
 
+  <xs:element name="ol">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="li" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 
+  <xs:element name="caption">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Ejemplo de leyenda"/>
+        <xs:enumeration value="Exemplo de legenda"/>
+        <xs:enumeration value="Caption example"/>
+        <xs:enumeration value="Ejemplo de leyenda 2"/>
+        <xs:enumeration value="Exemplo de legenda 2"/>
+        <xs:enumeration value="Caption example 2"/>
+        <xs:enumeration value="Ejemplo de leyenda 3"/>
+        <xs:enumeration value="Exemplo de legenda 3"/>
+        <xs:enumeration value="Caption example 3"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
   <xs:element name="screenshot">
     <xs:complexType>
       <xs:sequence>
+        <xs:element ref="caption" minOccurs="0"/>
         <xs:element ref="image" maxOccurs="unbounded" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute type="xs:string" name="type" use="optional"/>
@@ -114,13 +139,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ol">
-    <xs:complexType mixed="true">
-      <xs:sequence>
-        <xs:element ref="li" maxOccurs="unbounded" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="content_rating">
     <xs:complexType>
       <xs:choice maxOccurs="unbounded" minOccurs="0">
@@ -129,22 +147,7 @@
       <xs:attribute type="xs:string" name="type" use="optional"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="id">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:enumeration value="org.gnome.Builder.desktop"/>
-        <xs:enumeration value="com.discordapp.Discord.desktop"/>
-        <xs:enumeration value="org.freedesktop.Sdk.Extension.openjdk9"/>
-        <xs:enumeration value="org.kde.kdenlive.desktop"/>
-        <xs:enumeration value="org.vim.Vim.desktop"/>
-        <xs:enumeration value="org.freedesktop.Platform"/>
-        <xs:enumeration value="org.gnome.Platform"/>
-        <xs:enumeration value="org.gtk.Gtk3theme.Adapta"/>
-        <xs:enumeration value="io.lbry.lbry-app.desktop"/>
-        <xs:enumeration value="org.pitivi.Pitivi.desktop"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
+  <xs:element name="id" type="xs:string"/>
   <xs:element name="categories">
     <xs:complexType>
       <xs:sequence>
@@ -185,7 +188,7 @@
     <xs:complexType>
       <xs:simpleContent>
         <xs:extension base="xs:string">
-          <xs:attribute type="xs:string" name="key"/>
+          <xs:attribute type="xs:string" name="key" use="optional"/>
         </xs:extension>
       </xs:simpleContent>
     </xs:complexType>
@@ -199,6 +202,7 @@
         <xs:enumeration value="Vim"/>
         <xs:enumeration value="MIT"/>
         <xs:enumeration value="LGPL-2.0+"/>
+        <xs:enumeration value="GPL-3.0+"/>
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
@@ -218,6 +222,7 @@
           <xs:attribute type="xs:string" name="type" use="optional"/>
           <xs:attribute type="xs:short" name="height" use="optional"/>
           <xs:attribute type="xs:short" name="width" use="optional"/>
+          <xs:attribute ref="xml:lang"/>
         </xs:extension>
       </xs:simpleContent>
     </xs:complexType>
@@ -257,29 +262,29 @@
   </xs:element>
   <xs:element name="component">
     <xs:complexType>
-      <xs:sequence>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
         <xs:element ref="id"/>
-        <xs:element ref="translation" minOccurs="0"/>
-        <xs:element ref="name" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element ref="summary" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element ref="developer_name" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element ref="description" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element ref="icon" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element ref="categories" minOccurs="0"/>
-        <xs:element ref="keywords" minOccurs="0"/>
-        <xs:element ref="kudos" minOccurs="0"/>
-        <xs:element ref="mimetypes" minOccurs="0"/>
-        <xs:element ref="project_license" minOccurs="0"/>
-        <xs:element ref="url" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element ref="project_group" minOccurs="0"/>
-        <xs:element ref="screenshots" minOccurs="0"/>
-        <xs:element ref="content_rating" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element ref="releases" minOccurs="0"/>
-        <xs:element ref="languages" minOccurs="0"/>
-        <xs:element ref="provides" minOccurs="0"/>
+        <xs:element ref="translation"/>
+        <xs:element ref="name"/>
+        <xs:element ref="summary"/>
+        <xs:element ref="developer_name"/>
+        <xs:element ref="description"/>
+        <xs:element ref="icon"/>
+        <xs:element ref="categories"/>
+        <xs:element ref="keywords"/>
+        <xs:element ref="kudos"/>
+        <xs:element ref="mimetypes"/>
+        <xs:element ref="project_license"/>
+        <xs:element ref="url"/>
+        <xs:element ref="project_group"/>
+        <xs:element ref="screenshots"/>
+        <xs:element ref="content_rating"/>
+        <xs:element ref="releases"/>
+        <xs:element ref="languages"/>
+        <xs:element ref="provides"/>
         <xs:element ref="bundle"/>
-        <xs:element ref="metadata" minOccurs="0"/>
-      </xs:sequence>
+        <xs:element ref="metadata"/>
+      </xs:choice>
       <xs:attribute type="xs:string" name="type" use="optional"/>
     </xs:complexType>
   </xs:element>
@@ -310,21 +315,7 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="mimetype" type="xs:string"/>
-  <xs:element name="category">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:enumeration value="Development"/>
-        <xs:enumeration value="IDE"/>
-        <xs:enumeration value="InstantMessaging"/>
-        <xs:enumeration value="Network"/>
-        <xs:enumeration value="AudioVideo"/>
-        <xs:enumeration value="AudioVideoEditing"/>
-        <xs:enumeration value="TextEditor"/>
-        <xs:enumeration value="Utility"/>
-        <xs:enumeration value="Video"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
+  <xs:element name="category" type="xs:string"/>
   <xs:element name="project_group">
     <xs:simpleType>
       <xs:restriction base="xs:string">
