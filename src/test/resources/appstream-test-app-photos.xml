@@ -76,6 +76,7 @@
     <url type="homepage">http://www.endlessm.com</url>
     <screenshots>
       <screenshot type="default">
+        <caption>Ejemplo de leyenda</caption>
         <image type="source" xml:lang="es">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot1-es.png</image>
         <image type="thumbnail" height="351" width="624" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-4ba1969595153deb52d30027a2287df5.png</image>
         <image type="thumbnail" height="702" width="1248" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-4ba1969595153deb52d30027a2287df5.png</image>
@@ -85,6 +86,7 @@
         <image type="thumbnail" height="846" width="1504" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-4ba1969595153deb52d30027a2287df5.png</image>
       </screenshot>
       <screenshot>
+        <caption>Exemplo de legenda</caption>
         <image type="source" xml:lang="pt">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot1-pt.png</image>
         <image type="thumbnail" height="351" width="624" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-dda0971ebb1786bf54f7a5cf26940153.png</image>
         <image type="thumbnail" height="702" width="1248" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-dda0971ebb1786bf54f7a5cf26940153.png</image>
@@ -94,6 +96,7 @@
         <image type="thumbnail" height="846" width="1504" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-dda0971ebb1786bf54f7a5cf26940153.png</image>
       </screenshot>
       <screenshot>
+        <caption>Caption example</caption>
         <image type="source">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot1-C.png</image>
         <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-f95b90b3f2b326a6ff039e4494852ab3.png</image>
         <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-f95b90b3f2b326a6ff039e4494852ab3.png</image>
@@ -103,6 +106,7 @@
         <image type="thumbnail" height="846" width="1504">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-f95b90b3f2b326a6ff039e4494852ab3.png</image>
       </screenshot>
       <screenshot>
+        <caption>Ejemplo de leyenda 2</caption>
         <image type="source" xml:lang="es">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot2-es.png</image>
         <image type="thumbnail" height="351" width="624" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-d3d6d6a4ce37723813ea726a95a13df4.png</image>
         <image type="thumbnail" height="702" width="1248" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-d3d6d6a4ce37723813ea726a95a13df4.png</image>
@@ -112,6 +116,7 @@
         <image type="thumbnail" height="846" width="1504" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-d3d6d6a4ce37723813ea726a95a13df4.png</image>
       </screenshot>
       <screenshot>
+        <caption>Exemplo de legenda 2</caption>
         <image type="source" xml:lang="pt">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot2-pt.png</image>
         <image type="thumbnail" height="351" width="624" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-cdac7ee42900c169af2dcf56f478a1b0.png</image>
         <image type="thumbnail" height="702" width="1248" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-cdac7ee42900c169af2dcf56f478a1b0.png</image>
@@ -121,6 +126,7 @@
         <image type="thumbnail" height="846" width="1504" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-cdac7ee42900c169af2dcf56f478a1b0.png</image>
       </screenshot>
       <screenshot>
+        <caption>Caption example 2</caption>
         <image type="source">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot2-C.png</image>
         <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-9af7e1dae332c49e3d9e624c01e89882.png</image>
         <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-9af7e1dae332c49e3d9e624c01e89882.png</image>
@@ -130,6 +136,7 @@
         <image type="thumbnail" height="846" width="1504">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-9af7e1dae332c49e3d9e624c01e89882.png</image>
       </screenshot>
       <screenshot>
+        <caption>Ejemplo de leyenda 3</caption>
         <image type="source" xml:lang="es">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot3-es.png</image>
         <image type="thumbnail" height="351" width="624" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-18ba97ee3fdba705960c92a7bb106bdd.png</image>
         <image type="thumbnail" height="702" width="1248" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-18ba97ee3fdba705960c92a7bb106bdd.png</image>
@@ -139,6 +146,7 @@
         <image type="thumbnail" height="846" width="1504" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-18ba97ee3fdba705960c92a7bb106bdd.png</image>
       </screenshot>
       <screenshot>
+        <caption>Exemplo de legenda 3</caption>
         <image type="source" xml:lang="pt">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot3-pt.png</image>
         <image type="thumbnail" height="351" width="624" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-d14dcc8d14c923bf309ff5313d25eec0.png</image>
         <image type="thumbnail" height="702" width="1248" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-d14dcc8d14c923bf309ff5313d25eec0.png</image>
@@ -148,6 +156,7 @@
         <image type="thumbnail" height="846" width="1504" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-d14dcc8d14c923bf309ff5313d25eec0.png</image>
       </screenshot>
       <screenshot>
+        <caption>Caption example 3</caption>
         <image type="source">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot3-C.png</image>
         <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-c3bd8b6a507088980eea924bd3df90af.png</image>
         <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-c3bd8b6a507088980eea924bd3df90af.png</image>
