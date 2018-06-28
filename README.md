@@ -9,12 +9,14 @@ This is a simple Java library to parse [AppData files.](https://www.freedesktop.
   * Maven > Create from archetype: org.apache.maven.archetypes:maven-archetype-quickstart
     * GroupID: org.freedesktop.appstream
     * ArtifactID: appstream-appdata
-* Create an example App Data file xds/appstream-flathub-x86_64-201803-subset.xml
-* IntelliJ > Select xds/appstream-flathub-x86_64-201803-subset.xml > Generate XSD schema from XML file:
+* Create an example App Data file xds/appstream-seed.xml
+  * It contains an example component with most of the appstream spec. 
+  * It's added twice in the file on purpose to tell the system that we'll have a list of components. 
+* IntelliJ > Select xds/appstream-seed.xml > Generate XSD schema from XML file:
+  * Result schema file name: appstream.xsd
   * Design type: local elements/types
   * Detect simple content type: smart
-* Rename obtained file appstream-flathub-x86_64-201803-subset.xsd to appstream.xsd 
-* Rename obtained file appstream-flathub-x86_64-201803-subset.xml1.xsd to appstream-lang.xsd  
+* Rename obtained file appstream-seed.xml1.xsd to appstream-lang.xsd 
 * Edit xds/appstream.xsd
   * Import appstream-lang.xsd 
   ```
@@ -23,9 +25,22 @@ This is a simple Java library to parse [AppData files.](https://www.freedesktop.
     <xs:import namespace="http://www.w3.org/XML/1998/namespace"
       schemaLocation="appstream-lang.xsd"/>
   ``` 
-  * Manually modify description type
+  * Manually modify "description" type
   ```
-  <!-- schema fragment having  mixed content -->
+  # Before
+  <xs:element name="description">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element ref="p"/>
+        <xs:element ref="ul"/>
+        <xs:element ref="ol"/>
+      </xs:choice>
+      <xs:attribute ref="xml:lang"/>
+    </xs:complexType>
+  </xs:element>
+
+  # After
+  <!-- We manually modify description type to allow mixed content -->
   <xs:complexType name="description" mixed="true">
     <xs:sequence>
       <xs:element name="p" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
@@ -36,16 +51,6 @@ This is a simple Java library to parse [AppData files.](https://www.freedesktop.
   </xs:complexType>
 
   <xs:element name="description" type="description"/>
-  ```
-  * Manually add "ol" element
-  ```
-   <xs:element name="ol">
-    <xs:complexType mixed="true">
-      <xs:sequence>
-        <xs:element ref="li" maxOccurs="unbounded" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   ```
 
 * Create bindings using xcj:
