@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="flatpak">
+  <component type="desktop">
+    <id>org.flatpak.exampleapp</id>
+    <translation type="gettext">flatpak-exampleapp</translation>
+    <name>Builder</name>
+    <name xml:lang="bs">Graditelj</name>
+    <name xml:lang="ca">Constructor</name>
+    <name xml:lang="ca@valencia">Constructor</name>
+    <name xml:lang="el">Κατασκευαστής</name>
+    <name xml:lang="gl">Construtor</name>
+    <name xml:lang="hu">Építő</name>
+    <name xml:lang="ja">ビルダー</name>
+    <name xml:lang="kk">Құрастырушы</name>
+    <name xml:lang="ko">빌더</name>
+    <name xml:lang="lt">Kūrėjas</name>
+    <name xml:lang="lv">Būvētājs</name>
+    <name xml:lang="nb">Bygger</name>
+    <name xml:lang="ne">बिल्डर</name>
+    <name xml:lang="pt">Construtor</name>
+    <name xml:lang="ro">Generator</name>
+    <name xml:lang="sk">Stavbár</name>
+    <name xml:lang="sl">Izgrajevalnik</name>
+    <name xml:lang="sr">Градитељ</name>
+    <name xml:lang="sr@latin">Graditelj</name>
+    <name xml:lang="uk">Будівник</name>
+    <summary>A flatpak example app</summary>
+    <summary xml:lang="ca">Una aplicació d'exemple de flatpak</summary>
+    <summary xml:lang="ca@valencia">Una aplicació d'exemple de flatpak</summary>
+    <summary xml:lang="cs">IDE pro GNOME</summary>
+    <summary xml:lang="da">Et IDE til GNOME</summary>
+    <summary xml:lang="de">Eine integrierte Entwicklungsumgebung für GNOME</summary>
+    <summary xml:lang="el">Ένα IDE για το GNOME</summary>
+    <summary xml:lang="es">Una aplicación ejemplo de flatpak</summary>
+    <summary xml:lang="fi">Sovelluskehitin Gnomelle</summary>
+    <summary xml:lang="fr">Un EDI pour GNOME</summary>
+    <summary xml:lang="gl">Un IDE para GNOME</summary>
+    <summary xml:lang="he">סביבת פיתוח משולבת עבור GNOME</summary>
+    <summary xml:lang="hu">Integrált fejlesztői környezet a GNOME-hoz</summary>
+    <summary xml:lang="id">IDE untuk GNOME</summary>
+    <summary xml:lang="it">Un IDE per GNOME</summary>
+    <summary xml:lang="kk">GNOME үшін IDE</summary>
+    <summary xml:lang="ko">그놈 통합 개발 환경</summary>
+    <summary xml:lang="lt">IDE GNOME aplinkai</summary>
+    <summary xml:lang="lv">IDE GNOME videi</summary>
+    <summary xml:lang="nb">Et IDE for GNOME</summary>
+    <summary xml:lang="nl">Een geïntegreerde ontwikkelingsomgeving voor Gnome</summary>
+    <summary xml:lang="oc">Un EDI per GNOME</summary>
+    <summary xml:lang="pl">Zintegrowane środowisko programistyczne dla GNOME</summary>
+    <summary xml:lang="pt">Um IDE para o GNOME</summary>
+    <summary xml:lang="pt_BR">Uma IDE para o GNOME</summary>
+    <summary xml:lang="ro">Un IDE pentru GNOME</summary>
+    <summary xml:lang="ru">IDE для GNOME</summary>
+    <summary xml:lang="sk">Integrované vývojové prostredie pre GNOME</summary>
+    <summary xml:lang="sl">IDE za okolje GNOME</summary>
+    <summary xml:lang="sr">ИДЕ (интегрисано развојно окружење) за Гном</summary>
+    <summary xml:lang="sr@latin">IDE (integrisano razvojno okruženje) za Gnom</summary>
+    <summary xml:lang="sv">En utvecklingsmiljö för GNOME</summary>
+    <summary xml:lang="tr">GNOME için bir IDE</summary>
+    <summary xml:lang="uk">Середовище розробляння для GNOME</summary>
+    <summary xml:lang="zh_CN">GNOME 的集成开发环境</summary>
+    <summary xml:lang="zh_TW">GNOME 的 IDE</summary>
+    <developer_name>The Pitivi Team</developer_name>
+    <developer_name xml:lang="ca">L&apos;equip Pitivi</developer_name>
+    <developer_name xml:lang="cs">Tým Pitivi</developer_name>
+    <developer_name xml:lang="da">Pitivi-holdet</developer_name>
+    <developer_name xml:lang="de">Das Pitivi Team</developer_name>
+    <developer_name xml:lang="es">El equipo de Pitivi</developer_name>
+    <developer_name xml:lang="fr">L&apos;équipe Pitivi</developer_name>
+    <developer_name xml:lang="hu">A Pitivi csapat</developer_name>
+    <developer_name xml:lang="id">Tim Pitivi</developer_name>
+    <developer_name xml:lang="lt">Pitivi komanda</developer_name>
+    <developer_name xml:lang="pl">Zespół projektu Pitivi</developer_name>
+    <developer_name xml:lang="pt_BR">A equipe do Pitivi</developer_name>
+    <developer_name xml:lang="sk">Tím aplikácie Pitivi</developer_name>
+    <developer_name xml:lang="sr">Тим Питивија</developer_name>
+    <developer_name xml:lang="sr@latin">Tim Pitivija</developer_name>
+    <developer_name xml:lang="sv">Pitivi-teamet</developer_name>
+    <developer_name xml:lang="uk">Команда Pitivi</developer_name>
+    <description><p>Builder is an actively developed Integrated Development Environment for GNOME. It combines integrated support for essential GNOME technologies such as GTK+, GLib, and GNOME APIs with features that any developer will appreciate, like syntax highlighting and snippets.</p><p>You can rely on predictable releases of Builder with each new release of GNOME every six months.</p><p>Features:</p><ul><li>Built in syntax highlighting for many languages</li><li>Side-by-side code editors</li><li>Integration with Git</li><li>Integration with Autotools, Cargo, CMake, Meson, Make, and PHPize</li><li>Clang based auto-completion, semantic highlighting, and diagnostics</li><li>Python based auto-completion, semantic highlighting, and diagnostics</li><li>Vala based auto-completion and diagnostics</li><li>Auto indentation support for C, Python, Vala, and XML</li><li>HTML, Markdown, and reStructuredText, and Sphinx live preview</li><li>Optional Vim-style editing</li><li>An integrated software profiler for native applications</li><li>An integrated debugger for native applications</li><li>Support for building with jhbuild and flatpak runtimes</li></ul></description>
+    <description xml:lang="ca"><p>Constructor és un entorn de desenvolupament integrat actiu desenvolupat per GNOME. Combina el suport integrat per a tecnologies GNOME essencials, com ara GTK +, GLib i l&apos;API de GNOME APIs amb característiques que qualsevol desenvolupador apreciarà, com el ressaltat de sintaxi i els fragments.</p><p>Podeu confiar en versions previsibles de Constructor amb cada nova versió de GNOME cada sis mesos.</p><p>Característiques:</p><ul><li>Construït amb ressaltat de sintaxi per molts llenguatges</li><li>Editors de codi en paral·lel</li><li>Integració amb Git</li><li>Integració amb Autotools, Cargo, CMake, Meson, Make, i PHPize</li><li>Autocompleció usant Clang, ressaltat semàntic, i diagnòstics</li><li>Autocompleció usant Python, ressaltat semàntic, i diagnòstics</li><li>Autocompleció usant Vala i diagnòstics</li><li>Suport a l&apos;auto-sagnat per a C, Python, Vala, i XML</li><li>HTML, Markdown,  reStructuredText, i previsualització en directe de Sphinx</li><li>Edició opcional amb l&apos;estil de Vim</li><li>Un gestor de perfils de programari integrat per a aplicacions natives</li><li>Un depurador integrat per a aplicacions natives</li><li>Suportat per construir amb jhbuild i temps d&apos;execució flatpak</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+    <description xml:lang="cs"><p>Builder je aktivně vyvíjené integrované vývojové prostředí pro GNOME. Kombinuje podporu pro základní technologie GNOME jako jsou GTK+, GLib a GNOME API a obsahuje funkce, jako je zvýrazňování syntaxe a útržky, které ocení každý vývojář.</p><p>Můžete spoléhat na předvídatelná vydání Builderu s každou novou verzí GNOME, která vychází každých šest měsíců.</p><p>Funkce:</p><ul><li>Vestavěné zvýrazňování syntaxe pro řadu jazyků</li><li>Více editorů kódu vedle sebe</li><li>Integrace s Git</li><li>Integrace s Autotools, Cargo, CMake, Meson, Make a PHPize</li><li>Automatické dokončování, zvýrazňování sémantiky a diagnostika překladačem Clang</li><li>Automatické dokončování, zvýrazňování sémantiky a diagnostika interpretem Python</li><li>Automatické dokončování a diagnostika překladačem Vala</li><li>Podpora automatického odsazování pro C, Python, Vala a XML</li><li>Živé náhledy HTML, Markdown, reStructuredText a Sphinx</li><li>Volitelné editování ve stylu Vim</li><li>Integrovaný softwarový profiler pro nativní aplikace</li><li>Integrovaný ladicí program pro nativní aplikace</li><li>Podpora pro sestavování pomocí jhbuild a běhového prostředí Flatpak</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+    <description xml:lang="da"><p>Builder er et integreret udviklingsmiljø til GNOME som udvikles aktivt. Builder kombinerer integreret understøttelse af essentielle GNOME-teknologier såsom GTK+, Glib og GNOME-API&apos;er med funktioner som udviklere vil have brug for såsom syntaksfremhævning og tekststumper.</p><p>Du kan regne med at nye versioner af Builder udkommer jævnligt sammen med GNOME hver sjette måned.</p><p>Funktioner:</p><ul><li>Indbygget syntaksfremhævning af mange sprog</li><li>Koderedigering side om side</li><li>Integration med Git</li><li>Integration med Autotools, Cargo, CMake, Meson, Make og PHPize</li><li>Clang-baseret autofuldførelse, semantisk fremhævning og diagnostik</li><li>Pythonbaseret autofuldførelse, semantisk fremhævning og diagnostik</li><li>Vala-baseret autofuldførelse og diagnostik</li><li>Understøttelse for autoindrykning i C, Python, Vala og XML</li><li>HTML, Markdown og reStructuredText, samt Sphinx live-forhåndsvisning</li><li>Valgfri Vim-redigeringstilstand</li><li>Integreret softwareprofilering til platformsspecifikke programmer</li><li>En integreret fejlsøger til platformsspecifikke programmer</li><li>Understøttelse for kompilering med jhbuild og flatpak-runtime</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+    <description xml:lang="de"><p>Builder ist eine aktiv entwickelte integrierte Entwicklungsumgebung für GNOME. Es kombiniert eingebaute Unterstützung für grundlegende GNOME-Technologien, wie GTK+, GLib und GNOME-APIs mit Funktionsmerkmalen, die jeder Entwickler zu schätzen weiß, wie Syntax-Hervorhebung und die Nutzung von Textschnipseln.</p><p>Sie können sich alle sechs Monate auf planmäßige Freigaben von Builder mit jeder neuen Freigabe von GNOME verlassen.</p><p>Funktionen:</p><ul><li>Eingebaute Syntax-Hervorhebung für viele Sprachen</li><li>Nebeneinander angeordnete Code-Editoren</li><li>Integration von Git</li><li>Integration von Autotools, Cargo, CMake, Meson, Make und PHPize</li><li>Clang-basierte Autovervollständigung, semantische Hervorhebung und Fehlerdiagnose</li><li>Python-basierte Autovervollständigung, semantische Hervorhebung und Fehlerdiagnose</li><li>Vala-basierte Autovervollständigung und Fehlerdiagnose</li><li>Unterstützung für automatische Einrückungen in C, Python, Vala und XML</li><li>Live-Vorschau für HTML, Markdown, reStructuredText und Sphinx</li><li>Optionale Bearbeitung im Vim-Stil</li><li>Ein integrierter Software-Profiler für native Anwendungen</li><li>Ein integrierter Debugger für native Anwendungen</li><li>Unterstützung für Erstellung mit JHbuild- und Flatpak-Laufzeitumgebungen</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+    <description xml:lang="el"><p>Χαρακτηριστικά:</p><ul><li>Ενσωματωμένη επισήμανση σύνταξης για αρκετές γλώσσες</li><li>Ενσωμάτωση με Git</li><li>Αυτόματη συμπλήρωση, σημασιολογική επισήμανση και διαγνωστικά βασισμένα στο Clang</li><li>Αυτόματη συμπλήρωση, σημασιολογική επισήμανση και διαγνωστικά βασισμένα στη Python</li><li>Αυτόματη συμπλήρωση και διαγνωστικά βασισμένα στο Vala</li><li>Αυτόματη προσθήκη εσοχής για C, Python, Vala, και XML</li><li>Προαιρετικό στυλ επεξεργασίας με βάση το Vim</li></ul></description>
+    <description xml:lang="es"><p>Builder es un entorno de desarrollo integrado para GNOME gestionado activamente. Combina soporte integrado para las tecnologías esenciales de GNOME, tales como GTK+, GLib y las API de GNOME con características que cualquier desarrollador apreciará, como el resaltado de sintaxis y los fragmentos.</p><p>Puede apoyarse en las publicaciones previstas de Builder con cada nueva versión de GNOME cada seis meses.</p><p>Características:</p><ul><li>Resaltado de sintaxis integrado para muchos lenguajes</li><li>Editores de código de lado a lado</li><li>Integración con Git</li><li>Integración con Autotools, Cargo, CMake, Meson, Make, y PHPize</li><li>Completado automático basado en Clang, resaltado semántico y diagnósticos</li><li>Completado automático basado en Python, resaltado semántico y diagnósticos</li><li>Completado automático basado en Vala y diagnósticos</li><li>Soporte de sangrado automático para C, Python, Vala y XML</li><li>HTML, marcado, reStructuredText y vista previa en directo de Sphinx</li><li>Edición estilo Vim opcional</li><li>Un perfilador de software integrado para aplicaciones nativas</li><li>Un depurador integrado para aplicaciones nativas</li><li>Soporte para construir con jhbuild y rutinas de Flatpak</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+    <description xml:lang="fi"><p>Ominaisuudet:</p><ul><li>Sisäänrakennettu korostus monille kielille</li><li>Vierekkäin olevat koodimuokkaimet</li><li>Integraatio Gitiin</li><li>Automaattinen sisennystuki C:lle, Pythonille, Valalle ja XML:lle</li><li>Valinnainen Vim-tyylinen muokkaus</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+    <description xml:lang="fr"><p>Builder est un environnement de développement pour GNOME activement développé. Il combine une prise en charge intégrée pour les technologies GNOME essentielles telles que GTK+, GLib et les API GNOME avec des fonctionnalités que tout développeur appréciera, comme la coloration syntaxique et les extraits de code.</p><p>Builder suit le cycle de publication de GNOME avec des nouvelles versions tous les six mois.</p><p>Fonctionnalités :</p><ul><li>Coloration syntaxique intégrée pour de nombreux langages</li><li>Éditeur de code côte à côte</li><li>Intégration avec Git</li><li>Intégration avec Autotools, Cargo, CMake, Meson, Make et PHPize</li><li>Complétion automatique, coloration sémantique et diagnostics basés sur Clang</li><li>Complétion automatique, coloration sémantique et diagnostics basés sur Python</li><li>Complétion automatique et diagnostics basés sur Vala</li><li>Indentation automatique pour C, Python, Vala et XML</li><li>Aperçu pour HTML, Markdown, reStructuredText et Sphinx</li><li>Édition à la manière de Vim en option</li><li>Un logiciel de profilage intégré pour les applications natives</li><li>Un débogueur intégré pour les applications natives</li><li>Prise en charge pour la construction d’exécutables avec jhbuild et flatpak</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+    <description xml:lang="zh_CN"><p>Builder 是一个为 GNOME 打造的集成开发环境，目前正在积极开发中。它集成了对 GNOME 所必需的技术的支持，如 GTK+、GLib 和 GNOME API 等，并结合了像语法高亮和代码片段等任何开发者都会重视的特性。</p><p>按 GNOME 每六个月的发布周期，您可以预见每次 Builder 的发布时间。</p><p>特性：</p><ul><li>为许多语言内置的语法高亮</li><li>分栏式代码编辑器</li><li>集成 Git</li><li>基于 Clang 的自动补全、语义高亮和诊断</li><li>基于 Python 的自动补全、语义高亮和诊断</li><li>基于 Vala 的自动补全和语法诊断</li><li>支持 C、Python、Vala 和 XML 的自动缩进</li><li>可选的 Vim 编辑风格</li><li>一个集成的本地应用程序性能分析工具</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+    <description xml:lang="zh_TW"><p>Builder 是 積極開發的 GNOME 整合式開發環境。它結合 GTK +、Glib 和 GNOME API 等基本的 GNOME 技術整合的支援，以及任何開發人員都讚賞，像語法標示和文字片段的功能。</p><p>您可以預期 Builder 會隨著 GNOME 每六個月的更新周期推出新的釋出版本。</p><p>功能：</p><ul><li>內建許多語言的語法標示</li><li>同步程式碼編輯器</li><li>整合 Git</li><li>基於 Clang 的自動補齊、語義標示和診斷</li><li>基於 Python 的自動補齊、語義標示和診斷</li><li>基於 Vala 的自動補齊和診斷</li><li>C、Python、Vala 和 XML 的自動縮排支援</li><li>選用的 Vim-風格式編輯</li><li>對原生應用程式整合的軟體效能分析器</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+    <icon height="128" width="128" type="cached">org.gnome.Builder.png</icon>
+    <icon height="64" width="64" type="cached">org.gnome.Builder.png</icon>
+    <categories>
+      <category>Development</category>
+      <category>IDE</category>
+    </categories>
+    <keywords>
+      <keyword>Build</keyword>
+      <keyword>Develop</keyword>
+      <keyword xml:lang="ca">Construeix</keyword>
+      <keyword xml:lang="ca">Desenvolupa</keyword>
+      <keyword xml:lang="cs">sestavení</keyword>
+      <keyword xml:lang="cs">sestavit</keyword>
+      <keyword xml:lang="cs">vývoj</keyword>
+      <keyword xml:lang="da">Byg</keyword>
+      <keyword xml:lang="da">Kompiler</keyword>
+      <keyword xml:lang="da">Kompilér</keyword>
+      <keyword xml:lang="da">Udvikl</keyword>
+      <keyword xml:lang="da">Udvikle</keyword>
+      <keyword xml:lang="de">Entwickeln</keyword>
+      <keyword xml:lang="de">Erstellen</keyword>
+      <keyword xml:lang="de">IDE</keyword>
+      <keyword xml:lang="el">ανάπτυξη</keyword>
+      <keyword xml:lang="el">δόμηση</keyword>
+      <keyword xml:lang="es">Construir</keyword>
+      <keyword xml:lang="es">Desarrollar</keyword>
+      <keyword xml:lang="fi">kehitä</keyword>
+      <keyword xml:lang="fi">koodaa</keyword>
+      <keyword xml:lang="fi">rakenna</keyword>
+      <keyword xml:lang="fr">Construire</keyword>
+      <keyword xml:lang="fr">Développer</keyword>
+      <keyword xml:lang="fur">Compilâ</keyword>
+      <keyword xml:lang="fur">Svilup</keyword>
+      <keyword xml:lang="gl">Construír</keyword>
+      <keyword xml:lang="gl">Desenvolver</keyword>
+      <keyword xml:lang="he">Builder</keyword>
+      <keyword xml:lang="he">IDE</keyword>
+      <keyword xml:lang="he">בנייה</keyword>
+      <keyword xml:lang="he">סביבת עבודה משולבת</keyword>
+      <keyword xml:lang="he">פיתוח</keyword>
+      <keyword xml:lang="he">קוד</keyword>
+      <keyword xml:lang="he">תכנות</keyword>
+      <keyword xml:lang="hu">Fejlesztés</keyword>
+      <keyword xml:lang="hu">Építés</keyword>
+      <keyword xml:lang="hu">Összeállítás</keyword>
+      <keyword xml:lang="id">Bangun</keyword>
+      <keyword xml:lang="id">Kembangkan</keyword>
+      <keyword xml:lang="it">Compila</keyword>
+      <keyword xml:lang="it">Crea</keyword>
+      <keyword xml:lang="it">Dev</keyword>
+      <keyword xml:lang="it">Sviluppa</keyword>
+      <keyword xml:lang="ja">ビルド</keyword>
+      <keyword xml:lang="ja">開発</keyword>
+      <keyword xml:lang="kk">Құрастыру</keyword>
+      <keyword xml:lang="kk">Өндіру</keyword>
+      <keyword xml:lang="ko">개발</keyword>
+      <keyword xml:lang="ko">빌드</keyword>
+      <keyword xml:lang="ko">컴파일</keyword>
+      <keyword xml:lang="lt">Kurti</keyword>
+      <keyword xml:lang="lt">Plėtoti</keyword>
+      <keyword xml:lang="lt">Vystyti</keyword>
+      <keyword xml:lang="lv">Būvēt</keyword>
+      <keyword xml:lang="lv">Izstrādāt</keyword>
+      <keyword xml:lang="nl">Compileren</keyword>
+      <keyword xml:lang="nl">Ontwikkelen</keyword>
+      <keyword xml:lang="oc">Construire</keyword>
+      <keyword xml:lang="oc">Desvolopar</keyword>
+      <keyword xml:lang="pl">Budowanie</keyword>
+      <keyword xml:lang="pl">Buduj</keyword>
+      <keyword xml:lang="pl">IDE</keyword>
+      <keyword xml:lang="pl">Programowanie</keyword>
+      <keyword xml:lang="pl">Programuj</keyword>
+      <keyword xml:lang="pl">Zaprogramuj</keyword>
+      <keyword xml:lang="pl">Zbuduj</keyword>
+      <keyword xml:lang="pl">Zintegrowane</keyword>
+      <keyword xml:lang="pl">programistyczne</keyword>
+      <keyword xml:lang="pl">środowisko</keyword>
+      <keyword xml:lang="pt">Construir</keyword>
+      <keyword xml:lang="pt">Desenvolver</keyword>
+      <keyword xml:lang="pt">Programar</keyword>
+      <keyword xml:lang="pt_BR">Compilar</keyword>
+      <keyword xml:lang="pt_BR">Construir</keyword>
+      <keyword xml:lang="pt_BR">Desenvolver</keyword>
+      <keyword xml:lang="ro">Dezvoltare</keyword>
+      <keyword xml:lang="ro">Dezvoltă</keyword>
+      <keyword xml:lang="ro">Generare</keyword>
+      <keyword xml:lang="ro">Generează</keyword>
+      <keyword xml:lang="sk"> programov</keyword>
+      <keyword xml:lang="sk"> zostav</keyword>
+      <keyword xml:lang="sk">Vývoj</keyword>
+      <keyword xml:lang="sl">Izgradnja</keyword>
+      <keyword xml:lang="sl">Razvoj</keyword>
+      <keyword xml:lang="sr">bilder</keyword>
+      <keyword xml:lang="sr">develop</keyword>
+      <keyword xml:lang="sr">graditelj</keyword>
+      <keyword xml:lang="sr">programiranje</keyword>
+      <keyword xml:lang="sr">razvoj</keyword>
+      <keyword xml:lang="sr">билдер</keyword>
+      <keyword xml:lang="sr">градитељ</keyword>
+      <keyword xml:lang="sr">девелоп</keyword>
+      <keyword xml:lang="sr">програмирање</keyword>
+      <keyword xml:lang="sr">развој</keyword>
+      <keyword xml:lang="sr@latin">bilder</keyword>
+      <keyword xml:lang="sr@latin">develop</keyword>
+      <keyword xml:lang="sr@latin">graditelj</keyword>
+      <keyword xml:lang="sr@latin">programiranje</keyword>
+      <keyword xml:lang="sr@latin">razvoj</keyword>
+      <keyword xml:lang="sv">Bygg</keyword>
+      <keyword xml:lang="sv">Utveckla</keyword>
+      <keyword xml:lang="tr">Geliştir</keyword>
+      <keyword xml:lang="tr">Oluştur</keyword>
+      <keyword xml:lang="tr">İnşa Et</keyword>
+      <keyword xml:lang="zh_CN">开发</keyword>
+      <keyword xml:lang="zh_CN">构建</keyword>
+      <keyword xml:lang="zh_TW">組建</keyword>
+      <keyword xml:lang="zh_TW">開發</keyword>
+    </keywords>
+    <kudos>
+      <kudo>AppMenu</kudo>
+      <kudo>HiDpiIcon</kudo>
+      <kudo>ModernToolkit</kudo>
+      <kudo>Notifications</kudo>
+      <kudo>UserDocs</kudo>
+    </kudos>
+    <mimetypes>
+      <mimetype>application/javascript</mimetype>
+      <mimetype>application/json</mimetype>
+      <mimetype>application/x-desktop</mimetype>
+      <mimetype>application/x-gnome-app-info</mimetype>
+      <mimetype>application/x-javascript</mimetype>
+      <mimetype>application/x-m4</mimetype>
+      <mimetype>application/x-perl</mimetype>
+      <mimetype>application/x-php</mimetype>
+      <mimetype>application/x-php-source</mimetype>
+      <mimetype>application/x-python</mimetype>
+      <mimetype>application/x-ruby</mimetype>
+      <mimetype>application/x-shellscript</mimetype>
+      <mimetype>application/x-yaml</mimetype>
+      <mimetype>application/xml</mimetype>
+      <mimetype>text/css</mimetype>
+      <mimetype>text/html</mimetype>
+      <mimetype>text/javascript</mimetype>
+      <mimetype>text/x-c</mimetype>
+      <mimetype>text/x-c++</mimetype>
+      <mimetype>text/x-c++hdr</mimetype>
+      <mimetype>text/x-c++src</mimetype>
+      <mimetype>text/x-changelog</mimetype>
+      <mimetype>text/x-chdr</mimetype>
+      <mimetype>text/x-cpp</mimetype>
+      <mimetype>text/x-csrc</mimetype>
+      <mimetype>text/x-go</mimetype>
+      <mimetype>text/x-javascript</mimetype>
+      <mimetype>text/x-js</mimetype>
+      <mimetype>text/x-lua</mimetype>
+      <mimetype>text/x-makefile</mimetype>
+      <mimetype>text/x-markdown</mimetype>
+      <mimetype>text/x-perl</mimetype>
+      <mimetype>text/x-php</mimetype>
+      <mimetype>text/x-php-source</mimetype>
+      <mimetype>text/x-pkg-config</mimetype>
+      <mimetype>text/x-python</mimetype>
+      <mimetype>text/x-ruby</mimetype>
+      <mimetype>text/x-sh</mimetype>
+      <mimetype>text/x-shellscript</mimetype>
+      <mimetype>text/x-sql</mimetype>
+      <mimetype>text/x-vala</mimetype>
+      <mimetype>text/xml</mimetype>
+    </mimetypes>
+    <project_license>GPL-3.0+ and GPL-2.0+ and LGPL-3.0+ and LGPL-2.0+ and MIT</project_license>
+    <url type="bugtracker">https://gitlab.gnome.org/GNOME/gnome-builder/issues</url>
+    <url type="donation">http://www.gnome.org/friends/</url>
+    <url type="help">https://builder.readthedocs.io</url>
+    <url type="homepage">https://wiki.gnome.org/Apps/Builder</url>
+    <project_group>GNOME</project_group>
+    <screenshots>
+      <screenshot type="default">
+        <caption>Ejemplo de leyenda</caption>
+        <image type="source" xml:lang="es">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot1-es.png</image>
+        <image type="thumbnail" height="351" width="624" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-4ba1969595153deb52d30027a2287df5.png</image>
+        <image type="thumbnail" height="702" width="1248" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-4ba1969595153deb52d30027a2287df5.png</image>
+        <image type="thumbnail" height="63" width="112" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/112x63/com.endlessm.photos-4ba1969595153deb52d30027a2287df5.png</image>
+        <image type="thumbnail" height="126" width="224" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/224x126/com.endlessm.photos-4ba1969595153deb52d30027a2287df5.png</image>
+        <image type="thumbnail" height="423" width="752" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/752x423/com.endlessm.photos-4ba1969595153deb52d30027a2287df5.png</image>
+        <image type="thumbnail" height="846" width="1504" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-4ba1969595153deb52d30027a2287df5.png</image>
+      </screenshot>
+      <screenshot>
+        <caption>Exemplo de legenda</caption>
+        <image type="source" xml:lang="pt">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot1-pt.png</image>
+        <image type="thumbnail" height="351" width="624" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-dda0971ebb1786bf54f7a5cf26940153.png</image>
+        <image type="thumbnail" height="702" width="1248" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-dda0971ebb1786bf54f7a5cf26940153.png</image>
+        <image type="thumbnail" height="63" width="112" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/112x63/com.endlessm.photos-dda0971ebb1786bf54f7a5cf26940153.png</image>
+        <image type="thumbnail" height="126" width="224" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/224x126/com.endlessm.photos-dda0971ebb1786bf54f7a5cf26940153.png</image>
+        <image type="thumbnail" height="423" width="752" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/752x423/com.endlessm.photos-dda0971ebb1786bf54f7a5cf26940153.png</image>
+        <image type="thumbnail" height="846" width="1504" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-dda0971ebb1786bf54f7a5cf26940153.png</image>
+      </screenshot>
+      <screenshot>
+        <caption>Caption example</caption>
+        <image type="source">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot1-C.png</image>
+        <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-f95b90b3f2b326a6ff039e4494852ab3.png</image>
+        <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-f95b90b3f2b326a6ff039e4494852ab3.png</image>
+        <image type="thumbnail" height="63" width="112">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/112x63/com.endlessm.photos-f95b90b3f2b326a6ff039e4494852ab3.png</image>
+        <image type="thumbnail" height="126" width="224">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/224x126/com.endlessm.photos-f95b90b3f2b326a6ff039e4494852ab3.png</image>
+        <image type="thumbnail" height="423" width="752">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/752x423/com.endlessm.photos-f95b90b3f2b326a6ff039e4494852ab3.png</image>
+        <image type="thumbnail" height="846" width="1504">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-f95b90b3f2b326a6ff039e4494852ab3.png</image>
+      </screenshot>
+      <screenshot>
+        <caption>Ejemplo de leyenda 2</caption>
+        <image type="source" xml:lang="es">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot2-es.png</image>
+        <image type="thumbnail" height="351" width="624" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-d3d6d6a4ce37723813ea726a95a13df4.png</image>
+        <image type="thumbnail" height="702" width="1248" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-d3d6d6a4ce37723813ea726a95a13df4.png</image>
+        <image type="thumbnail" height="63" width="112" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/112x63/com.endlessm.photos-d3d6d6a4ce37723813ea726a95a13df4.png</image>
+        <image type="thumbnail" height="126" width="224" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/224x126/com.endlessm.photos-d3d6d6a4ce37723813ea726a95a13df4.png</image>
+        <image type="thumbnail" height="423" width="752" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/752x423/com.endlessm.photos-d3d6d6a4ce37723813ea726a95a13df4.png</image>
+        <image type="thumbnail" height="846" width="1504" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-d3d6d6a4ce37723813ea726a95a13df4.png</image>
+      </screenshot>
+      <screenshot>
+        <caption>Exemplo de legenda 2</caption>
+        <image type="source" xml:lang="pt">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot2-pt.png</image>
+        <image type="thumbnail" height="351" width="624" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-cdac7ee42900c169af2dcf56f478a1b0.png</image>
+        <image type="thumbnail" height="702" width="1248" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-cdac7ee42900c169af2dcf56f478a1b0.png</image>
+        <image type="thumbnail" height="63" width="112" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/112x63/com.endlessm.photos-cdac7ee42900c169af2dcf56f478a1b0.png</image>
+        <image type="thumbnail" height="126" width="224" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/224x126/com.endlessm.photos-cdac7ee42900c169af2dcf56f478a1b0.png</image>
+        <image type="thumbnail" height="423" width="752" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/752x423/com.endlessm.photos-cdac7ee42900c169af2dcf56f478a1b0.png</image>
+        <image type="thumbnail" height="846" width="1504" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-cdac7ee42900c169af2dcf56f478a1b0.png</image>
+      </screenshot>
+      <screenshot>
+        <caption>Caption example 2</caption>
+        <image type="source">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot2-C.png</image>
+        <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-9af7e1dae332c49e3d9e624c01e89882.png</image>
+        <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-9af7e1dae332c49e3d9e624c01e89882.png</image>
+        <image type="thumbnail" height="63" width="112">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/112x63/com.endlessm.photos-9af7e1dae332c49e3d9e624c01e89882.png</image>
+        <image type="thumbnail" height="126" width="224">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/224x126/com.endlessm.photos-9af7e1dae332c49e3d9e624c01e89882.png</image>
+        <image type="thumbnail" height="423" width="752">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/752x423/com.endlessm.photos-9af7e1dae332c49e3d9e624c01e89882.png</image>
+        <image type="thumbnail" height="846" width="1504">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-9af7e1dae332c49e3d9e624c01e89882.png</image>
+      </screenshot>
+      <screenshot>
+        <caption>Ejemplo de leyenda 3</caption>
+        <image type="source" xml:lang="es">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot3-es.png</image>
+        <image type="thumbnail" height="351" width="624" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-18ba97ee3fdba705960c92a7bb106bdd.png</image>
+        <image type="thumbnail" height="702" width="1248" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-18ba97ee3fdba705960c92a7bb106bdd.png</image>
+        <image type="thumbnail" height="63" width="112" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/112x63/com.endlessm.photos-18ba97ee3fdba705960c92a7bb106bdd.png</image>
+        <image type="thumbnail" height="126" width="224" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/224x126/com.endlessm.photos-18ba97ee3fdba705960c92a7bb106bdd.png</image>
+        <image type="thumbnail" height="423" width="752" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/752x423/com.endlessm.photos-18ba97ee3fdba705960c92a7bb106bdd.png</image>
+        <image type="thumbnail" height="846" width="1504" xml:lang="es">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-18ba97ee3fdba705960c92a7bb106bdd.png</image>
+      </screenshot>
+      <screenshot>
+        <caption>Exemplo de legenda 3</caption>
+        <image type="source" xml:lang="pt">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot3-pt.png</image>
+        <image type="thumbnail" height="351" width="624" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-d14dcc8d14c923bf309ff5313d25eec0.png</image>
+        <image type="thumbnail" height="702" width="1248" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-d14dcc8d14c923bf309ff5313d25eec0.png</image>
+        <image type="thumbnail" height="63" width="112" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/112x63/com.endlessm.photos-d14dcc8d14c923bf309ff5313d25eec0.png</image>
+        <image type="thumbnail" height="126" width="224" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/224x126/com.endlessm.photos-d14dcc8d14c923bf309ff5313d25eec0.png</image>
+        <image type="thumbnail" height="423" width="752" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/752x423/com.endlessm.photos-d14dcc8d14c923bf309ff5313d25eec0.png</image>
+        <image type="thumbnail" height="846" width="1504" xml:lang="pt">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-d14dcc8d14c923bf309ff5313d25eec0.png</image>
+      </screenshot>
+      <screenshot>
+        <caption>Caption example 3</caption>
+        <image type="source">https://raw.githubusercontent.com/endlessm/eos-photos/master/data/assets/screenshot3-C.png</image>
+        <image type="thumbnail" height="351" width="624">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/624x351/com.endlessm.photos-c3bd8b6a507088980eea924bd3df90af.png</image>
+        <image type="thumbnail" height="702" width="1248">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1248x702/com.endlessm.photos-c3bd8b6a507088980eea924bd3df90af.png</image>
+        <image type="thumbnail" height="63" width="112">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/112x63/com.endlessm.photos-c3bd8b6a507088980eea924bd3df90af.png</image>
+        <image type="thumbnail" height="126" width="224">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/224x126/com.endlessm.photos-c3bd8b6a507088980eea924bd3df90af.png</image>
+        <image type="thumbnail" height="423" width="752">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/752x423/com.endlessm.photos-c3bd8b6a507088980eea924bd3df90af.png</image>
+        <image type="thumbnail" height="846" width="1504">https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-c3bd8b6a507088980eea924bd3df90af.png</image>
+      </screenshot>
+    </screenshots>
+    <content_rating type="oars-1.1">
+      <content_attribute id="violence-cartoon">intense</content_attribute>
+      <content_attribute id="violence-fantasy">intense</content_attribute>
+      <content_attribute id="violence-realistic">none</content_attribute>
+      <content_attribute id="violence-bloodshed">mild</content_attribute>
+      <content_attribute id="violence-sexual">none</content_attribute>
+      <content_attribute id="violence-desecration">mild</content_attribute>
+      <content_attribute id="violence-slavery">mild</content_attribute>
+      <content_attribute id="violence-worship">none</content_attribute>
+      <content_attribute id="drugs-alcohol">mild</content_attribute>
+      <content_attribute id="drugs-narcotics">none</content_attribute>
+      <content_attribute id="drugs-tobacco">none</content_attribute>
+      <content_attribute id="sex-nudity">none</content_attribute>
+      <content_attribute id="sex-themes">none</content_attribute>
+      <content_attribute id="sex-homosexuality">none</content_attribute>
+      <content_attribute id="sex-prostitution">none</content_attribute>
+      <content_attribute id="sex-adultery">none</content_attribute>
+      <content_attribute id="sex-appearance">none</content_attribute>
+      <content_attribute id="language-profanity">none</content_attribute>
+      <content_attribute id="language-humor">none</content_attribute>
+      <content_attribute id="language-discrimination">none</content_attribute>
+      <content_attribute id="social-chat">intense</content_attribute>
+      <content_attribute id="social-info">intense</content_attribute>
+      <content_attribute id="social-audio">none</content_attribute>
+      <content_attribute id="social-location">none</content_attribute>
+      <content_attribute id="social-contacts">none</content_attribute>
+      <content_attribute id="money-purchasing">intense</content_attribute>
+      <content_attribute id="money-gambling">none</content_attribute>
+    </content_rating>
+    <releases>
+      <release version="3.28.2" timestamp="1527465600">
+        <description><p>Builder 3.28.2 contains a number of important bugfixes and translation updates.</p><ul><li>A leak of buffers when using semantic highlighting as been fixed, which has the potential to significantly reduce memory usage for some languages such as C.</li><li>Various fixes with DTD validation.</li><li>Various correctness fixes in API usage.</li><li>The new task and threading engine has been backported which provides a new layer of saftey for our threading usage.</li><li>Various fixes for the flatpak plugin.</li><li>Ctags tries to be more careful to avoid recursive mining and no longer attempts to load ~/.tags.</li><li>The clang plugin tries harder to cook cflags delivered to libclang.</li><li>A preferences menu item was added back to the perspective selector. It still uses a dialog for preferences.</li><li>The recent-projects plugin performs additional checks to avoid recursive directory cleanup when that would result in deleting some external data.</li><li>A number of miscellaneous memory leaks have been plugged.</li><li>When meson/ninja are not found, a message is displayed to the user in the messages pane.</li><li>The clang plugin will try to drop state as soon as possible to help keep memory usage down.</li><li>The npm modules now marks &quot;node_modules&quot; as an ignored pattern.</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+        <description xml:lang="pl"><p>(pl translation) Builder 3.28.2 contains a number of important bugfixes and translation updates.</p><ul><li>A leak of buffers when using semantic highlighting as been fixed, which has the potential to significantly reduce memory usage for some languages such as C.</li><li>Various fixes with DTD validation.</li><li>Various correctness fixes in API usage.</li><li>The new task and threading engine has been backported which provides a new layer of saftey for our threading usage.</li><li>Various fixes for the flatpak plugin.</li><li>Ctags tries to be more careful to avoid recursive mining and no longer attempts to load ~/.tags.</li><li>The clang plugin tries harder to cook cflags delivered to libclang.</li><li>A preferences menu item was added back to the perspective selector. It still uses a dialog for preferences.</li><li>The recent-projects plugin performs additional checks to avoid recursive directory cleanup when that would result in deleting some external data.</li><li>A number of miscellaneous memory leaks have been plugged.</li><li>When meson/ninja are not found, a message is displayed to the user in the messages pane.</li><li>The clang plugin will try to drop state as soon as possible to help keep memory usage down.</li><li>The npm modules now marks &quot;node_modules&quot; as an ignored pattern.</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+        <description xml:lang="es"><p>(es translation) Builder 3.28.2 contains a number of important bugfixes and translation updates.</p><ul><li>A leak of buffers when using semantic highlighting as been fixed, which has the potential to significantly reduce memory usage for some languages such as C.</li><li>Various fixes with DTD validation.</li><li>Various correctness fixes in API usage.</li><li>The new task and threading engine has been backported which provides a new layer of saftey for our threading usage.</li><li>Various fixes for the flatpak plugin.</li><li>Ctags tries to be more careful to avoid recursive mining and no longer attempts to load ~/.tags.</li><li>The clang plugin tries harder to cook cflags delivered to libclang.</li><li>A preferences menu item was added back to the perspective selector. It still uses a dialog for preferences.</li><li>The recent-projects plugin performs additional checks to avoid recursive directory cleanup when that would result in deleting some external data.</li><li>A number of miscellaneous memory leaks have been plugged.</li><li>When meson/ninja are not found, a message is displayed to the user in the messages pane.</li><li>The clang plugin will try to drop state as soon as possible to help keep memory usage down.</li><li>The npm modules now marks &quot;node_modules&quot; as an ignored pattern.</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+      </release>
+      <release version="3.28.1" timestamp="1523232000">
+        <description><p>Builder 3.28.1 contains a number of bugfixes and translation updates.</p><ul><li>Correctness fixes in the xml-pack plugin.</li><li>gdb plugin now updates frames properly for selected thread.</li><li>Some improvements in the emacs bindings.</li><li>The meson plugin handles meson being run outside of the builddir now when extracting targets and tests.</li><li>Many fixes in our introspection usage which translates into memory leak fixes for some plugins written in languages other than C.</li><li>Bug fixes for a number of build systems including cargo.</li><li>The build pipeline is now invalidated when the branch changes.</li><li>Right clicking on a project in the greeter now enters selection mode.</li><li>The VCS backend now unconditionally ignores minified JSON to protect various subsystems from parsing unnecessary data.</li><li>The todo plugin ignores more patterns early on, avoiding loading the content into memory.</li><li>Safety fixes to the code-index, buffer manager, terminals, xml parsing, and a number of other subsystems.</li><li>The qemu plugin now checks for the &apos;F&apos; option which is required.</li><li>File settings now support setting auto-indent in GSettings. This fixes a regression in the preferences to enable/disable auto-indent on a per langugae basis.</li><li>primary+shift+k now activates the symbol search for the document.</li><li>Special handling of git worktrees has been added.</li><li>Flatpak manifest &quot;simple&quot; build system types now run the build-commands from the srcdir, as is done by flatpak-builder.</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+        <description xml:lang="pl"><p>(pl translation) Builder 3.28.1 contains a number of bugfixes and translation updates.</p><ul><li>Correctness fixes in the xml-pack plugin.</li><li>gdb plugin now updates frames properly for selected thread.</li><li>Some improvements in the emacs bindings.</li><li>The meson plugin handles meson being run outside of the builddir now when extracting targets and tests.</li><li>Many fixes in our introspection usage which translates into memory leak fixes for some plugins written in languages other than C.</li><li>Bug fixes for a number of build systems including cargo.</li><li>The build pipeline is now invalidated when the branch changes.</li><li>Right clicking on a project in the greeter now enters selection mode.</li><li>The VCS backend now unconditionally ignores minified JSON to protect various subsystems from parsing unnecessary data.</li><li>The todo plugin ignores more patterns early on, avoiding loading the content into memory.</li><li>Safety fixes to the code-index, buffer manager, terminals, xml parsing, and a number of other subsystems.</li><li>The qemu plugin now checks for the &apos;F&apos; option which is required.</li><li>File settings now support setting auto-indent in GSettings. This fixes a regression in the preferences to enable/disable auto-indent on a per langugae basis.</li><li>primary+shift+k now activates the symbol search for the document.</li><li>Special handling of git worktrees has been added.</li><li>Flatpak manifest &quot;simple&quot; build system types now run the build-commands from the srcdir, as is done by flatpak-builder.</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+        <description xml:lang="es"><p>(es translation) Builder 3.28.1 contains a number of bugfixes and translation updates.</p><ul><li>Correctness fixes in the xml-pack plugin.</li><li>gdb plugin now updates frames properly for selected thread.</li><li>Some improvements in the emacs bindings.</li><li>The meson plugin handles meson being run outside of the builddir now when extracting targets and tests.</li><li>Many fixes in our introspection usage which translates into memory leak fixes for some plugins written in languages other than C.</li><li>Bug fixes for a number of build systems including cargo.</li><li>The build pipeline is now invalidated when the branch changes.</li><li>Right clicking on a project in the greeter now enters selection mode.</li><li>The VCS backend now unconditionally ignores minified JSON to protect various subsystems from parsing unnecessary data.</li><li>The todo plugin ignores more patterns early on, avoiding loading the content into memory.</li><li>Safety fixes to the code-index, buffer manager, terminals, xml parsing, and a number of other subsystems.</li><li>The qemu plugin now checks for the &apos;F&apos; option which is required.</li><li>File settings now support setting auto-indent in GSettings. This fixes a regression in the preferences to enable/disable auto-indent on a per langugae basis.</li><li>primary+shift+k now activates the symbol search for the document.</li><li>Special handling of git worktrees has been added.</li><li>Flatpak manifest &quot;simple&quot; build system types now run the build-commands from the srcdir, as is done by flatpak-builder.</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+      </release>
+      <release version="3.28.0" timestamp="1520899200">
+        <description><p>Builder 3.28 brings 6 months of features, bug fixes, and performance improvements.</p><ul><li>Significant improvements in memory usage.</li><li>Builder now monitors your project&apos;s file-system for changes to update the sidebar in real-time.</li><li>Builder gained the support for drag-n-drop of files in the project sidebar and editor.</li><li>Builder now tracks git status in the sidebar for quickly locating new and changed files.</li><li>An overview of the build pipeline is provided in the build panel which updates as the build progresses.</li><li>Builder now extracts progress messages from tooling such as flatpak-builder and displays it prominently in the project bar.</li><li>Builder tries to avoid building projects immediately upon opening, and no longer auto-updates dependencies upon loading.</li><li>Developers can update project dependencies for certain project backends such as Flatpak and Cargo using the &quot;Update Dependencies&quot; button in the omnibar.</li><li>Builder now uses a pseudo-terminal for build output, allowing color output from build tooling.</li><li>A simplified newcomers experience has been added, to click on a newcomer project icon and immediately clone/open the project.</li><li>Editor search has been improved to be more reliable and predictable in usage.</li><li>The project open dialog now defaults to directory selection. It will autodetect the project backend based on the directory contents.</li><li>The code indexers have been improved.</li><li>Support for compile_commands.json has been added for Meson and CMake build systems.</li><li>Three-finger-swipe can be used to move pages left or right.</li><li>A number of improvements to Meson, CMake, and Make project support.</li><li>New templates including a Mono-based Gtk♯ application and a command-line based Makefile template.</li><li>A number of features were added in our Flatpak support, including support for Flatpak SDK extensions.</li><li>Builder no longer requires flatpak-builder on the host when running from Flatpak, it is now bundled with Builder.</li><li>Technology preview for external devices, adding the ability to compile for alternate architectures.</li><li>Technology preview of integrated unit testing is included.</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+        <description xml:lang="pl"><p>(pl translation) Builder 3.28 brings 6 months of features, bug fixes, and performance improvements.</p><ul><li>Significant improvements in memory usage.</li><li>Builder now monitors your project&apos;s file-system for changes to update the sidebar in real-time.</li><li>Builder gained the support for drag-n-drop of files in the project sidebar and editor.</li><li>Builder now tracks git status in the sidebar for quickly locating new and changed files.</li><li>An overview of the build pipeline is provided in the build panel which updates as the build progresses.</li><li>Builder now extracts progress messages from tooling such as flatpak-builder and displays it prominently in the project bar.</li><li>Builder tries to avoid building projects immediately upon opening, and no longer auto-updates dependencies upon loading.</li><li>Developers can update project dependencies for certain project backends such as Flatpak and Cargo using the &quot;Update Dependencies&quot; button in the omnibar.</li><li>Builder now uses a pseudo-terminal for build output, allowing color output from build tooling.</li><li>A simplified newcomers experience has been added, to click on a newcomer project icon and immediately clone/open the project.</li><li>Editor search has been improved to be more reliable and predictable in usage.</li><li>The project open dialog now defaults to directory selection. It will autodetect the project backend based on the directory contents.</li><li>The code indexers have been improved.</li><li>Support for compile_commands.json has been added for Meson and CMake build systems.</li><li>Three-finger-swipe can be used to move pages left or right.</li><li>A number of improvements to Meson, CMake, and Make project support.</li><li>New templates including a Mono-based Gtk♯ application and a command-line based Makefile template.</li><li>A number of features were added in our Flatpak support, including support for Flatpak SDK extensions.</li><li>Builder no longer requires flatpak-builder on the host when running from Flatpak, it is now bundled with Builder.</li><li>Technology preview for external devices, adding the ability to compile for alternate architectures.</li><li>Technology preview of integrated unit testing is included.</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+        <description xml:lang="es"><p>(es translation) Builder 3.28 brings 6 months of features, bug fixes, and performance improvements.</p><ul><li>Significant improvements in memory usage.</li><li>Builder now monitors your project&apos;s file-system for changes to update the sidebar in real-time.</li><li>Builder gained the support for drag-n-drop of files in the project sidebar and editor.</li><li>Builder now tracks git status in the sidebar for quickly locating new and changed files.</li><li>An overview of the build pipeline is provided in the build panel which updates as the build progresses.</li><li>Builder now extracts progress messages from tooling such as flatpak-builder and displays it prominently in the project bar.</li><li>Builder tries to avoid building projects immediately upon opening, and no longer auto-updates dependencies upon loading.</li><li>Developers can update project dependencies for certain project backends such as Flatpak and Cargo using the &quot;Update Dependencies&quot; button in the omnibar.</li><li>Builder now uses a pseudo-terminal for build output, allowing color output from build tooling.</li><li>A simplified newcomers experience has been added, to click on a newcomer project icon and immediately clone/open the project.</li><li>Editor search has been improved to be more reliable and predictable in usage.</li><li>The project open dialog now defaults to directory selection. It will autodetect the project backend based on the directory contents.</li><li>The code indexers have been improved.</li><li>Support for compile_commands.json has been added for Meson and CMake build systems.</li><li>Three-finger-swipe can be used to move pages left or right.</li><li>A number of improvements to Meson, CMake, and Make project support.</li><li>New templates including a Mono-based Gtk♯ application and a command-line based Makefile template.</li><li>A number of features were added in our Flatpak support, including support for Flatpak SDK extensions.</li><li>Builder no longer requires flatpak-builder on the host when running from Flatpak, it is now bundled with Builder.</li><li>Technology preview for external devices, adding the ability to compile for alternate architectures.</li><li>Technology preview of integrated unit testing is included.</li></ul><p>More Features:</p><ol><li>Feature 1</li><li>Feature 2</li></ol></description>
+      </release>
+    </releases>
+    <provides>
+      <binary>kdenlive</binary>
+      <binary>kdenlive_render</binary>
+    </provides>
+    <metadata>
+      <value key="X-Flatpak-Tags">proprietary</value>
+    </metadata>
+    <languages>
+      <lang percentage="37">bs</lang>
+      <lang percentage="98">ca</lang>
+      <lang percentage="99">cs</lang>
+      <lang percentage="99">da</lang>
+      <lang percentage="99">de</lang>
+      <lang percentage="61">el</lang>
+      <lang percentage="99">en_GB</lang>
+      <lang percentage="99">es</lang>
+      <lang percentage="31">fi</lang>
+      <lang percentage="98">fr</lang>
+      <lang percentage="40">fur</lang>
+      <lang percentage="99">gl</lang>
+      <lang percentage="70">he</lang>
+      <lang percentage="99">hu</lang>
+      <lang percentage="99">id</lang>
+      <lang percentage="99">it</lang>
+      <lang percentage="33">ja</lang>
+      <lang percentage="68">kk</lang>
+      <lang percentage="99">ko</lang>
+      <lang percentage="99">lt</lang>
+      <lang percentage="99">lv</lang>
+      <lang percentage="36">nb</lang>
+      <lang percentage="44">ne</lang>
+      <lang percentage="99">nl</lang>
+      <lang percentage="95">oc</lang>
+      <lang percentage="100">pl</lang>
+      <lang percentage="48">pt</lang>
+      <lang percentage="99">pt_BR</lang>
+      <lang percentage="99">ro</lang>
+      <lang percentage="81">ru</lang>
+      <lang percentage="70">sk</lang>
+      <lang percentage="95">sl</lang>
+      <lang percentage="99">sr</lang>
+      <lang percentage="99">sr@latin</lang>
+      <lang percentage="99">sv</lang>
+      <lang percentage="99">tr</lang>
+      <lang percentage="49">uk</lang>
+      <lang percentage="76">zh_CN</lang>
+      <lang percentage="78">zh_TW</lang>
+    </languages>
+    <bundle type="flatpak" runtime="org.gnome.Sdk/x86_64/3.28" sdk="org.gnome.Sdk/x86_64/3.28">app/org.gnome.Builder/x86_64/stable</bundle>
+  </component>
+</components>
