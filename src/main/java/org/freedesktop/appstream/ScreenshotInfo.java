@@ -14,14 +14,14 @@ public class ScreenshotInfo extends Screenshot{
     super();
     this.image = parentScreenshot.getImage();
     this.type = parentScreenshot.getType();
+    this.caption = parentScreenshot.getCaption();
   }
 
-
-  public Optional<String> findThumbnailUrlByHeight(short height){
+  public Optional<String> findThumbnailUrlByHeightAndLangDefault(short height){
 
     for (Image image: this.getImage()) {
       if(AppdataComponent.SCREENSHOT_IMAGE_TYPE_THUMBNAIL.equalsIgnoreCase(image.getType())){
-        if(image.getHeight() == height) return Optional.ofNullable(image.getValue());
+        if(image.getHeight() == height && image.getLang() == null) return Optional.ofNullable(image.getValue());
       }
     }
 
