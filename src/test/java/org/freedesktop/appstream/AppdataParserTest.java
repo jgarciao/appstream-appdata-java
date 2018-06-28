@@ -16,6 +16,11 @@ public class AppdataParserTest {
   final String IMAGE_TYPE_THUMBNAIL = "thumbnail";
   final String IMAGE_TYPE_SOURCE = "source";
 
+  private static final int APP_DESCRIPTION_LENGTH = 4096;
+  private static final short ICON_HEIGHT_HIDPI = 128;
+  private static final short ICON_HEIGHT_DEFAULT = 64;
+
+
   final ClassLoader classLoader = getClass().getClassLoader();
 
 
@@ -151,25 +156,73 @@ public class AppdataParserTest {
   }
 
 
+  /**
+   * Check if the component contains the required appdata:
+   * - For all components: FlatpakId, Name, Summary
+   * - For apps require also: Description, Icon
+   *
+   * Check data size limits:
+   * - description.length < App.APP_DESCRIPTION_LENGTH
+   *
+   * @return true if the component has the required info for its type and respects the size limits
+   */
+  private boolean validateAppdataInformation(AppdataComponent component) {
+
+    boolean appDataIsValid = true;
+
+    appDataIsValid = appDataIsValid && component.getFlatpakId() != null && !""
+      .equalsIgnoreCase(component.getFlatpakId());
+
+    appDataIsValid = appDataIsValid && component.findDefaultName() != null && !""
+      .equalsIgnoreCase(component.findDefaultName());
+
+    appDataIsValid = appDataIsValid && component.findDefaultSummary() != null && !""
+      .equalsIgnoreCase(component.findDefaultSummary());
+
+    if (APPSTREAM_TYPE_DESKTOP.equalsIgnoreCase(component.getType())) {
+
+      //appDataIsValid = appDataIsValid && component.findDefaultDescription() != null && !"".equalsIgnoreCase(component.findDefaultDescription());
+      if (component.findDefaultDescription() != null) {
+        appDataIsValid = appDataIsValid
+          && component.findDefaultDescription().length() < APP_DESCRIPTION_LENGTH;
+      }
+
+      String hiDpiIconUrl = component.findIconUrl(ICON_BASE_RELATIVE_PATH, ICON_HEIGHT_HIDPI);
+      String defaultIconUrl = component.findIconUrl(ICON_BASE_RELATIVE_PATH, ICON_HEIGHT_DEFAULT);
+      appDataIsValid = appDataIsValid && (!"".equalsIgnoreCase(hiDpiIconUrl) || !""
+        .equalsIgnoreCase(defaultIconUrl));
+    }
+
+    return appDataIsValid;
+  }
+
+
   @Test
   public void when_ParsingFlathub_Expect_ComponentInfoObtained() throws Exception {
 
-    final int EXPECTED_COMPONENT_COUNT = 252;
-    final int EXPECTED_APP_COUNT = 209;
-    final int EXPECTED_RUNTIME_COUNT = 43;
+    final int EXPECTED_COMPONENT_COUNT = 376;
+    final int EXPECTED_APP_WITH_REQUIRED_APPDATA_COUNT = 304;
+    final int EXPECTED_APP_WITHOUT_REQUIRED_APPDATA_COUNT = 5;
+    final int EXPECTED_RUNTIME_COUNT = 67;
 
     //Given
     List<AppdataComponent> componentList = null;
-    int appCount = 0;
+    int appsWithRequiredAppdataCount = 0;
+    int appsWithoutRequiredAppdataCount = 0;
     int runtimeCount = 0;
 
     //When
-    File file = new File(classLoader.getResource("appstream-flathub-x86_64-201803.xml").getFile());
+    File file = new File(classLoader.getResource("appstream-flathub-x86_64.xml").getFile());
     componentList = AppdataParser.parseAppdataFile(file);
 
     for (AppdataComponent component : componentList) {
       if (APPSTREAM_TYPE_DESKTOP.equalsIgnoreCase(component.getType())) {
-        appCount++;
+        if(validateAppdataInformation(component)){
+          appsWithRequiredAppdataCount++;
+        }
+        else{
+          appsWithoutRequiredAppdataCount++;
+        }
       } else {
         runtimeCount++;
       }
@@ -178,7 +231,8 @@ public class AppdataParserTest {
     //Then
     assertThat(componentList).isNotNull();
     assertThat(componentList.size()).isEqualTo(EXPECTED_COMPONENT_COUNT);
-    assertThat(appCount).isEqualTo(EXPECTED_APP_COUNT);
+    assertThat(appsWithRequiredAppdataCount).isEqualTo(EXPECTED_APP_WITH_REQUIRED_APPDATA_COUNT);
+    assertThat(appsWithoutRequiredAppdataCount).isEqualTo(EXPECTED_APP_WITHOUT_REQUIRED_APPDATA_COUNT);
     assertThat(runtimeCount).isEqualTo(EXPECTED_RUNTIME_COUNT);
 
   }
