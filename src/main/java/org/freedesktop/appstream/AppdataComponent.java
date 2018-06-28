@@ -14,6 +14,7 @@ import org.freedesktop.appstream.appdata.ContentRating;
 import org.freedesktop.appstream.appdata.Description;
 import org.freedesktop.appstream.appdata.DeveloperName;
 import org.freedesktop.appstream.appdata.Icon;
+import org.freedesktop.appstream.appdata.Image;
 import org.freedesktop.appstream.appdata.Keywords;
 import org.freedesktop.appstream.appdata.Kudos;
 import org.freedesktop.appstream.appdata.Languages;
@@ -140,8 +141,12 @@ public class AppdataComponent {
     this.parentComponent.setProjectGroup(projectGroup);
   }
 
-  public List<ContentRating> getContentRating() {
+  public ContentRating getContentRating() {
     return this.parentComponent.getContentRating();
+  }
+
+  public void setContentRating(ContentRating contentRating){
+    this.parentComponent.setContentRating(contentRating);
   }
 
   public Languages getLanguages() {
@@ -194,6 +199,11 @@ public class AppdataComponent {
 
   public AppdataComponent() {}
 
+  public AppdataComponent(Component parentComponent) {
+    
+    this.parentComponent = parentComponent;
+
+  }
 
   public void merge(AppdataComponent anotherComponent){
 
@@ -259,14 +269,13 @@ public class AppdataComponent {
       this.setProjectGroup(anotherComponent.getProjectGroup());
     }
 
-    if(this.getScreenshots().size() < anotherComponent.getScreenshots().size()){
-      this.getScreenshots().clear();
-      this.getScreenshots().addAll(anotherComponent.getScreenshots());
+    if(this.getScreenshotsByLangDefault().size() < anotherComponent.getScreenshotsByLangDefault().size()){
+      this.getScreenshotsByLangDefault().clear();
+      this.getScreenshotsByLangDefault().addAll(anotherComponent.getScreenshotsByLangDefault());
     }
 
-    if(this.getContentRating().size() < anotherComponent.getContentRating().size()){
-      this.getContentRating().clear();
-      this.getContentRating().addAll(anotherComponent.getContentRating());
+    if(this.getContentRating() == null && anotherComponent.getContentRating() != null){
+      this.setContentRating(anotherComponent.getContentRating());
     }
 
     if(this.getReleases() == null  && anotherComponent.getReleases() != null){
@@ -291,21 +300,6 @@ public class AppdataComponent {
 
     if(this.getType() == null && anotherComponent.getType() != null){
       this.setType(anotherComponent.getType());
-    }
-
-  }
-
-
-
-  public AppdataComponent(Component parentComponent) {
-    
-    this.parentComponent = parentComponent;
-
-    this.screenshotsInfo = new ArrayList<>();
-    if(parentComponent.getScreenshots() != null){
-      for (Screenshot screenshot: parentComponent.getScreenshots().getScreenshot()) {
-        this.screenshotsInfo.add(new ScreenshotInfo(screenshot));
-      }
     }
 
   }
@@ -365,9 +359,20 @@ public class AppdataComponent {
   }
 
   private static String getOlAsString(Ol element) {
-    return "<ol>" + "\n" + getSerializableObjectListAsString(element.getContent()) + "</ol>" + "\n";
+    return "<ol>" + "\n" + getListAsStringUsingTag(element.getLi(), "li") + "</ol>" + "\n";
   }
 
+
+  private static String getListAsStringUsingTag(List<String> list, String tag) {
+
+    String contents = "";
+
+    for (String value : list) {
+      contents = contents + "<" + tag + ">\n" + value  + "</" + tag + ">\n";
+    }
+
+    return contents;
+  }
 
   public String getFlatpakId() {
 
@@ -397,7 +402,29 @@ public class AppdataComponent {
     return this.getBundle().getSdk();
   }
 
-  public List<ScreenshotInfo> getScreenshots(){
+  public List<ScreenshotInfo> getScreenshotsByLangDefault(){
+
+    if(this.screenshotsInfo == null){
+
+      this.screenshotsInfo = new ArrayList<>();
+
+      if(parentComponent.getScreenshots() != null){
+
+        for (Screenshot screenshot: parentComponent.getScreenshots().getScreenshot()) {
+
+          for(Image image : screenshot.getImage())
+
+            if(image.getLang() == null){
+              this.screenshotsInfo.add(new ScreenshotInfo(screenshot));
+              break;
+            }
+
+        }
+      }
+    }
+
+
+
     return this.screenshotsInfo;
   }
 
@@ -541,8 +568,7 @@ public class AppdataComponent {
 
   }
 
-
-  public Optional<ReleaseInfo> findReleaseInfoByMostRecent() {
+  public Optional<ReleaseInfo> findReleaseInfoByMostRecentAndLangIsDefault() {
 
     if (this.parentComponent.getReleases() == null || this.parentComponent.getReleases().getRelease() == null
       || this.parentComponent.getReleases().getRelease().size() == 0) {
@@ -553,11 +579,20 @@ public class AppdataComponent {
     sortedReleases.sort(Comparator.comparing(Release::getTimestamp).reversed());
 
     Release release = sortedReleases.get(0);
-    String description = getSerializableObjectListAsString(release.getContent());
-    description = description.replace("<description>", "");
-    description = description.replace("</description>", "");
 
-    return Optional.of(new ReleaseInfo(release.getVersion(), release.getTimestamp(), description));
+    String strDescription = "";
+
+    for (Description description : release.getDescription()) {
+      if (description.getLang() == null) {
+        strDescription = getObjectListAsString(description.getContent());
+        break;
+      }
+    }
+
+    strDescription = strDescription.replace("<description>", "");
+    strDescription = strDescription.replace("</description>", "");
+
+    return Optional.of(new ReleaseInfo(release.getVersion(), release.getTimestamp(), strDescription));
 
   }
 

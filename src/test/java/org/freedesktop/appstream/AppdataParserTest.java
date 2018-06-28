@@ -251,7 +251,7 @@ public class AppdataParserTest {
         + "<li>When meson/ninja are not found, a message is displayed to the user in the messages pane.</li>\n"
         + "<li>The clang plugin will try to drop state as soon as possible to help keep memory usage down.</li>\n"
         + "<li>The npm modules now marks \"node_modules\" as an ignored pattern.</li>\n"
-        + "</ul>\n"
+        + "</ul>"
         + "\n";
     int EXPECTED_RELEASE_TIMESTAMP = 1527465600;
 
@@ -290,12 +290,12 @@ public class AppdataParserTest {
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64))
       .isEqualToIgnoringCase(EXPECTED_ICONURL_64);
 
-    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component.getScreenshotsByLangDefault().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT))
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT))
       .isPresent();
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT).get())
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT).get())
       .isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
 
     assertThat(component.getCategories()).isNotNull();
@@ -303,12 +303,12 @@ public class AppdataParserTest {
     assertThat(component.getCategories().getCategory().get(0))
       .isEqualToIgnoringCase(EXPECTED_CATEGORY_FIRST);
 
-    assertThat(component.findReleaseInfoByMostRecent()).isPresent();
-    assertThat(component.findReleaseInfoByMostRecent().get().getVersion())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault()).isPresent();
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getVersion())
       .isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
-    assertThat(component.findReleaseInfoByMostRecent().get().getTimestamp())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getTimestamp())
       .isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
-    assertThat(component.findReleaseInfoByMostRecent().get().getDescription())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getDescription())
       .isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
 
   }
@@ -435,12 +435,12 @@ public class AppdataParserTest {
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64))
       .isEqualToIgnoringCase(EXPECTED_ICONURL_64);
 
-    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component.getScreenshotsByLangDefault().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT))
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT))
       .isPresent();
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT).get())
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT).get())
       .isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
 
     assertThat(component.getCategories()).isNotNull();
@@ -448,13 +448,13 @@ public class AppdataParserTest {
     assertThat(component.getCategories().getCategory().get(0))
       .isEqualToIgnoringCase(EXPECTED_CATEGORY_FIRST);
 
-    assertThat(component.findReleaseInfoByMostRecent()).isPresent();
-    assertThat(component.findReleaseInfoByMostRecent().get().getVersion())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault()).isPresent();
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getVersion())
       .isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
-    assertThat(component.findReleaseInfoByMostRecent().get().getTimestamp())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getTimestamp())
       .isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
-//    assertThat(component.findReleaseInfoByMostRecent().get().getDescription())
-      //.isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getDescription())
+      .isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
 
   }
 
@@ -523,12 +523,11 @@ public class AppdataParserTest {
     //String EXPECTED_ICONURL_128 = "/repo/appstream/x86_64/icons/128x128/com.endlessm.photos.png";
     short EXPECTED_ICONHEIGHT_64 = 64;
     String EXPECTED_ICONURL_64 = "/repo/appstream/x86_64/icons/64x64/com.endlessm.photos.png";
-    int EXPECTED_SCREENSHOT_COUNT = 9;
+    int EXPECTED_SCREENSHOT_COUNT = 3;
     short EXPECTED_SCHEENSHOT0_HEIGHT = 846;
-    String EXPECTED_SCREENSHOT0_URL = "https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-4ba1969595153deb52d30027a2287df5.png";
-    //short EXPECTED_SCHEENSHOT1_HEIGHT = 351;
-    //String EXPECTED_SCREENSHOT1_URL = "https://flathub.org/repo/screenshots/org.gnome.Builder-stable/624x351/org.gnome.Builder-19b4818c4fda40f94d8e6ccc1379dc6d.png";
+    String EXPECTED_SCREENSHOT0_URL = "https://flathub.org/repo/screenshots/com.endlessm.photos-stable/1504x846/com.endlessm.photos-f95b90b3f2b326a6ff039e4494852ab3.png";
 
+    String EXPECTED_SCREENSHOT0_CAPTION = "Caption example";
     int EXPECTEC_CATEGORY_COUNT = 2;
     String EXPECTED_CATEGORY_FIRST = "Graphics";
 
@@ -567,25 +566,29 @@ public class AppdataParserTest {
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64))
       .isEqualToIgnoringCase(EXPECTED_ICONURL_64);
 
-    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component.getScreenshotsByLangDefault().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT))
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT))
       .isPresent();
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT).get())
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT).get())
       .isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
+
+    assertThat(
+      component.getScreenshotsByLangDefault().get(0).getCaption()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_CAPTION);
+
 
     assertThat(component.getCategories()).isNotNull();
     assertThat(component.getCategories().getCategory().size()).isEqualTo(EXPECTEC_CATEGORY_COUNT);
     assertThat(component.getCategories().getCategory().get(0))
       .isEqualToIgnoringCase(EXPECTED_CATEGORY_FIRST);
 
-    assertThat(component.findReleaseInfoByMostRecent()).isPresent();
-    assertThat(component.findReleaseInfoByMostRecent().get().getVersion())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault()).isPresent();
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getVersion())
       .isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
-    assertThat(component.findReleaseInfoByMostRecent().get().getTimestamp())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getTimestamp())
       .isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
-    assertThat(component.findReleaseInfoByMostRecent().get().getDescription())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getDescription())
       .isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
 
   }
@@ -663,12 +666,12 @@ public class AppdataParserTest {
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64))
       .isEqualToIgnoringCase(EXPECTED_ICONURL_64);
 
-    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component.getScreenshotsByLangDefault().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT))
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT))
       .isPresent();
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT).get())
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT).get())
       .isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
 
     assertThat(component.getCategories()).isNotNull();
@@ -676,12 +679,12 @@ public class AppdataParserTest {
     assertThat(component.getCategories().getCategory().get(0))
       .isEqualToIgnoringCase(EXPECTED_CATEGORY_FIRST);
 
-    assertThat(component.findReleaseInfoByMostRecent()).isPresent();
-    assertThat(component.findReleaseInfoByMostRecent().get().getVersion())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault()).isPresent();
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getVersion())
       .isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
-    assertThat(component.findReleaseInfoByMostRecent().get().getTimestamp())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getTimestamp())
       .isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
-    assertThat(component.findReleaseInfoByMostRecent().get().getDescription())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getDescription())
       .isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
 
   }
@@ -740,12 +743,12 @@ public class AppdataParserTest {
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64))
       .isEqualToIgnoringCase(EXPECTED_ICONURL_64);
 
-    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component.getScreenshotsByLangDefault().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT_HEIGHT))
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT_HEIGHT))
       .isPresent();
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT_HEIGHT).get())
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT_HEIGHT).get())
       .isEqualToIgnoringCase(EXPECTED_SCREENSHOT_URL);
 
     assertThat(component.getCategories()).isNotNull();
@@ -819,12 +822,12 @@ public class AppdataParserTest {
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64))
       .isEqualToIgnoringCase(EXPECTED_ICONURL_64);
 
-    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component.getScreenshotsByLangDefault().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT_HEIGHT))
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT_HEIGHT))
       .isPresent();
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT_HEIGHT).get())
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT_HEIGHT).get())
       .isEqualToIgnoringCase(EXPECTED_SCREENSHOT_URL);
 
     assertThat(component.getCategories()).isNotNull();
@@ -891,12 +894,12 @@ public class AppdataParserTest {
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64))
       .isEqualToIgnoringCase(EXPECTED_ICONURL_64);
 
-    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component.getScreenshotsByLangDefault().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT_HEIGHT))
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT_HEIGHT))
       .isPresent();
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT_HEIGHT).get())
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT_HEIGHT).get())
       .isEqualToIgnoringCase(EXPECTED_SCREENSHOT_URL);
 
     assertThat(component.getCategories()).isNotNull();
@@ -967,21 +970,21 @@ public class AppdataParserTest {
     assertThat(component.getProjectLicense()).isEqualToIgnoringCase(EXPECTED_PROJECT_LICENSE);
     assertThat(component.findHomepageUrl().get()).isEqualToIgnoringCase(EXPECTED_HOMEPAGE_URL);
 
-    assertThat(component.getScreenshots()).isNotNull();
-    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component.getScreenshotsByLangDefault()).isNotNull();
+    assertThat(component.getScreenshotsByLangDefault().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT))
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT))
       .isPresent();
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT).get())
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT).get())
       .isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
 
-    assertThat(component.findReleaseInfoByMostRecent()).isPresent();
-    assertThat(component.findReleaseInfoByMostRecent().get().getVersion())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault()).isPresent();
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getVersion())
       .isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
-    assertThat(component.findReleaseInfoByMostRecent().get().getTimestamp())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getTimestamp())
       .isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
-    assertThat(component.findReleaseInfoByMostRecent().get().getDescription())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getDescription())
       .isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
 
     //Check missing info at component
@@ -1024,21 +1027,21 @@ public class AppdataParserTest {
     assertThat(component.getProjectLicense()).isEqualToIgnoringCase(EXPECTED_PROJECT_LICENSE);
     assertThat(component.findHomepageUrl().get()).isEqualToIgnoringCase(EXPECTED_HOMEPAGE_URL);
 
-    assertThat(component.getScreenshots()).isNotNull();
-    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component.getScreenshotsByLangDefault()).isNotNull();
+    assertThat(component.getScreenshotsByLangDefault().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT))
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT))
       .isPresent();
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT).get())
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT).get())
       .isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
 
-    assertThat(component.findReleaseInfoByMostRecent()).isPresent();
-    assertThat(component.findReleaseInfoByMostRecent().get().getVersion())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault()).isPresent();
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getVersion())
       .isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
-    assertThat(component.findReleaseInfoByMostRecent().get().getTimestamp())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getTimestamp())
       .isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
-    assertThat(component.findReleaseInfoByMostRecent().get().getDescription())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getDescription())
       .isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
 
     assertThat(component.findIconByHeight(EXPECTED_ICONHEIGHT_128)).isNotNull();
@@ -1123,21 +1126,21 @@ public class AppdataParserTest {
     assertThat(component.getProjectLicense()).isEqualToIgnoringCase(EXPECTED_PROJECT_LICENSE);
     assertThat(component.findHomepageUrl().get()).isEqualToIgnoringCase(EXPECTED_HOMEPAGE_URL);
 
-    assertThat(component.getScreenshots()).isNotNull();
-    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component.getScreenshotsByLangDefault()).isNotNull();
+    assertThat(component.getScreenshotsByLangDefault().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT))
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT))
       .isPresent();
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT).get())
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT).get())
       .isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
 
-    assertThat(component.findReleaseInfoByMostRecent()).isPresent();
-    assertThat(component.findReleaseInfoByMostRecent().get().getVersion())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault()).isPresent();
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getVersion())
       .isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
-    assertThat(component.findReleaseInfoByMostRecent().get().getTimestamp())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getTimestamp())
       .isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
-    assertThat(component.findReleaseInfoByMostRecent().get().getDescription())
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault().get().getDescription())
       .isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
 
     //Check missing info at component
@@ -1180,21 +1183,21 @@ public class AppdataParserTest {
     assertThat(component2.getProjectLicense()).isEqualToIgnoringCase(EXPECTED_PROJECT_LICENSE);
     assertThat(component2.findHomepageUrl().get()).isEqualToIgnoringCase(EXPECTED_HOMEPAGE_URL);
 
-    assertThat(component2.getScreenshots()).isNotNull();
-    assertThat(component2.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component2.getScreenshotsByLangDefault()).isNotNull();
+    assertThat(component2.getScreenshotsByLangDefault().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(
-      component2.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT))
+      component2.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT))
       .isPresent();
     assertThat(
-      component2.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT0_HEIGHT)
+      component2.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT0_HEIGHT)
         .get()).isEqualToIgnoringCase(EXPECTED_SCREENSHOT0_URL);
 
-    assertThat(component2.findReleaseInfoByMostRecent()).isPresent();
-    assertThat(component2.findReleaseInfoByMostRecent().get().getVersion())
+    assertThat(component2.findReleaseInfoByMostRecentAndLangIsDefault()).isPresent();
+    assertThat(component2.findReleaseInfoByMostRecentAndLangIsDefault().get().getVersion())
       .isEqualToIgnoringCase(EXPECTED_RELEASE_VERSION);
-    assertThat(component2.findReleaseInfoByMostRecent().get().getTimestamp())
+    assertThat(component2.findReleaseInfoByMostRecentAndLangIsDefault().get().getTimestamp())
       .isEqualTo(EXPECTED_RELEASE_TIMESTAMP);
-    assertThat(component2.findReleaseInfoByMostRecent().get().getDescription())
+    assertThat(component2.findReleaseInfoByMostRecentAndLangIsDefault().get().getDescription())
       .isEqualTo(EXPECTED_RELEASE_DESCRIPTION);
 
     assertThat(component2.findIconByHeight(EXPECTED_ICONHEIGHT_128)).isNotNull();
@@ -1277,12 +1280,12 @@ public class AppdataParserTest {
     assertThat(component.findIconUrl(ICON_BASE_RELATIVE_PATH, EXPECTED_ICONHEIGHT_64))
       .isEqualToIgnoringCase(EXPECTED_ICONURL_64);
 
-    assertThat(component.getScreenshots().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
+    assertThat(component.getScreenshotsByLangDefault().size()).isEqualTo(EXPECTED_SCREENSHOT_COUNT);
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT_HEIGHT))
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT_HEIGHT))
       .isPresent();
     assertThat(
-      component.getScreenshots().get(0).findThumbnailUrlByHeight(EXPECTED_SCHEENSHOT_HEIGHT).get())
+      component.getScreenshotsByLangDefault().get(0).findThumbnailUrlByHeightAndLangDefault(EXPECTED_SCHEENSHOT_HEIGHT).get())
       .isEqualToIgnoringCase(EXPECTED_SCREENSHOT_URL);
 
     assertThat(component.getCategories()).isNotNull();
