@@ -580,19 +580,25 @@ public class AppdataComponent {
 
     Release release = sortedReleases.get(0);
 
-    String strDescription = "";
+    if(release.getVersion() != null && release.getTimestamp() != null){
 
-    for (Description description : release.getDescription()) {
-      if (description.getLang() == null) {
-        strDescription = getObjectListAsString(description.getContent());
-        break;
+      String strDescription = "";
+
+      for (Description description : release.getDescription()) {
+        if (description.getLang() == null) {
+          strDescription = getObjectListAsString(description.getContent());
+          break;
+        }
       }
+
+      strDescription = strDescription.replace("<description>", "");
+      strDescription = strDescription.replace("</description>", "");
+
+      Optional.of(new ReleaseInfo(release.getVersion(), release.getTimestamp(), strDescription));
+
     }
 
-    strDescription = strDescription.replace("<description>", "");
-    strDescription = strDescription.replace("</description>", "");
-
-    return Optional.of(new ReleaseInfo(release.getVersion(), release.getTimestamp(), strDescription));
+    return Optional.empty();
 
   }
 

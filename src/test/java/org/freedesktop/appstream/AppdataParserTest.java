@@ -964,6 +964,32 @@ public class AppdataParserTest {
 
 
   @Test
+  public void when_ParsingAppWithIncompleteReleaseInfo_Expect_ComponentInfoObtained() throws Exception {
+
+    //Given
+    String EXPECTED_FLATPAKID = "de.akaflieg_freiburg.cavok.add_hours_and_minutes";
+    String appDataResourceFile = "appstream-test-app-add_hours_and_minutes.xml";
+    List<AppdataComponent> componentList = null;
+    AppdataComponent component = null;
+
+    //When
+    File file = new File(classLoader.getResource(appDataResourceFile).getFile());
+    componentList = AppdataParser.parseAppdataFile(file);
+    if (componentList != null) {
+      component = componentList.get(0);
+    }
+
+    //Then
+    assertThat(componentList).isNotNull();
+    assertThat(componentList.size()).isEqualTo(1);
+    assertThat(component.getFlatpakId()).isEqualToIgnoringCase(EXPECTED_FLATPAKID);
+    assertThat(component.findReleaseInfoByMostRecentAndLangIsDefault()).isNotPresent();
+
+  }
+
+
+
+  @Test
   public void when_MergingComponentData_Expect_ComponentInfoObtained() throws Exception {
 
     //Given

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="flatpak">
+  <component type="desktop">
+    <id>de.akaflieg_freiburg.cavok.add_hours_and_minutes</id>
+    <name>Add Hours and Minutes</name>
+    <name xml:lang="de">Rechner für Stunden und Minuten</name>
+    <summary>Simple calculator for adding hours and minutes</summary>
+    <summary xml:lang="de">Einfacher Rechner zum Addieren von Stunden und Minuten</summary>
+    <description><p>This calculator adds times given in hours and minutes.  It helps with the recording of machine running times, with the addition of flight times for pilots&apos; flight logs, or driving times of truck drivers.</p></description>
+    <description xml:lang="de"><p>Dieser Rechner addiert Zeiten, die in Stunden und Minuten gegeben sind. Er hilft bei der Erfassung von Maschinenlaufzeiten, beim Zusammenrechnen von Flugzeiten für die Flugbücher von Piloten, oder bei Lenkzeiten von LKW-Fahrern.</p></description>
+    <icon type="cached" height="128" width="128">de.akaflieg_freiburg.cavok.add_hours_and_minutes.png</icon>
+    <icon type="cached" height="64" width="64">de.akaflieg_freiburg.cavok.add_hours_and_minutes.png</icon>
+    <categories>
+      <category>Calculator</category>
+      <category>Utility</category>
+    </categories>
+    <kudos>
+      <kudo>HiDpiIcon</kudo>
+    </kudos>
+    <project_license>GPL-3.0+</project_license>
+    <url type="homepage">https://cplx.vm.uni-freiburg.de/en/add-hours-and-minutes</url>
+    <project_group>Flatpak</project_group>
+    <screenshots>
+      <screenshot type="default">
+        <image type="source">https://cplx.vm.uni-freiburg.de/wp-content/uploads/2018/12/addHoursAndMinutes.png</image>
+      </screenshot>
+    </screenshots>
+    <content_rating type="oars-1.1"/>
+    <releases>
+      <release version="0.9.6"/>
+    </releases>
+    <provides>
+      <binary>addhoursandminutes</binary>
+    </provides>
+    <launchable type="desktop-id">de.akaflieg_freiburg.cavok.add_hours_and_minutes.desktop</launchable>
+    <bundle type="flatpak" runtime="org.kde.Platform/x86_64/5.11" sdk="org.kde.Sdk/x86_64/5.11">app/de.akaflieg_freiburg.cavok.add_hours_and_minutes/x86_64/stable</bundle>
+  </component>
+</components>
