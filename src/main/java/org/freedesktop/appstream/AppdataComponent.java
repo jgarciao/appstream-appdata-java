@@ -306,24 +306,24 @@ public class AppdataComponent {
 
   private static String getObjectListAsString(List<Object> objectList) {
 
-    String contents = "";
+    StringBuilder contents = new StringBuilder();
 
     for (Object obj : objectList) {
-      contents = contents + getObjectAsString(obj);
+      contents.append(getObjectAsString(obj));
     }
 
-    return contents;
+    return contents.toString();
   }
 
   private static String getSerializableObjectListAsString(List<Serializable> objectList) {
 
-    String contents = "";
+    StringBuilder contents = new StringBuilder();
 
     for (Object obj : objectList) {
-      contents = contents + getObjectAsString(obj);
+      contents.append(getObjectAsString(obj));
     }
 
-    return contents;
+    return contents.toString();
   }
 
   private static String getObjectAsString(Object obj) {
@@ -365,13 +365,13 @@ public class AppdataComponent {
 
   private static String getListAsStringUsingTag(List<String> list, String tag) {
 
-    String contents = "";
+    StringBuilder contents = new StringBuilder();
 
     for (String value : list) {
-      contents = contents + "<" + tag + ">\n" + value  + "</" + tag + ">\n";
+      contents.append("<").append(tag).append(">\n").append(value).append("</").append(tag).append(">\n");
     }
 
-    return contents;
+    return contents.toString();
   }
 
   public String getFlatpakId() {
