@@ -594,7 +594,7 @@ public class AppdataComponent {
       strDescription = strDescription.replace("<description>", "");
       strDescription = strDescription.replace("</description>", "");
 
-      Optional.of(new ReleaseInfo(release.getVersion(), release.getTimestamp(), strDescription));
+      return Optional.of(new ReleaseInfo(release.getVersion(), release.getTimestamp(), strDescription));
 
     }
 
